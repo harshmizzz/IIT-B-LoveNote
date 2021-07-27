@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import lottie from "lottie-web";
+
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 const Navbar = () => {
+  
   const container = useRef(null);
   useEffect(() => {
     lottie.loadAnimation({
@@ -55,11 +58,11 @@ const Navbar = () => {
               <p>
                 Find your companion.
                 <span>
-                  <br />
+                  <br /> 
                 </span>
-                According to your own style
+                According to your own style 
               </p>
-              <div className="container">ref={container}</div>
+              {/* <p className="container" ref={container}></p> */}
             </div>
           </section>
         </div>

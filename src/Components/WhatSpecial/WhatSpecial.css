@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+.WhatSpecialBody {
+  /* margin-top: 10px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: -22px;
+  background-color: #0f071b;
+  color: white;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.5px;
+  letter-spacing: 1px;
+}
+.imageRow {
+  display: flex;
+  justify-content: center;
+}
+.imgCard {
+  justify-content: space-between;
+  padding: 20px;
+  width: 350px;
+  float: left;
+}
+.WhatSpecialImg {
+  width: 168px;
+  height: 215px;
+  object-fit: cover;
+}
