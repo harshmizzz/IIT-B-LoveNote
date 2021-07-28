@@ -2,6 +2,7 @@ import React from "react";
 import "./WhatSpecial.css";
 import img1 from "../../Images/WhatSpecialImgs/Illustration 1.png";
 import img2 from "../../Images/WhatSpecialImgs/Illustration 2.png";
+import img3 from "../../Images/WhatSpecialImgs/Illustration 3.png";
 
 const WhatSpecial = () => {
   return (
@@ -15,7 +16,7 @@ const WhatSpecial = () => {
             <p>
               Add only thoughful matches in the list and remove the rest-choose
               your 'the one' better with our detailed profiles and finite matche
-              list.
+              list. 
             </p>
           </div>
           <div className="imgCard column col-lg-4">
@@ -27,7 +28,7 @@ const WhatSpecial = () => {
             </p>
           </div>
           <div className="imgCard column col-lg-4">
-            <img className="WhatSpecialImg" src={img1} alt="" />
+            <img className="WhatSpecialImg" src={img3} alt="" />
             <h3>We understand your safety</h3>
             <p>
               You can now enable or disable the call option with your match

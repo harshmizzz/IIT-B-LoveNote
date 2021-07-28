@@ -16,7 +16,7 @@ const imgData = [
   },
   {
     id: 3,
-    src: "../../Images/WhatSpecialImgs/Illustration 2.png",
+    src: "../../Images/WhatSpecialImgs/Illustration 3.png",
     title: "We understand your safety",
     info: "You can now enable or disable the call option with your match whenever you'd like!",
   },
