@@ -7,7 +7,7 @@ import img3 from "../../Images/WhatSpecialImgs/Illustration 3.png";
 const WhatSpecial = () => {
   return (
     <>
-      <div className="WhatSpecialBody">
+      <div className="WhatSpecialBody"> 
         <h3>WHAT'S SPECIAL ?</h3>
         <div className="row imageRow">
           <div className="imgCard column col-lg-4">

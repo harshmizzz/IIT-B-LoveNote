@@ -1,4 +1,8 @@
 .homeBody{
     margin-top: -22px;
-    /* background-color: #0F071B; */
+}
+.videoBody{
+    margin: 100px 0px 100px 0px;
+    display: flex;
+    justify-content: center;
 }
