@@ -13,7 +13,7 @@ const VideoScreen = () => {
           src={Upperillustration}
           alt=""
         />
-        <video controls width="1004" height="504" autoplay muted>
+        <video controls width="1004" height="504" autoPlay muted>
           <source src={InstructionVideo} type="video/mp4" />
         </video>
         <img

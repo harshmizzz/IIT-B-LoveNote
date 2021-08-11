@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+.excitedBody {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8c3b3;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.excitedText{
+    color: black;
+}
+.footerTitle{
+  display: flex;
+}
+.excitedHeading {
+  font-size: 22px;
+  font-weight: bolder;
+}
+.footerImg{
+  width: 83px;
+  height: 67px;
+}
+.excitedButton {
+  padding: 15px;
+  width: 70%; 
+  border-radius: 40px;
+  border: 1px solid black;
+  background-color: #0f071b;
+}
+.excitedButton a {
+  text-decoration: none;
+  /* font */
+  font-size: 16px;
+  line-height: 18px;
+  color: white;
+}

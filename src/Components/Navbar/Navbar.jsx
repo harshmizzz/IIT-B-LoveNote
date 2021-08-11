@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
-
+import Homebg from "../Homebg/Homebg";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-const Navbar = () => {
+const Navbar = ({hideBG}) => {
   
   const container = useRef(null);
   useEffect(() => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <div className="body">
-        <div className="wrap">
+        <div className="">
           <nav>
             <div className="logo">Logo</div>
             <ul>
@@ -35,37 +35,12 @@ const Navbar = () => {
                 <Link className="navItems">Meet Us</Link>
               </li>
               <li className="joinNow">
-                <Link>Join Now</Link>
+                <Link to="/SignUp" >Join Now</Link>
               </li>
             </ul>
-          </nav>
-          <section className="homeBg">
-            <div class="centered">
-              <p>
-                <span className="love">Love</span>
-                <span className="note">
-                  <strong>Note</strong>
-                </span>
-              </p>
-              <p className="tagLine">BEGIN A FOREVER STORY</p>
-            </div>
-            <div className="bottomSec">
-              <button className="beginButton">
-                <Link>
-                  <strong>Begin my journey</strong>
-                </Link>
-              </button>
-              <p>
-                Find your companion.
-                <span>
-                  <br /> 
-                </span>
-                According to your own style 
-              </p>
-              {/* <p className="container" ref={container}></p> */}
-            </div>
-          </section>
-        </div>
+          </nav> 
+          {!hideBG && <Homebg /> }
+        </div> 
       </div>
     </>
   );
