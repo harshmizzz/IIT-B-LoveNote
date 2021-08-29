@@ -1,0 +1,73 @@
+.VerificationModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  padding: 50px;
+  background: #f5a834;
+  border-radius: 5px;
+  font-family: "Montserrat";
+  transform: translate(-50%, -50%);
+}
+
+.VerificationModalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(15, 7, 27, 0.9);
+}
+
+.VerificationModalClose {
+  float: right;
+  position: relative;
+  margin-top: -40px;
+}
+
+.VerificationModalClose > p {
+  font-size: 20px;
+  cursor: pointer;
+  color: #0f071b;
+}
+
+.VerificationModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.VerificationModalContent > h5 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ffffff;
+}
+
+.VerificationModalContent > p {
+  margin-top: -10px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.VerificationButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.VerificationButtonContainer > button {
+  width: 199px;
+  border-style: none;
+  height: 49px;
+  color: #ebe7e6;
+  background: #0f071b;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+}

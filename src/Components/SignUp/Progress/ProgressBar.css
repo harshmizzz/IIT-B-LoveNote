@@ -1,0 +1,54 @@
+.SignUpProgress{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f8c3b3;
+    border-radius: 5px;
+    height: 65px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    width: 100%;
+}
+.SignUpProgressItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ProgressCircle{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProgressCircleText {
+  color: #f8c3b3;
+}
+
+.ProgressText{
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(15 ,7,27,.6);
+}
+
+.SignUpActive>.ProgressCircle>.ProgressCircleText{
+  color: black;
+}
+.SignUpActive>.ProgressText{
+  color: black;
+}
+
+.ProgressTickCircle{
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .6);
+}

@@ -1,0 +1,121 @@
+.SecondFormItems label::after {
+  color: #ff5555;
+  content: "*";
+  display: inline;
+}
+
+.SignUpSecond {
+  display: flex;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 20px;
+  color: #0f071b;
+  width: clamp(60vw, 80vw, 90vw);
+}
+.SignUpSecondLeft {
+  /* min-width: 50vw; */
+  min-height: 60vh;
+}
+.SignUpSecondRight {
+  min-width: 40vw;
+  display: flex;
+}
+
+.SecondFormWomen {
+  position: absolute;
+  width: 213px;
+  height: 212px;
+  /* margin-top: 60vh;
+    margin-left: 10vh; */
+  margin-top: clamp(10vh, 30vh, 30vh);
+  margin-left: clamp(2vh, 5vh, 10vh);
+}
+.SecondFormMen {
+  position: absolute;
+  width: 238px;
+  margin-left: clamp(0vw, 20vw, 25vw);
+  margin-top: clamp(10vh, 15vh, 20vh);
+  height: 146px;
+}
+
+.SignUpSecondItemsLines {
+  width: 40vw;
+  border: 1px solid #cabfbc;
+}
+
+.SignUpSecondForm {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.SecondFormItems {
+  margin-top: 30px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.SecondFormItems > input[type="text"],
+.SecondFormItems > select {
+  padding: 5px;
+  border: 0px;
+  min-width: 40vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 10%;
+}
+
+.SecondFormItems > input,
+.SecondFormItems > textarea,
+.SecondFormItems > select {
+  font-family: inherit;
+  padding-left: 5px;
+  font-size: inherit;
+}
+.SecondFormItems > textarea:focus,
+.SecondFormItems > input:focus,
+.SecondFormItems > select:focus {
+  outline: none;
+  padding-left: 5px;
+}
+
+.SignUpSecondMoreHeading {
+  margin-top: 30px;
+  margin-left: 50px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f5a834;
+  font-weight: 400;
+}
+
+.SignUpSecondFormBottom {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.SignUpSecondFormBottom > h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Montserrat";
+  font-weight: 600px;
+}
+
+.SignUpSecondFormBottom > input[type="submit"] {
+  height: 49px;
+  width: 140px;
+  border-radius: 50px;
+  background-color: #0f071b;
+  color: #ebe7e6;
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "Monserrat";
+}

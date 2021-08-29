@@ -1,0 +1,46 @@
+.MainVerification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4vh;
+  margin-top: 5vh;
+}
+
+.MainVerification > div {
+  max-width: 23vw;
+}
+
+.MainPageVerifyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 51px;
+  background-color: #0f071b;
+  border-radius: 51.9359px;
+  color: #ebe7e6;
+  line-height: 23px;
+  font-size: 16.6195px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.VerificationAbstract {
+  width: 211px;
+  height: 158px;
+  position: absolute;
+  margin-left: -80px;
+  margin-top: 4vh;
+}
+.VerificationStanding {
+  margin-left: 180px;
+  width: 233px;
+  height: 134px;
+}
+
+.MainPageVerifyImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

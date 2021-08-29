@@ -1,0 +1,40 @@
+.Verified {
+  display: flex;
+  font-family: "Montserrat";
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 35vw;
+}
+.VerifiedItems {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
+  margin-left: 15%;
+  margin-top: 40px;
+}
+
+.VerifiedHeading {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #0f071b;
+}
+
+.VerifiedText {
+  width: 25vw;
+  color: #0f071b;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: -10px;
+}
+.VerifiedImage {
+  margin-left: 20vw;
+}
+.VerifiedImage > img {
+  width: 192px;
+  height: 188px;
+}
