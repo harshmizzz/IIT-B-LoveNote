@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-
 .excitedBody {
   display: flex;
   justify-content: center;
@@ -9,23 +7,23 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.excitedText{
-    color: black;
+.excitedText {
+  color: black;
 }
-.footerTitle{
+.footerTitle {
   display: flex;
 }
 .excitedHeading {
   font-size: 22px;
   font-weight: bolder;
 }
-.footerImg{
+.footerImg {
   width: 83px;
   height: 67px;
 }
 .excitedButton {
   padding: 15px;
-  width: 70%; 
+  width: 70%;
   border-radius: 40px;
   border: 1px solid black;
   background-color: #0f071b;
@@ -36,4 +34,49 @@
   font-size: 16px;
   line-height: 18px;
   color: white;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+  .excitedBody {
+    padding: 0;
+    font-size: 12px;
+  }
+  .excitedHeading {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .excitedText {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+
+    color: #0f071b;
+  }
+  .footerImg {
+    margin-top: 1vh;
+    width: 43.6px;
+    height: 34.97px;
+  }
+  .excitedButton {
+    padding: 15px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    font-weight: 400;
+    border: 1px solid black;
+    background-color: #0f071b;
+  }
+  .excitedButton a {
+    text-decoration: none;
+    /* font */
+
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+  }
 }

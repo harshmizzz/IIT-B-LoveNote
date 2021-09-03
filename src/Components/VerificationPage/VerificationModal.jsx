@@ -1,8 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router";
 import "./VerificationModal.css";
 function VerificationModal({ progress, open, onclose }) {
-  const history = useHistory();
   if (!open) return null;
   return (
     <>
@@ -31,11 +29,11 @@ function VerificationModal({ progress, open, onclose }) {
             onClick={
               progress === 100
                 ? () => (window.location = "/main")
-                : () => alert ("Uploading Files Wait for few seconds")
+                : () => alert("Uploading Files Wait for few seconds")
             }
           >
             Go Home
-          </button> 
+          </button>
         </div>
       </div>
       ;

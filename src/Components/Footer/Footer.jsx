@@ -1,8 +1,9 @@
 import React from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import FooterIllustration from "../../Images/BirthLoveNote/FooterIllustration.png";
 const Excited = () => {
+  const history = useHistory();
   return (
     <>
       <div className="excitedBody">
@@ -15,7 +16,12 @@ const Excited = () => {
           </div>
 
           <p className="excitedText">Cant't wait to have you</p>
-          <button className="excitedButton">
+          <button
+            onClick={() => {
+              history.push("/SignUp");
+            }}
+            className="excitedButton"
+          >
             <Link>Begin my forever story</Link>
           </button>
         </div>

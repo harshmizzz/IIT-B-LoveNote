@@ -106,16 +106,3 @@
   font-weight: 600px;
 }
 
-.SignUpSecondFormBottom > input[type="submit"] {
-  height: 49px;
-  width: 140px;
-  border-radius: 50px;
-  background-color: #0f071b;
-  color: #ebe7e6;
-  border: none;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  font-weight: 500;
-  font-family: "Monserrat";
-}

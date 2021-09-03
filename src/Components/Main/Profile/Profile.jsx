@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Profile.css";
 import ClearIcon from "@material-ui/icons/Clear";
 import ReplayIcon from "@material-ui/icons/Replay";
@@ -10,7 +10,32 @@ import BusinessCenterOutlinedIcon from "@material-ui/icons/BusinessCenterOutline
 import TranslateOutlinedIcon from "@material-ui/icons/TranslateOutlined";
 import LockIcon from "@material-ui/icons/Lock";
 import HeightOutlinedIcon from "@material-ui/icons/HeightOutlined";
+import { db } from "../../StoreFeatures/firebase";
+import { useState } from "react";
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
+import "swiper/components/a11y/a11y.scss";
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 function Profile() {
+  const [Quotes, setQuotes] = useState([]);
+  const FetchData = async () => {
+    const citiesRef = db.collection("Quotes");
+    const snapshot = await citiesRef
+      .get()
+      .then((snapshot) =>
+        snapshot.forEach((doc) =>
+          setQuotes((Quotes) => [...Quotes, doc.data()])
+        )
+      );
+  };
+  useEffect(() => {
+    FetchData();
+  }, []);
+
   return (
     <div className="Profile">
       <div className="ProfileTop">
@@ -25,15 +50,39 @@ function Profile() {
         </div>
       </div>
       <div className="ProfileQuotes">
-        <div className="ProfileQuotesText">
+        {/* <div className="ProfileQuotesText">
           <p>
             I like taking the scenic route, while looking at the world through
             colored glasses.Join me on this journey?
           </p>
         </div>
+        {console.log(Quotes)}
         <div className="ProfileQuoteHashtag">
           <p>Happy Thoughts</p> <p>Realism</p>
-        </div>
+        </div> */}
+        <Swiper
+          // install Swiper modules
+          modules={[Pagination, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          {console.log(Quotes)}
+          {Quotes.map((data) => (
+            <SwiperSlide>
+              <div className="ProfileQuotesText">
+                <p>{data.quote}</p>
+              </div>
+              <div className="ProfileQuoteHashtag">
+                {data.hashtag.map((hashtagdata) => (
+                  <p>{hashtagdata}</p>
+                ))}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div className="ProfileMain">
         <div className="ProfileMainTop">

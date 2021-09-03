@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Homebg.css";
-const Homebg = ({hideBG}) => {
+const Homebg = ({ hideBG }) => {
   return (
-    <>
-    {/* className={hideBG == false ? "homeBg" : "homeBgHide"} */}
-      <section className="homeBg" >
+    <div>
+      <section className="homeBg">
         <div class="centered">
           <p>
             <span className="love">Love</span>
@@ -31,7 +30,7 @@ const Homebg = ({hideBG}) => {
           {/* <p className="container" ref={container}></p> */}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

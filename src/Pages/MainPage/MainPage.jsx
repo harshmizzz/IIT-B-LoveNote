@@ -13,7 +13,6 @@ import { login, selectUser } from "../../Components/StoreFeatures/userSlice";
 import { useState } from "react";
 function MainPage() {
   const user = useSelector(selectUser);
-  // const isVerified = localStorage.getItem("isVerified");
   const [data, setdata] = useState("");
 
   useEffect(() => {
@@ -26,7 +25,6 @@ function MainPage() {
             if (doc.exists) {
               setdata(doc.data());
             } else {
-              // doc.data() will be undefined in this case
               console.log("No such document!");
             }
           })
@@ -58,7 +56,7 @@ function MainPage() {
           <div className="MainPageVerificationBox">
             {console.log(data.isVerified)}
 
-            {data.isVerified ===false ? <MainVerification /> : <Verified />}
+            {data.isVerified === false ? <MainVerification /> : <Verified />}
           </div>
           <div className="MainPageProfileBox">
             <Profile />

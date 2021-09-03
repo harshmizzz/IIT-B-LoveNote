@@ -12,7 +12,6 @@ function SignUpThird() {
   const [val, setval] = useState([25, 35]);
   const user = useSelector(selectUser);
   const onSubmit = (data) => {
-    window.location = "/feedback";
     db.collection("users")
       .doc(user.uid)
       .update({
@@ -27,7 +26,12 @@ function SignUpThird() {
           PDiet: data.diet,
           PSmoke: data.smoke,
         },
+      })
+      .then(() => {
+        window.location = "/feedback";
       });
+
+    console.log(data);
   };
 
   const updateRange = (e, data) => {
@@ -163,7 +167,7 @@ function SignUpThird() {
             <div className="SignUpThirdItemsLines"></div>
           </div>
           <div className="ThirdFormItems">
-            <label>What's thier diet be?</label>
+            <label>What's their diet be?</label>
             <select
               {...register("diet", {
                 required: true,

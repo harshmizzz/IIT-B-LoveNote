@@ -3,40 +3,44 @@ import "./SignUpSecond.css";
 import men from "../../../Images/SignUp/Stuck at Home Sitting On Floor.png";
 import women from "../../../Images/SignUp/Olá Planting.png";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router";
 import { ErrorMessage } from "@hookform/error-message";
 import { auth, db } from "../../StoreFeatures/firebase";
 import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, selectUser } from "../../StoreFeatures/userSlice";
 function SignUPSecond() {
-  let history = useHistory();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const onSubmit = (data) => {
     console.log(data);
-    db.collection("users").doc(user.uid).set({
-      Fullname: data.name,
-      Age: data.age,
-      Gender: data.gender,
-      HeightFt: data.height,
-      Location: data.location,
-      Language: data.language,
-      Occupation: data.occupation,
-      Relationship: data.status,
-      Diet: data.diet,
-      Exercise: data.exercise,
-      Smoke: data.smoke,
-      Drink: data.drink,
-      Children: data.children,
-      Religion: data.religion,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    db.collection("users")
+      .doc(user.uid)
+      .set({
+        Fullname: data.name,
+        Age: data.age,
+        Gender: data.gender,
+        HeightFt: data.height,
+        Location: data.location,
+        Language: data.language,
+        Occupation: data.occupation,
+        Relationship: data.status,
+        Diet: data.diet,
+        Exercise: data.exercise,
+        Smoke: data.smoke,
+        Drink: data.drink,
+        Children: data.children,
+        Religion: data.religion,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      })
+      .then(() => {
+        window.location = "/preferences";
+      });
     auth.currentUser.updateProfile({
       displayName: data.name,
     });
@@ -47,7 +51,6 @@ function SignUPSecond() {
         name: data.name,
       })
     );
-    window.location = "/preferences";
   };
   return (
     <div className="SignUpSecond">
@@ -110,7 +113,7 @@ function SignUPSecond() {
               {...register("height", {
                 required: true,
                 pattern: {
-                  value: /^[0-9,'"]+$/,
+                  value: /^[0-9,'".]+$/,
                   message: "Please enter a valid height",
                 },
               })}

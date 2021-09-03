@@ -7,7 +7,7 @@ import google from "../../../Images/SignUp/google.png";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import { useState } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, Redirect, withRouter } from "react-router-dom";
 import { auth, db } from "../../StoreFeatures/firebase";
 import { useDispatch } from "react-redux";
 import firebase from "firebase";
@@ -55,23 +55,40 @@ function LoginPage() {
         var credential = result.credential;
         var token = credential.accessToken;
         var user = result.user;
+        var newUser = result.additionalUserInfo.isNewUser;
+        console.log(result.additionalUserInfo.isNewUser);
+        auth.onAuthStateChanged((user) => {
+          if (newUser) {
+            window.location = "/profile";
+          } else if (user) {
+            dispatch(
+              login({
+                email: user.email,
+                uid: user.uid,
+                name: user.displayName,
+              })
+            );
+            localStorage.setItem("email", user.email);
+            window.location = "/main";
+          }
+        });
       })
       .catch((error) => {
         console.log(error.message);
       });
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        dispatch(
-          login({
-            email: user.email,
-            uid: user.uid,
-            name: user.displayName,
-          })
-        );
-      }
-      localStorage.setItem("email", user.email);
-      window.location = "/main";
-    });
+    // auth.onAuthStateChanged((user) => {
+    //   if (user) {
+    //     dispatch(
+    //       login({
+    //         email: user.email,
+    //         uid: user.uid,
+    //         name: user.displayName,
+    //       })
+    //     );
+    //     localStorage.setItem("email", user.email);
+    //     window.location = "/main";
+    //   }
+    // });
   };
   const signInWithEmailAndPassword = async (email, password) => {
     try {

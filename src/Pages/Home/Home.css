@@ -1,15 +1,25 @@
-.homeBody{
-    margin-top: -22px;
+.homeBody {
+  margin-top: -22px;
 }
-.videoBody{
-    margin: 100px 0px 100px 0px;
-    display: flex;
-    justify-content: center;
+.videoBody {
+  display: flex;
+  justify-content: center;
 }
-.Carousel{
+.Carousel {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  /* width: 80%; */
+  height: 400px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+}
+@media only screen and (min-width: 500px) and (max-width: 1024px) {
+  .videoBody {
+    height: 60vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin: auto;
-    /* width: 80%; */
-    height: 400px;
+  }
 }

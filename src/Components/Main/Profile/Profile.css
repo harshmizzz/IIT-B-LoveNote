@@ -1,279 +1,322 @@
-.Profile{
-    margin-top: 20px;
-    background: whitesmoke;
-    width: 35vw;
-    border: 1px solid rgb(216, 213, 213);
-    border-radius: 10px;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    font-family: "Montserrat";
+.Profile {
+  margin-top: 20px;
+  background: whitesmoke;
+  width: 35vw;
+  border: 1px solid rgb(216, 213, 213);
+  border-radius: 10px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Montserrat";
 }
 
-.ProfileTop{
-    height: 100px;
-    background: rgb(236, 234, 234);
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-around;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.ProfileTop {
+  height: 100px;
+  background: rgb(236, 234, 234);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.ProfileHeading{
-    font-weight: 600;
-    font-size: 18px;
+.ProfileHeading {
+  font-weight: 600;
+  font-size: 18px;
 }
 
-.ProfileBack,.ProfileDelete{
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    border-radius: 50%;
-    background: #0f071b;
+.ProfileBack,
+.ProfileDelete {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 50%;
+  background: #0f071b;
 }
 
 /* Quotes */
 
-.ProfileQuotes{
-    background: white;
-    width: 30vw;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center ;
-    border-radius: 30px;
-    margin-top: 20px;
+.ProfileQuotes {
+  background: white;
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  margin-top: 20px;
 }
-.ProfileQuotesText{
-    width: 30vw;
-    font-size: 15px;
-}
-
-.ProfileQuotes>div{
-    width: 25vw;
-    display: flex;
-    gap: 20px;
+.ProfileQuotesText {
+  /* width: 30vw; */
+  font-size: 15px;
 }
 
-.ProfileQuoteHashtag > p{
-    background: whitesmoke;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 5px;
+.ProfileQuotes > div {
+  width: 25vw;
+  display: flex;
+  gap: 20px;
+}
+
+.ProfileQuoteHashtag {
+  display: flex;
+  gap: 20px;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  /* margin-top: 10px; */
+  bottom: 0% !important;
+}
+
+/* .ProfileQuotes
+  > .swiper-container
+  > .swiper-pagination
+  > .swiper-pagination-bullet:active {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #000 !important;
+  opacity: 0.2;
+} */
+
+.ProfileQuotes
+  > .swiper-container
+  > .swiper-pagination
+  > .swiper-pagination-bullet-active {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #000 !important;
+  opacity: 1;
+}
+
+.ProfileQuoteHashtag > p {
+  background: whitesmoke;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px;
 }
 
 /* Main */
 
-.ProfileMain{
-    margin-top: 20px;
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
+.ProfileMain {
+  margin-top: 20px;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
 }
 
-.ProfileMainTop{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.ProfileMainTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.ProfileMainTopLeft>img{
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
+.ProfileMainTopLeft > img {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
 }
 
-.ProfileMainTopLeft{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.ProfileMainTopLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.ProfileMainTopLeft>p{
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 17px;
+.ProfileMainTopLeft > p {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 17px;
 }
 
-.ProfileMainTopRight{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
-    background: #ebe7e6;
+.ProfileMainTopRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  background: #ebe7e6;
 }
 
-.ProfileMainTopRight>.MuiSvgIcon-root{
-    color: #0f071b;
+.ProfileMainTopRight > .MuiSvgIcon-root {
+  color: #0f071b;
 }
 
-.ProfileMainImage{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30vw;
-    height: 60vh;
-    object-fit: cover;
-    margin-top: 10px;
+.ProfileMainImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  height: 60vh;
+  object-fit: cover;
+  margin-top: 10px;
 }
 
-.ProfileMainImage >img{
-   width: 30vw;
-   height: 60vh;
-   border-radius: 15px;
+.ProfileMainImage > img {
+  width: 30vw;
+  height: 60vh;
+  border-radius: 15px;
 }
 
 /* Userdata */
 
-.ProfileMainUserInfo{
-    margin-top: 20px;
+.ProfileMainUserInfo {
+  margin-top: 20px;
 }
 
-.ProfileMainUserProfileHeading{
-    font-weight: 600;
-    font-size: 18px;
-    color: #0f071b;
+.ProfileMainUserProfileHeading {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0f071b;
 }
 
-.ProfileMainUserProfileItems{
-    display: flex;
-    justify-content: space-between;
-    
+.ProfileMainUserProfileItems {
+  display: flex;
+  justify-content: space-between;
 }
-.ProfileMainUserProfileItemsLeft{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+.ProfileMainUserProfileItemsLeft {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.ProfileMainUserProfileItemsRight{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-right: 30px;
-}
-
-.ProfileMainUserProfileItemsLeft>div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -10px;
-}
-.ProfileMainUserProfileItemsRight>div{
-    display: flex;
-    align-items: center;
-    margin-top: -10px;
-    justify-content: center;
+.ProfileMainUserProfileItemsRight {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 30px;
 }
 
-.ProfileMainUserProfileItemsLeft>div>p{
-    margin-left: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #0f071b;
+.ProfileMainUserProfileItemsLeft > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
 }
-.ProfileMainUserProfileItemsRight>div>p{
-    margin-left: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #0f071b;
+.ProfileMainUserProfileItemsRight > div {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  justify-content: center;
 }
-    
-.ProfileMainUserProfileItemsLeft>div>.MuiSvgIcon-root{
-   color: grey;
+
+.ProfileMainUserProfileItemsLeft > div > p {
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f071b;
 }
-.ProfileMainUserProfileItemsRight>div>.MuiSvgIcon-root{
-   color: grey;
+.ProfileMainUserProfileItemsRight > div > p {
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f071b;
+}
+
+.ProfileMainUserProfileItemsLeft > div > .MuiSvgIcon-root {
+  color: grey;
+}
+.ProfileMainUserProfileItemsRight > div > .MuiSvgIcon-root {
+  color: grey;
 }
 
 /* userhashtag */
 
-.ProfileMainUserProfileHashtag > p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 5px;
-    border-radius: 20px;
+.ProfileMainUserProfileHashtag > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
 }
 
 .ProfileMainUserProfileHashtag {
-    margin-left: -10px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 20px;
+  margin-left: -10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
 }
 
 /* UserLifestyle and goals */
 
-.ProfileMainUserLifestyle,.ProfileMainUserGoal{
-    min-width: 35vw;
+.ProfileMainUserLifestyle,
+.ProfileMainUserGoal {
+  min-width: 35vw;
 }
 
-.LifeStyleHeading,.GoalHeading{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 40px;
-    background-color: #d3cecd;
-    padding-left: 30px;
-    font-weight: 600;
+.LifeStyleHeading,
+.GoalHeading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+  background-color: #d3cecd;
+  padding-left: 30px;
+  font-weight: 600;
 }
 
-.LifestyleMain>div,.GoalsMain>div{
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding-left: 30px;
-padding-right: 30px;
-font-size: 17px;
+.LifestyleMain > div,
+.GoalsMain > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 17px;
 }
 
-.LifestyleText,.GoalText{
-    font-weight: 600;
+.LifestyleText,
+.GoalText {
+  font-weight: 600;
 }
 
 /* AudioNotes and compatibility */
 
-
-.ProfileMainUserAudioNotes,.ProfileMainUserCompatibility{
-    min-width: 35vw;
+.ProfileMainUserAudioNotes,
+.ProfileMainUserCompatibility {
+  min-width: 35vw;
 }
 
-.AudioHeading,.CompatibilityHeading{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    background-color: #d3cecd;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-weight: 600;
+.AudioHeading,
+.CompatibilityHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  background-color: #d3cecd;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 600;
 }
-.AudioHeading>.MuiSvgIcon-root,.CompatibilityHeading>.MuiSvgIcon-root{
-    color: #0f071b;
-}   
+.AudioHeading > .MuiSvgIcon-root,
+.CompatibilityHeading > .MuiSvgIcon-root {
+  color: #0f071b;
+}
 
-.AudioMain>div,.CompatibilityMain{
-    display: flex;
-align-items: center;
-justify-content: center;
-padding-left: 30px;
-padding-right: 30px;
-font-size: 17px;
-min-height: 15vh;
-filter: blur(1px);
+.AudioMain > div,
+.CompatibilityMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 17px;
+  min-height: 15vh;
+  filter: blur(1px);
 }

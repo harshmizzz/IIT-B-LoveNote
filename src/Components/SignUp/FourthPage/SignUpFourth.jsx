@@ -119,8 +119,10 @@ function SignUpFourth() {
           Suggestion: textbox,
         },
         isVerified: false,
+      })
+      .then(() => {
+        window.location = "/main";
       });
-    window.location = "/main";
   };
 
   return (

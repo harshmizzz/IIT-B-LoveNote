@@ -3,8 +3,7 @@ import lottie from "lottie-web";
 import Homebg from "../Homebg/Homebg";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-const Navbar = ({hideBG}) => {
-  
+const Navbar = ({ hideBG }) => {
   const container = useRef(null);
   useEffect(() => {
     lottie.loadAnimation({
@@ -15,7 +14,6 @@ const Navbar = ({hideBG}) => {
       animationData: require("../../Images/scroll-down-arrows.json"),
     });
   }, []);
-
   return (
     <>
       <div className="body">
@@ -35,12 +33,12 @@ const Navbar = ({hideBG}) => {
                 <Link className="navItems">Meet Us</Link>
               </li>
               <li className="joinNow">
-                <Link to="/SignUp" >Join Now</Link>
+                <Link to="/SignUp">Join Now</Link>
               </li>
             </ul>
-          </nav> 
-          {!hideBG && <Homebg /> }
-        </div> 
+          </nav>
+          {!hideBG && <Homebg />}
+        </div>
       </div>
     </>
   );

@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { auth, db } from "../../StoreFeatures/firebase";
+import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, selectUser } from "../../StoreFeatures/userSlice";
 function SignUpPage() {
@@ -37,11 +38,36 @@ function SignUpPage() {
           history.push("/profile");
         }
       });
-     
     } catch (err) {
       console.error(err);
       alert(err.message);
     }
+  };
+  const signInWithGoogle = async () => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    await auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        var credential = result.credential;
+        var token = credential.accessToken;
+        var user = result.user;
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        dispatch(
+          login({
+            email: user.email,
+            uid: user.uid,
+            name: user.displayName,
+          })
+        );
+        localStorage.setItem("email", user.email);
+        window.location = "/profile";
+      }
+    });
   };
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
@@ -109,7 +135,7 @@ function SignUpPage() {
               <Link to="/login">Log In</Link>{" "}
             </div>
           </div>
-          <div className="SignUpLoginButton">
+          <div onClick={signInWithGoogle} className="SignUpLoginButton">
             <img src={google} alt="google" />
             <p>Sign Up with Google</p>
           </div>

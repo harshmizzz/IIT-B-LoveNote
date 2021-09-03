@@ -1,96 +1,100 @@
-
-.SignUpFirstPage{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    margin-left: -100px;
-    height: 100%;
+.SignUpFirstPage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-left: -100px;
+  height: 100%;
+  font-family: "Montserrat";
 }
-.signUpHeart{
-    width: 82px;
-    height: 57px;
-    position: absolute;
-    /* left: 25%;
+.signUpHeart {
+  width: 82px;
+  height: 57px;
+  position: absolute;
+  /* left: 25%;
     top: 40%; */
-    margin-top: 1%;
-    margin-left: -15%;
-    transform: rotate(-15.51deg);
- }
+  margin-top: 1%;
+  margin-left: -15%;
+  transform: rotate(-15.51deg);
+}
 
- .signUpFlower{
-     position: absolute;
-     width: 47.63px;
-     height: 68.43px;
-    transform: rotate(8.75deg);
-    /* top: 82%;
+.signUpFlower {
+  position: absolute;
+  width: 47.63px;
+  height: 68.43px;
+  transform: rotate(8.75deg);
+  /* top: 82%;
     left: 65%; */
-    margin-left: clamp(20vw,30vw,30vw);
-    padding-top: clamp(10vh,30vh,60vh);
- }
-
- .SignUpContainer{
-     display: flex;
-     align-items: flex-start;
-     justify-content: center;
-     /* min-height: 60vh; */
-     min-height: 50vh;
-     width: 100%;
- }
- .SignUpForm{
-     min-width:30%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin-left:80px;
- }
- .SignUpForm >form{
-     display: flex;
-     flex-direction: column;
-     
- }
-.SignUpFormHeading{
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 27px;
-    color: #f5a834; 
-    margin-top: 30px;   
-    margin-bottom: -10px;
+  margin-left: clamp(20vw, 30vw, 30vw);
+  padding-top: clamp(10vh, 30vh, 60vh);
 }
- .SignUpSmallHeading{
-     font-family: "Montserrat";
-     font-size: 12px;
-     line-height: 15px;
-     color: #0f071b;
- }
 
- .SignUpFormBox>input[type=text],.signUpPassword>input[type=password],
- .signUpPassword>input[type=text] {
-    padding: 5px; border: 0px;
-    border-bottom: 1px;
-    margin:10px;
-    width: 115%;
-    margin-left: -5px;
+.SignUpContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* min-height: 60vh; */
+  min-height: 50vh;
+  width: 100%;
+}
+.SignUpForm {
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 80px;
+}
+.SignUpForm > form {
+  display: flex;
+  flex-direction: column;
+}
+.SignUpFormHeading {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #f5a834;
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+.SignUpSmallHeading {
+  font-family: "Montserrat";
+  font-size: 12px;
+  line-height: 15px;
+  color: #0f071b;
+}
 
-  }
-  .SignUpFormBox>input, .SignUpFormBox>textarea,.signUpPassword>input[type=password],
-  .signUpPassword>input[type=text] {
-    font-family:inherit;
+.SignUpFormBox > input[type="text"],
+.signUpPassword > input[type="password"],
+.signUpPassword > input[type="text"] {
+  padding: 5px;
+  border: 0px;
+  border-bottom: 1px;
+  margin: 10px;
+  width: 115%;
+  margin-left: -5px;
+}
+.SignUpFormBox > input,
+.SignUpFormBox > textarea,
+.signUpPassword > input[type="password"],
+.signUpPassword > input[type="text"] {
+  font-family: inherit;
   padding-left: 5px;
-    font-size: inherit;
-  }
-  .SignUpFormBox>textarea:focus, .SignUpFormBox> input:focus,.signUpPassword>input:focus{
-    outline: none;
+  font-size: inherit;
+}
+.SignUpFormBox > textarea:focus,
+.SignUpFormBox > input:focus,
+.signUpPassword > input:focus {
+  outline: none;
   padding-left: 5px;
 }
-.SignUpLines{
-    border: 1px solid #Cabfbc;
-    width: 125%;
+.SignUpLines {
+  border: 1px solid #cabfbc;
+  width: 125%;
 }
 
-.SignUpFormBox > 
-::placeholder,.signUpPassword> ::placeholder {
+.SignUpFormBox > ::placeholder,
+.signUpPassword > ::placeholder {
   padding-left: 5px;
   color: #cfc4c1;
   font-family: "Montserrat";
@@ -99,92 +103,91 @@
   line-height: 20px;
 }
 
-.SignUpFormBox>input[type=submit]{
-    margin-top: 35px;
-    border-radius: 50px;
-    width: 125%;
-    height: 40px;
-    background-color: #0f071b;
-    border: 1px solid #0f071b;
-    color: #ebe7e6;
-    font-weight: 500;
-    font-family: "Manrope";
-    font-size: 18px;
-    line-height: 22px;
-    font-style: normal;
+.SignUpFormBox > input[type="submit"] {
+  margin-top: 35px;
+  border-radius: 50px;
+  width: 125%;
+  height: 40px;
+  background-color: #0f071b;
+  border: 1px solid #0f071b;
+  color: #ebe7e6;
+  font-weight: 500;
+  font-family: "Manrope";
+  font-size: 18px;
+  line-height: 22px;
+  font-style: normal;
 }
 
-.signUpPassword{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 125%;
+.signUpPassword {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 125%;
 }
 
-.signUpPassword > img:hover{
-cursor: pointer;
+.signUpPassword > img:hover {
+  cursor: pointer;
 }
 
-
-.SignUpFormLineAlreadyLine{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: 1px solid #Cabfbc;
-    min-width: 22vw;
-    margin-left: 15%;
+.SignUpFormLineAlreadyLine {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #cabfbc;
+  min-width: 22vw;
+  margin-left: 15%;
 }
 
-.SignUpFormAlreadyAccount{
-    display: flex;
-    font-size: 15px;
-    margin-left: 30px;
+.SignUpFormAlreadyAccount {
+  display: flex;
+  font-size: 15px;
+  margin-left: 30px;
 }
-.SignUpFormAlreadyAccount>.left{
-font-family: "Montserrat";
-color: #ab9892;
+.SignUpFormAlreadyAccount > .left {
+  font-family: "Montserrat";
+  color: #ab9892;
 }
-.SignUpFormAlreadyAccount>.right{
-    text-decoration: underline;
-    color: #0f071b;
+.SignUpFormAlreadyAccount > .right {
+  text-decoration: underline;
+  color: #0f071b;
 }
-.SignUpLoginButton{
-    margin-top: 30px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    filter: drop-shadow(0px 4px 4px rgba(0,0,0,.1));
-    border-radius: 50px;
-    width: 250px;
-    height: 50px;
+.SignUpLoginButton {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+  border-radius: 50px;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
 }
-.SignUpLoginButton>img{
-    width: 20px;
-    height: 20px;
+.SignUpLoginButton > img {
+  width: 20px;
+  height: 20px;
 }
 
-.SignUpLoginButton>p{
-    margin-left: 10px;
-    line-height: 22px;
-    font-size: 16px;
-    font-family: "Manrope";
-    font-weight: 500;
+.SignUpLoginButton > p {
+  margin-left: 10px;
+  line-height: 22px;
+  font-size: 16px;
+  font-family: "Manrope";
+  font-weight: 500;
 }
 
 .SignUpEmailError {
-    display: flex;
-    margin: 0;
-    margin-block: 0 ;
+  display: flex;
+  margin: 0;
+  margin-block: 0;
 
-    color: #bf1650;
-    width: 15vw;
-  }
-  
+  color: #bf1650;
+  width: 15vw;
+}
+
 .SignUpEmailError::before,
-.SignUpEmailError::after     {
-    display: flex;
-    width: inherit;
-
-  }
+.SignUpEmailError::after {
+  display: flex;
+  width: inherit;
+}

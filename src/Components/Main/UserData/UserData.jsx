@@ -6,13 +6,15 @@ import MainNavBar from "../MainNav/MainNavBar";
 import "./UserData.css";
 import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
 import { auth, db } from "../../StoreFeatures/firebase";
-import { useDispatch, useSelector } from "react-redux";
-import { logout, selectUser } from "../../StoreFeatures/userSlice";
+import { useDispatch } from "react-redux";
+import { logout } from "../../StoreFeatures/userSlice";
 import firebase from "firebase";
 import { useState } from "react";
+import PasswordChangeModal from "./PasswordChangeModal";
 function UserData() {
   const history = useHistory();
   const dispatch = useDispatch();
+  const [isOpen, setisOpen] = useState(false);
   const [data, setdata] = useState([]);
   const [loading, setLoading] = useState(true);
   const user = auth.currentUser;
@@ -26,7 +28,6 @@ function UserData() {
             if (doc.exists) {
               setdata(doc.data());
             } else {
-              // doc.data() will be undefined in this case
               console.log("No such document!");
             }
           })
@@ -46,7 +47,7 @@ function UserData() {
     auth.signOut().then(() => {
       dispatch(logout());
       auth.signOut();
-      history.push("/home");
+      history.push("/login");
       localStorage.removeItem("email");
     });
   };
@@ -58,11 +59,10 @@ function UserData() {
         <p>Loading...</p>
       </div>
     );
+
   return (
     <div className="UserData">
       <MainNavBar />
-      {console.log(data)}
-
       <div className="UserDataContainer">
         <div className="UserDataHeading">
           <div className="UserDataHeadingLeft">
@@ -137,7 +137,17 @@ function UserData() {
                 <p className="UserDataTitle"></p>
                 <div className="UserDataValueButton">
                   <p>Forgot</p>
-                  <p>Change</p>
+                  <p
+                    onClick={() => {
+                      setisOpen(true);
+                    }}
+                  >
+                    Change
+                  </p>
+                  <PasswordChangeModal
+                    open={isOpen}
+                    onclose={() => setisOpen(false)}
+                  />
                 </div>
               </div>
 
