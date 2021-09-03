@@ -11,8 +11,6 @@
   width: 82px;
   height: 57px;
   position: absolute;
-  /* left: 25%;
-    top: 40%; */
   margin-top: 1%;
   margin-left: -15%;
   transform: rotate(-15.51deg);
@@ -23,8 +21,6 @@
   width: 47.63px;
   height: 68.43px;
   transform: rotate(8.75deg);
-  /* top: 82%;
-    left: 65%; */
   margin-left: clamp(20vw, 30vw, 30vw);
   padding-top: clamp(10vh, 30vh, 60vh);
 }
@@ -33,7 +29,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  /* min-height: 60vh; */
   min-height: 50vh;
   width: 100%;
 }
@@ -190,4 +185,60 @@
 .SignUpEmailError::after {
   display: flex;
   width: inherit;
+}
+
+@media only screen and (max-width: 800px) {
+  .SignUpContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .signUpHeart {
+    position: absolute;
+    right: 5vw;
+    top: 20vh;
+  }
+  .SignUpFirstPage {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100vw;
+  }
+  .SignUpFormLineAlreadyLine {
+    position: relative;
+    width: 60vw;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+  }
+  .signUpFlower {
+    position: absolute;
+    top: 70vh;
+    left: 8vw;
+    margin: 0;
+    padding: 0;
+  }
+  .SignUpLoginButton {
+    /* margin: 0; */
+    margin-left: 60px;
+    margin-bottom: 5px;
+  }
+  .SignUpFormBox > input[type="submit"] {
+    width: 60vw;
+    position: relative;
+    left: 5vw;
+    margin-top: 15px;
+  }
+  .SignUpLines {
+    width: 110%;
+  }
+
+  /* .SignUpFormBox > input[type="text"],
+  .signUpPassword > input[type="password"],
+  .signUpPassword > input[type="text"] {
+    margin: 0;
+  } */
+  .signUpPassword {
+    width: 100%;
+  }
 }

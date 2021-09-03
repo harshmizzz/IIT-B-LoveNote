@@ -10,14 +10,21 @@ import {
   withRouter,
 } from "react-router-dom";
 import "./SignUp.css";
+import Media from "react-media";
 import SignUpThird from "../../Components/SignUp/ThirdPage/SignUpThird";
 import SignUpFourth from "../../Components/SignUp/FourthPage/SignUpFourth";
 import LoginPage from "../../Components/SignUp/Loginpage/LoginPage";
+import HamburgerBox2 from "../../Components/SignUp/SignUpNav/HamburgerBox2";
+import MobileProgressBar from "../../Components/SignUp/Progress/MobileProgressBar";
 const SignUp = () => {
   return (
     <Router>
       <div>
-        <SignUPNav />
+        <Media query={{ maxWidth: 800 }}>
+          {(matches) => (matches ? <HamburgerBox2 /> : <SignUPNav />)}
+        </Media>
+
+        {/* <SignUPNav /> */}
         <div className="SignUpBody">
           <div className="SignUpHeading">
             <div className="signUpBig">Sign Up</div>
@@ -26,7 +33,10 @@ const SignUp = () => {
             </div>
           </div>
           <div className="SignUpBox">
-            <ProgressBar />
+            <Media query={{ maxWidth: 800 }}>
+              {(matches) => (matches ? <MobileProgressBar /> : <ProgressBar />)}
+            </Media>
+
             <Switch>
               <div className="SignUpContainer">
                 <Route component={SignUpPage} path="/SignUp" exact />

@@ -1,47 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-.SignUpBody{
-    margin-top: 60px;
-    margin-left: 98px;
-    margin-right: 139px;
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-    width: clamp(80vw,80vw,100vw);
-    
+.SignUpBody {
+  margin-top: 60px;
+  margin-left: 98px;
+  margin-right: 139px;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  width: clamp(80vw, 80vw, 100vw);
 }
-.SignUpHeading{
-    margin-bottom: 26px;
+.SignUpHeading {
+  margin-bottom: 26px;
 }
-
 
 .signUpBig {
-    color: #0f071b;
-    line-height: 37px;
-    font-size: 30px;
-    font-family: "Montserrat", sans-serif;
-font-style: normal;
-font-weight: 500;
+  color: #0f071b;
+  line-height: 37px;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
-.signUpSmall{
-    font-size: 16px;
-    line-height: 20px;
-    font-family: "Montserrat";
+.signUpSmall {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Montserrat";
 }
 
-.SignUpBox{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    border: 1px solid #f5a834;
-    box-sizing: border-box;
-    border-radius: 4.46963px;
-    margin-bottom: 20px;
+.SignUpBox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid #f5a834;
+  box-sizing: border-box;
+  border-radius: 4.46963px;
+  margin-bottom: 20px;
 }
-.SignUpContainer{
+.SignUpContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-height: 60vh;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  .SignUpBody {
+    margin-left: 5vh;
+  }
+  .SignUpContainer {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    max-height: 60vh;
-    overflow-x: hidden;
+  }
+  .SignUpBox {
+    height: 60vh;
+  }
 }
