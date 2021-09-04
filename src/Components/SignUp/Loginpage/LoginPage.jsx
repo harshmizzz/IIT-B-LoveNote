@@ -165,12 +165,16 @@ function LoginPage() {
               <img onClick={togglePasswordVisiblity} alt="eye" src={eye} />
             </div>
             <div className="LoginLines"></div>
+            <div className="LoginForgotPassword">
+              <p>Forgot password?</p>
+            </div>
             <ErrorMessage
               errors={errors}
               name="password"
               as="p"
               className="LoginEmailError"
             />
+
             <input type="submit" value="Log In" />
           </form>
           <div className="LoginFormLineAlreadyLine"></div>

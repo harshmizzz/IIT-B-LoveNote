@@ -99,6 +99,19 @@
   justify-content: center;
 }
 
+.SignUpSecondFormBottom > input[type="submit"] {
+  background: #0f071b;
+  border-radius: 50px;
+  width: 106px;
+  height: 40px;
+  border-style: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #ebe7e6;
+}
+
 .SignUpSecondFormBottom > h4 {
   font-size: 16px;
   line-height: 20px;
@@ -106,3 +119,27 @@
   font-weight: 600px;
 }
 
+@media only screen and (max-width: 800px) {
+  .SignUpSecondRight {
+    display: none;
+  }
+  .SecondFormItems {
+    margin-left: 0;
+  }
+  .SignUpSecondItemsLines {
+    width: 80vw;
+  }
+  .SecondFormItems > select {
+    min-width: 60vw;
+    margin: 0;
+  }
+  .SignUpSecondMoreHeading {
+    margin-left: 0;
+  }
+  .SignUpSecondFormBottom {
+    margin-left: 0;
+  }
+  .SecondFormItems option {
+    width: 40vw;
+  }
+}

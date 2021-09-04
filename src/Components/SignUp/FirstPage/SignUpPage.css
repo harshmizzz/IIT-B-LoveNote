@@ -176,7 +176,6 @@
   display: flex;
   margin: 0;
   margin-block: 0;
-
   color: #bf1650;
   width: 15vw;
 }
@@ -195,7 +194,7 @@
   }
   .signUpHeart {
     position: absolute;
-    right: 5vw;
+    right: 2vw;
     top: 20vh;
   }
   .SignUpFirstPage {
@@ -220,7 +219,7 @@
   }
   .SignUpLoginButton {
     /* margin: 0; */
-    margin-left: 60px;
+    margin-left: 40px;
     margin-bottom: 5px;
   }
   .SignUpFormBox > input[type="submit"] {
@@ -232,7 +231,11 @@
   .SignUpLines {
     width: 110%;
   }
-
+  .SignUpFormBox > input[type="text"],
+  .signUpPassword > input[type="password"],
+  .signUpPassword > input[type="text"] {
+    width: 90%;
+  }
   /* .SignUpFormBox > input[type="text"],
   .signUpPassword > input[type="password"],
   .signUpPassword > input[type="text"] {

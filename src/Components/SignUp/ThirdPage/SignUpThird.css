@@ -1,120 +1,155 @@
-.ThirdFormItems label::after{
-    color: #ff5555;
-    content: "*";
-    display: inline;
+.ThirdFormItems label::after {
+  color: #ff5555;
+  content: "*";
+  display: inline;
 }
-.SignUpThird{
-    display: flex;
-    font-family: "Montserrat";
-    font-size: 16px;
-    line-height: 20px;
-    color: #0f071b;
-}
-
-.SignUpThirdLeft{
-    width: 50vw;
-    min-height: 60vh;
-}
-.SignUpThirdRight{
-    min-width: 40vw;
-    display: flex;
+.SignUpThird {
+  display: flex;
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 20px;
+  color: #0f071b;
 }
 
-.SignUpThirdRight > img{
-    position: absolute;
-    width: 390px;
-    height: 237px;
-    transform: rotate(6.5deg);
-    margin-top: clamp(10vh,15vh,20vh);
-    z-index: 0;
+.SignUpThirdLeft {
+  width: 50vw;
+  min-height: 60vh;
+}
+.SignUpThirdRight {
+  min-width: 40vw;
+  display: flex;
 }
 
-.SignUpThirdItemsLines{
-    width: 40vw;
-    border: 1px solid #cabfbc;
+.SignUpThirdRight > img {
+  position: absolute;
+  width: 390px;
+  height: 237px;
+  transform: rotate(6.5deg);
+  margin-top: clamp(10vh, 15vh, 20vh);
+  z-index: 0;
 }
 
-.SignUpThirdForm{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+.SignUpThirdItemsLines {
+  width: 40vw;
+  border: 1px solid #cabfbc;
 }
 
-
-.ThirdFormItems{
-    margin-top: 30px;
-    margin-left: 50px;
-    display: flex;
-    flex-direction: column;
+.SignUpThirdForm {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-.ThirdFormItems>select{
-    padding: 5px; 
-    border: 0px;
-    min-width: 40vw;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 10%;
+.ThirdFormItems {
+  margin-top: 30px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
-.ThirdFormItems>select {
-  font-family:inherit;
-padding-left: 5px;
+.ThirdFormItems > select {
+  padding: 5px;
+  border: 0px;
+  min-width: 40vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 10%;
+}
+
+.ThirdFormItems > select {
+  font-family: inherit;
+  padding-left: 5px;
   font-size: inherit;
 }
-.ThirdFormItems>select:focus{
+.ThirdFormItems > select:focus {
   outline: none;
-padding-left: 5px;
+  padding-left: 5px;
 }
 
-
-.SignUpThirdFormBottom{
-    display: flex;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
+.SignUpThirdFormBottom {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
-.SignUpThirdFormBottom>h4{
-    font-size: 16px;
-    line-height: 20px;
-    font-family: "Montserrat";
-    font-weight: 600px;
+.SignUpThirdFormBottom > h4 {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Montserrat";
+  font-weight: 600px;
 }
 
-.SignUpThirdFormBottom>input[type=submit]{
-    height: 49px;
-    width: 140px;
-    border-radius: 50px;
-    background-color: #0f071b;
-    color: #ebe7e6;
-    border: none;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 20px;
-    font-weight: 500;
-    font-family: "Monserrat";
+.SignUpThirdFormBottom > input[type="submit"] {
+  height: 49px;
+  width: 140px;
+  border-radius: 50px;
+  background-color: #0f071b;
+  color: #ebe7e6;
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "Monserrat";
 }
 
-.sliderComponent{
+.sliderComponent {
+  width: 40vw;
+  margin-top: 50px;
+}
+
+.sliderComponent > .MuiSlider-root {
+  color: black;
+}
+
+.sliderComponent > .MuiSlider-rail {
+  color: #cabfbc;
+}
+
+.sliderComponent > .PrivateValueLabel-circle-4 {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .SignUpThirdRight {
+    display: none;
+  }
+  .ThirdFormItems {
+    margin-left: 0;
+  }
+  .SignUpThirdItemsLines {
+    width: 60vw;
+  }
+  .SignUpThird {
+    width: 80vw;
+  }
+  .ThirdFormItems > select {
+    min-width: 60vw;
+    margin: 0;
+  }
+  .SignUpThirdMoreHeading {
+    margin-left: 0;
+  }
+  .SignUpThirdFormBottom {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 80vw;
+    justify-content: flex-start;
+  }
+  .SignUpThirdFormBottom > input[type="submit"] {
+    width: 100px;
+  }
+  .ThirdFormItems option {
     width: 40vw;
-    margin-top: 50px;
-
-}
-
-.sliderComponent>.MuiSlider-root{
-    color: black;
-}
-
-.sliderComponent > .MuiSlider-rail{
-   color: #cabfbc;
-}
-
-.sliderComponent >.PrivateValueLabel-circle-4 {
-    background-color: white;
-    width: 10px;
-    height: 10px;
+  }
+  .sliderComponent {
+    width: 60vw;
+  }
 }

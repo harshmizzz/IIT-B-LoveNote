@@ -63,3 +63,14 @@
 .hamburger-react {
   color: #fff;
 }
+
+.JoinNowDisabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfc4c1;
+  background-color: rgba(15, 7, 27, 0.4);
+  box-shadow: 0px 2px 5px rgba(15, 7, 27, 0.1);
+  border-radius: 50px;
+  width: 120px;
+}

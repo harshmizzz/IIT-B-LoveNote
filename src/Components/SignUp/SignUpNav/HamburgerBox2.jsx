@@ -38,14 +38,9 @@ function HamburgerBox2() {
           >
             Meet Us
           </h3>
-          <h3
-            onClick={() => {
-              history.push("/SignUp");
-              setOpen(false);
-            }}
-          >
+          <div className="JoinNowDisabled">
             <p>Join Now</p>
-          </h3>
+          </div>
         </div>
       </div>
     </div>

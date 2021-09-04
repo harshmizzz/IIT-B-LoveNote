@@ -91,3 +91,12 @@
   font-weight: 500;
   font-family: "Monserrat";
 }
+
+@media only screen and (max-width: 800px) {
+  .SignUpFourthImg {
+    display: none;
+  }
+  .SignUpTextbox {
+    width: 70vw;
+  }
+}
