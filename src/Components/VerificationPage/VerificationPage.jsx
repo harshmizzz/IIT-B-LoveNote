@@ -12,6 +12,10 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../StoreFeatures/userSlice";
 import { db } from "../StoreFeatures/firebase";
 import firebase from "firebase";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import Media from "react-media";
+import HamburgerBox2 from "../SignUp/SignUpNav/HamburgerBox2";
+import { useHistory } from "react-router";
 function VerificationPage() {
   const [file, setFile] = useState([]);
   const [filesupload, setfilesupload] = useState([]);
@@ -77,6 +81,8 @@ function VerificationPage() {
     }
   }
 
+  const history = useHistory();
+
   function deleteFile(e) {
     const s = file.filter((item, index) => index !== e);
     setFile(s);
@@ -87,11 +93,24 @@ function VerificationPage() {
   }
   return (
     <div className="VerificationPage">
-      <MainNavBar />
+      <Media query={{ maxWidth: 800 }}>
+        {(matches) => (matches ? <HamburgerBox2 /> : <MainNavBar />)}
+      </Media>
       <div className="VerificationPageContainer">
         <div className="VerificationPageHeading">
           <div className="VerificationPageHeadingLeft">
-            <h3>Verification</h3>
+            <div className="VerificatinPageArrowContainer">
+              <div
+                className="VerificationPageBackArrow"
+                onClick={() => {
+                  history.push("/main");
+                }}
+              >
+                <ArrowBackIcon />
+              </div>
+              <h3>Verification</h3>
+            </div>
+
             <p>
               Thanks for verifiying yourself, trust us it’s a good step to take
             </p>

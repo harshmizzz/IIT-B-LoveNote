@@ -22,6 +22,7 @@ const Home = () => {
       <div className="videoBody">
         <VideoScreen />
       </div>
+      <VerticalCarousel />
       <BirthLoveNote />
       <Excited />
     </>

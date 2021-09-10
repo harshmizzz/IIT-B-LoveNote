@@ -11,6 +11,8 @@ import { auth, db } from "../../Components/StoreFeatures/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, selectUser } from "../../Components/StoreFeatures/userSlice";
 import { useState } from "react";
+import HamburgerBox2 from "../../Components/SignUp/SignUpNav/HamburgerBox2";
+import Media from "react-media";
 function MainPage() {
   const user = useSelector(selectUser);
   const [data, setdata] = useState("");
@@ -38,7 +40,9 @@ function MainPage() {
   }, []);
   return (
     <div className="MainPage">
-      <MainNavBar />
+      <Media query={{ maxWidth: 800 }}>
+        {(matches) => (matches ? <HamburgerBox2 /> : <MainNavBar />)}
+      </Media>
       <div className="MainPageContainer">
         <div className="MainPageHeading">
           <div className="MainPageHeadingLeft">
@@ -55,7 +59,6 @@ function MainPage() {
         <div className="MainPageItems">
           <div className="MainPageVerificationBox">
             {console.log(data.isVerified)}
-
             {data.isVerified === false ? <MainVerification /> : <Verified />}
           </div>
           <div className="MainPageProfileBox">

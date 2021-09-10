@@ -3,13 +3,13 @@
 }
 .videoBody {
   display: flex;
+  background: #ebe7e6;
   justify-content: center;
 }
 .Carousel {
   display: flex;
   justify-content: center;
   margin: auto;
-  /* width: 80%; */
   height: 400px;
 }
 

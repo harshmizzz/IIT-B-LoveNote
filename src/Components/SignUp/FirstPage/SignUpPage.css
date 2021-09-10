@@ -110,6 +110,7 @@
   font-family: "Manrope";
   font-size: 18px;
   line-height: 22px;
+  cursor: pointer;
   font-style: normal;
 }
 
@@ -186,7 +187,7 @@
   width: inherit;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .SignUpContainer {
     display: flex;
     align-items: flex-start;
@@ -195,7 +196,11 @@
   .signUpHeart {
     position: absolute;
     right: 2vw;
-    top: 20vh;
+    top: 25vh;
+  }
+  .SignUpForm > form {
+    width: 60vw;
+    margin-left: 40px;
   }
   .SignUpFirstPage {
     align-items: flex-start;
@@ -222,14 +227,17 @@
     margin-left: 40px;
     margin-bottom: 5px;
   }
+  .SignUpFormAlreadyAccount {
+    margin-left: 40px;
+  }
   .SignUpFormBox > input[type="submit"] {
-    width: 60vw;
+    width: 40vw;
     position: relative;
-    left: 5vw;
+    left: 11vw;
     margin-top: 15px;
   }
   .SignUpLines {
-    width: 110%;
+    width: 100%;
   }
   .SignUpFormBox > input[type="text"],
   .signUpPassword > input[type="password"],

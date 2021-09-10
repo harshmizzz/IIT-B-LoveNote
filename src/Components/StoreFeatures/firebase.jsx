@@ -16,16 +16,6 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 firebase.analytics();
 
-const sendPasswordResetEmail = async (email) => {
-  try {
-    await auth.sendPasswordResetEmail(email);
-    window.prompt("Password reset link sent!");
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-};
-
 const auth = firebase.auth();
 const storage = firebase.storage();
 const db = firebaseApp.firestore();

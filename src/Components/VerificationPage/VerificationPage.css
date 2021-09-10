@@ -1,6 +1,6 @@
 .VerificationPageContainer {
   min-height: 91vh;
-  /* margin-top: 9vh; */
+  margin-top: 9vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,4 +257,53 @@
   width: 127px;
   height: 91px;
 }
+.VerificationPageBackArrow {
+  display: none;
+}
 
+@media only screen and (max-width: 800px) {
+  .VerificationPageBackArrow {
+    display: flex;
+    border: 2px solid #0f071b;
+    border-radius: 50%;
+    /* margin-top: 20vh; */
+  }
+  .VerificationPageContainer {
+    margin-top: 5vh;
+  }
+  .VerificationPageBackArrow > .MuiSvgIcon-root {
+    color: #0f071b;
+  }
+  .VerificatinPageArrowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .VerificationBox {
+    max-height: none;
+    overflow-y: auto;
+    flex-direction: column;
+  }
+  .VerificationBoxLeft {
+    flex-direction: column;
+  }
+  .VerificationItemGrid {
+    display: flex;
+    flex-direction: column;
+  }
+  .VerificationBoxRight {
+    margin-top: 30px;
+  }
+  .VerificationButtonBox {
+    display: block;
+  }
+  .VerificationBoxItem {
+    margin-left: 20px;
+  }
+  .VerificationImageDelete {
+    width: 20vw;
+  }
+}

@@ -38,3 +38,33 @@
   width: 192px;
   height: 188px;
 }
+
+@media only screen and (max-width: 800px) {
+  .Verified {
+    width: 100%;
+    flex-direction: row;
+    height: 100%;
+  }
+  .VerifiedItems {
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 0;
+    justify-content: flex-start;
+  }
+
+  .VerifiedHeading {
+    font-size: 13px;
+    width: 90%;
+  }
+  .VerifiedImage {
+    margin-left: 0;
+  }
+  .VerifiedImage > img {
+    width: 109px;
+    height: 110px;
+  }
+  .VerifiedText {
+    width: 100%;
+    font-size: 13px;
+  }
+}

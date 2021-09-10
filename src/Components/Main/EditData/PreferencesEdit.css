@@ -1,0 +1,96 @@
+.PreferencesEditModalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 7, 27, 0.9);
+}
+
+.PreferencesEditModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  padding: 20px;
+  background: #f5a834;
+
+  border-radius: 5px;
+  font-family: "Montserrat";
+  transform: translate(-50%, -50%);
+  min-width: 50vw;
+  min-height: 50vh;
+}
+
+.PreferencesEditTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.PreferencesEditHeadingClose {
+  cursor: pointer;
+}
+
+.PreferencesEditItems {
+  margin-top: 4px;
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.PreferencesEditItems > input[type="text"],
+.PreferencesEditItems > select {
+  padding: 5px;
+  border: 0px;
+  min-width: 30vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /* width: 10%; */
+}
+
+.PreferencesEditModal input[type="submit"] {
+  background: #0f071b;
+  border-radius: 50px;
+  width: 106px;
+  height: 40px;
+  border-style: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #ebe7e6;
+}
+
+@media only screen and (max-width: 800px) {
+  .PreferencesEditModalWrapper {
+    width: 100vw;
+  }
+  .PreferencesEditModal {
+    width: 90%;
+    height: auto;
+    font-size: 15px;
+  }
+  .PreferencesEditItems {
+    margin-left: 0;
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .PreferencesEditItems > input[type="text"],
+  .PreferencesEditItems > select {
+    min-width: 30vw;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    padding: 3px;
+  }
+
+  .PreferencesEditItems option {
+    width: 40vw;
+  }
+}

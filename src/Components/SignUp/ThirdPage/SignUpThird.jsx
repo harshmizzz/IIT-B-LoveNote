@@ -18,13 +18,13 @@ function SignUpThird() {
         Preferences: {
           PGender: data.gender,
           PAge: val,
-          PLocation: data.state,
+          PState: data.state,
           PReligion: data.religion,
           PExercise: data.exercise,
-          PDrink: data.drink,
-          PChildren: data.children,
+          PIsDrink: data.drink,
+          PWantChildren: data.children,
           PDiet: data.diet,
-          PSmoke: data.smoke,
+          PIsSmoke: data.smoke,
         },
       })
       .then(() => {
@@ -90,6 +90,7 @@ function SignUpThird() {
               <option value="" disabled selected>
                 State
               </option>
+              <option value="Open to Anywhere">Open to Anywhere</option>
               <option value="Andhra Pradesh">Andhra Pradesh</option>
               <option value="Andaman and Nicobar Islands">
                 Andaman and Nicobar Islands

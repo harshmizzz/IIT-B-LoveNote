@@ -1,0 +1,35 @@
+.MobileProgress {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  height: 8vh;
+  text-align: center;
+  font-family: "Montserrat";
+  color: #f8c3b3;
+}
+
+.MobileProgressActive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f071b;
+  border-bottom: 1px solid #0f071b;
+  border-width: 100%;
+  width: 20%;
+}
+
+.MobileProgressNotActive .MuiSvgIcon-root {
+  color: #f8c3b3;
+}
+
+.MobileProgressNotActive {
+  display: flex;
+  height: 100%;
+  width: 20%;
+  align-items: center;
+  border-bottom: 1px solid #f8c3b3;
+  justify-content: center;
+}

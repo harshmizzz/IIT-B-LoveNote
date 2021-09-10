@@ -1,7 +1,11 @@
 import React from "react";
 import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
 import "./MainNavBar.css";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../StoreFeatures/userSlice";
+import { auth } from "../../StoreFeatures/firebase";
 function MainNavBar() {
+  const user = useSelector(selectUser);
   return (
     <div className="MainNavBar">
       <a href="/">
@@ -16,7 +20,7 @@ function MainNavBar() {
       <div>
         <AccountCircleOutlinedIcon />
         <div>
-          <p>Name</p>
+          <p>{auth.currentUser ? user.name : ""}</p>
           <div className="MainNavLine"></div>
         </div>
       </div>

@@ -11,9 +11,11 @@ import { Link, Redirect, withRouter } from "react-router-dom";
 import { auth, db } from "../../StoreFeatures/firebase";
 import { useDispatch } from "react-redux";
 import firebase from "firebase";
-import { login } from "../../StoreFeatures/userSlice";
+import { login, selectUser } from "../../StoreFeatures/userSlice";
+import { useSelector } from "react-redux";
 function LoginPage() {
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
   const {
     register,
     handleSubmit,
@@ -22,6 +24,15 @@ function LoginPage() {
   const onSubmit = (data) => {
     console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
+  };
+  const sendPasswordResetEmail = async () => {
+    try {
+      await auth.sendPasswordResetEmail(window.prompt("Enter Email"));
+      window.alert("Password reset link sent!");
+    } catch (err) {
+      console.error(err);
+      alert(err.message);
+    }
   };
   // const [data, setdata] = useState("");
 
@@ -165,7 +176,10 @@ function LoginPage() {
               <img onClick={togglePasswordVisiblity} alt="eye" src={eye} />
             </div>
             <div className="LoginLines"></div>
-            <div className="LoginForgotPassword">
+            <div
+              className="LoginForgotPassword"
+              onClick={sendPasswordResetEmail}
+            >
               <p>Forgot password?</p>
             </div>
             <ErrorMessage

@@ -31,10 +31,13 @@ const SignUp = () => {
             <div className="signUpsmall">
               All your information can be edited later
             </div>
+            <Media query={{ maxWidth: 800 }}>
+              {(matches) => (matches ? <MobileProgressBar /> : "")}
+            </Media>
           </div>
           <div className="SignUpBox">
             <Media query={{ maxWidth: 800 }}>
-              {(matches) => (matches ? <MobileProgressBar /> : <ProgressBar />)}
+              {(matches) => (matches ? "" : <ProgressBar />)}
             </Media>
 
             <Switch>

@@ -34,7 +34,7 @@
 .WhatSpecialImg {
   width: 168px;
   height: 215px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .imgCard > p,

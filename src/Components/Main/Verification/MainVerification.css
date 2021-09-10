@@ -44,3 +44,49 @@
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (max-width: 800px) {
+  .MainVerification {
+    width: 90%;
+    align-items: flex-end;
+    gap: 0;
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+  .VerificationAbstract {
+    display: none;
+  }
+  .MainVerification > div {
+    max-width: none;
+  }
+  .MainVerification :first-child {
+    width: 100%;
+    font-size: 13px;
+    max-width: none;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .MainVerification > div > p {
+    width: 100%;
+  }
+  .MainPageVerifyButton {
+    max-width: none;
+    width: 120px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .MainPageVerifyImages,
+  .VerificationStanding {
+    width: 104px;
+    height: 72px;
+  }
+  .VerificationStanding {
+    margin: 0;
+    position: relative;
+    right: 15vh;
+    bottom: 8vh;
+    transform: rotateY(180deg);
+  }
+}

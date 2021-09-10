@@ -1,8 +1,8 @@
 import React from "react";
 import "./WhatSpecial.css";
-import img1 from "../../Images/WhatSpecialImgs/Illustration 1.png";
-import img2 from "../../Images/WhatSpecialImgs/Illustration 2.png";
-import img3 from "../../Images/WhatSpecialImgs/Illustration 3.png";
+import img1 from "../../Images/WhatSpecialImgs/Illustration1.png";
+import img2 from "../../Images/WhatSpecialImgs/Illustration2.png";
+import img3 from "../../Images/WhatSpecialImgs/Illustration3.png";
 import Media from "react-media";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -25,7 +25,6 @@ const WhatSpecial = () => {
               <Swiper
                 // install Swiper modules
                 modules={[Pagination, A11y]}
-                
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
@@ -37,11 +36,11 @@ const WhatSpecial = () => {
                       <img src={img1} alt="" />
                     </div>
                     <div className="WhatsSpecialText">
-                      <h3>Not working? know it early</h3>
+                      <h3>Gauge a person, your own way!</h3>
                       <p>
-                        Add only thoughful matches in the list and remove the
-                        rest-choose your 'the one' better with our detailed
-                        profiles and finite matche list.
+                        We have a surprise for you! You can now ask whatever you
+                        always wanted to ask strangers, before adding them to
+                        your bracket!
                       </p>
                     </div>
                   </div>
@@ -49,14 +48,13 @@ const WhatSpecial = () => {
                 <SwiperSlide>
                   <div className="WhatsSpecialContainer">
                     <div className="WhatsSpecialimg">
-                      <img src={img1} alt="" />
+                      <img src={img2} alt="" />
                     </div>
                     <div className="WhatsSpecialText">
-                      <h3>Not working? know it early</h3>
+                      <h3>Forgo the incompatible</h3>
                       <p>
-                        Add only thoughful matches in the list and remove the
-                        rest-choose your 'the one' better with our detailed
-                        profiles and finite matche list.
+                        Select a few admirables, remove the unsuitable to avoid
+                        the wild goose chase
                       </p>
                     </div>
                   </div>
@@ -64,14 +62,14 @@ const WhatSpecial = () => {
                 <SwiperSlide>
                   <div className="WhatsSpecialContainer">
                     <div className="WhatsSpecialimg">
-                      <img src={img1} alt="" />
+                      <img src={img3} alt="" />
                     </div>
                     <div className="WhatsSpecialText">
-                      <h3>Not working? know it early</h3>
+                      <h3>On the safer side...</h3>
                       <p>
-                        Add only thoughful matches in the list and remove the
-                        rest-choose your 'the one' better with our detailed
-                        profiles and finite matche list.
+                        Verified users, verified users, verified all the way! oh
+                        what a relief it is to enable and disable calls on your
+                        way
                       </p>
                     </div>
                   </div>
@@ -85,27 +83,28 @@ const WhatSpecial = () => {
                 <div className="row imageRow">
                   <div className="imgCard column col-lg-4">
                     <img className="WhatSpecialImg" src={img1} alt="" />
-                    <h3>Not working? know it early</h3>
+                    <h3>Gauge a person, your own way!</h3>
                     <p>
-                      Add only thoughful matches in the list and remove the
-                      rest-choose your 'the one' better with our detailed
-                      profiles and finite matche list.
+                      We have a surprise for you! You can now ask whatever you
+                      always wanted to ask strangers, before adding them to your
+                      bracket!
                     </p>
                   </div>
                   <div className="imgCard column col-lg-4">
                     <img className="WhatSpecialImg" src={img2} alt="" />
-                    <h3> Helps you choose your "one {"&"} only" </h3>
+                    <h3>Forgo the incompatible</h3>
                     <p>
-                      We are with you till the end. By helping you compare all
-                      your matches, through different activities {"&"} stages
+                      Select a few admirables, remove the unsuitable to avoid
+                      the wild goose chase
                     </p>
                   </div>
                   <div className="imgCard column col-lg-4">
                     <img className="WhatSpecialImg" src={img3} alt="" />
-                    <h3>We understand your safety</h3>
+                    <h3>On the safer side...</h3>
                     <p>
-                      You can now enable or disable the call option with your
-                      match whenever you'd like!
+                      Verified users, verified users, verified all the way! oh
+                      what a relief it is to enable and disable calls on your
+                      way
                     </p>
                   </div>
                 </div>

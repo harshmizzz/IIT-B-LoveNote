@@ -5,8 +5,7 @@
 
 .upperImg {
   position: absolute;
-  top: 200vh;
-  z-index: -1;
+  top: 195vh;
   left: 5vh;
 }
 .lowerImg {

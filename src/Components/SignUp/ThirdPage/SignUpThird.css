@@ -87,6 +87,7 @@
   height: 49px;
   width: 140px;
   border-radius: 50px;
+  cursor: pointer;
   background-color: #0f071b;
   color: #ebe7e6;
   border: none;
@@ -130,7 +131,7 @@
     width: 80vw;
   }
   .ThirdFormItems > select {
-    min-width: 60vw;
+    min-width: 80vw;
     margin: 0;
   }
   .SignUpThirdMoreHeading {
@@ -150,6 +151,6 @@
     width: 40vw;
   }
   .sliderComponent {
-    width: 60vw;
+    width: 80vw;
   }
 }

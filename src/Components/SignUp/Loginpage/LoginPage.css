@@ -211,10 +211,11 @@
   .LoginHeart {
     position: absolute;
     right: 2vw;
-    top: 20vh;
+    top: 25vh;
   }
   .LoginForm > form {
-    max-width: 50vw;
+    max-width: 60vw;
+    margin-left: 20px;
   }
   .LoginForgotPassword {
     width: auto;
@@ -226,7 +227,7 @@
     margin-left: -10vw;
   }
   .LoginForm {
-    /* margin-left: 30vw;  */
+    margin-left: 20vw;
   }
   .LoginFormLineAlreadyLine {
     position: relative;
@@ -234,7 +235,7 @@
     margin: 0;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 40px;
+    margin-left: 10%;
   }
   .LoginFlower {
     position: absolute;
@@ -245,17 +246,18 @@
   }
   .LoginLoginButton {
     /* margin: 0; */
-    margin-left: 40px;
+    width: 200px;
+    margin-left: 20px;
     margin-bottom: 5px;
   }
   .LoginFormBox > input[type="submit"] {
     width: 40vw;
     position: relative;
-    left: 5vw;
-    margin-top: 15px;
+    left: 10vw;
+    margin-top: 0;
   }
   .LoginLines {
-    width: 110%;
+    width: 100%;
   }
   .LoginFormBox > input[type="text"],
   .LoginPassword > input[type="password"],
@@ -267,7 +269,7 @@
     width: 100%;
   }
   .LoginFormAlreadyAccount {
-    margin-left: 0;
+    margin-left: 20px;
   }
 }
 

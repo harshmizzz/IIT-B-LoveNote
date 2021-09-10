@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignUpSecond.css";
 import men from "../../../Images/SignUp/Stuck at Home Sitting On Floor.png";
 import women from "../../../Images/SignUp/Olá Planting.png";
@@ -8,6 +8,16 @@ import { auth, db } from "../../StoreFeatures/firebase";
 import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, selectUser } from "../../StoreFeatures/userSlice";
+import { MultiSelect } from "react-multi-select-component";
+
+const options = [
+  { label: "English ", value: "English" },
+  { label: "Hindi ", value: "Hindi" },
+  { label: "Marathi ", value: "Marathi" },
+  { label: "Tamil ", value: "Tamil" },
+  { label: "Telugu ", value: "Telugu" },
+  { label: "Kannada ", value: "Kannada" },
+];
 function SignUPSecond() {
   const {
     register,
@@ -17,6 +27,8 @@ function SignUPSecond() {
 
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+  const [selected, setSelected] = useState([]);
+
   const onSubmit = (data) => {
     console.log(data);
     db.collection("users")
@@ -26,15 +38,15 @@ function SignUPSecond() {
         Age: data.age,
         Gender: data.gender,
         HeightFt: data.height,
-        Location: data.location,
-        Language: data.language,
-        Occupation: data.occupation,
+        State: data.location,
+        Languages: selected.map((n) => n.label),
+        Profession: data.occupation,
         Relationship: data.status,
         Diet: data.diet,
         Exercise: data.exercise,
-        Smoke: data.smoke,
-        Drink: data.drink,
-        Children: data.children,
+        IsSmoke: data.smoke,
+        IsDrink: data.drink,
+        WantChildren: data.children,
         Religion: data.religion,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       })
@@ -183,14 +195,15 @@ function SignUPSecond() {
           </div>
           <div className="SecondFormItems">
             <label>What language(s) can you speak?</label>
-            <input
-              type="text"
-              {...register("language", {
-                required: true,
-              })}
-              autoComplete="off"
-              placeholder="Type here"
+            <MultiSelect
+              options={options}
+              value={selected}
+              disableSearch
+              hasSelectAll={false}
+              onChange={setSelected}
+              labelledBy="Choose"
             />
+            {console.log(selected.map((n) => n.label))}
             <div className="SignUpSecondItemsLines"></div>
           </div>
           <div className="SecondFormItems">

@@ -1,0 +1,96 @@
+.ProfileEditModalWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 7, 27, 0.9);
+}
+
+.ProfileEditModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  padding: 20px;
+  background: #f8c3b3;
+
+  border-radius: 5px;
+  font-family: "Montserrat";
+  transform: translate(-50%, -50%);
+  min-width: 50vw;
+  min-height: 50vh;
+}
+
+.ProfileEditTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ProfileEditHeadingClose {
+  cursor: pointer;
+}
+
+.ProfileEditItems {
+  margin-top: 4px;
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.ProfileEditItems > input[type="text"],
+.ProfileEditItems > select {
+  padding: 5px;
+  border: 0px;
+  min-width: 30vw;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /* width: 10%; */
+}
+
+.ProfileEditModal input[type="submit"] {
+  background: #0f071b;
+  border-radius: 50px;
+  width: 106px;
+  height: 40px;
+  border-style: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #ebe7e6;
+}
+
+@media only screen and (max-width: 800px) {
+  .ProfileEditModalWrapper {
+    width: 100vw;
+  }
+  .ProfileEditModal {
+    width: 90%;
+    height: auto;
+    font-size: 15px;
+  }
+  .ProfileEditItems {
+    margin-left: 0;
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .ProfileEditItems > input[type="text"],
+  .ProfileEditItems > select {
+    min-width: 30vw;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    padding: 3px;
+  }
+
+  .ProfileEditItems option {
+    width: 40vw;
+  }
+}

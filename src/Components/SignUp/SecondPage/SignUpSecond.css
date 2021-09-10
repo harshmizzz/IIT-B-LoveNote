@@ -25,17 +25,15 @@
   position: absolute;
   width: 213px;
   height: 212px;
-  /* margin-top: 60vh;
-    margin-left: 10vh; */
-  margin-top: clamp(10vh, 30vh, 30vh);
-  margin-left: clamp(2vh, 5vh, 10vh);
+  top: 50vh;
+  right: 20vw;
 }
 .SecondFormMen {
   position: absolute;
   width: 238px;
-  margin-left: clamp(0vw, 20vw, 25vw);
-  margin-top: clamp(10vh, 15vh, 20vh);
   height: 146px;
+  top: 35vh;
+  right: 5vw;
 }
 
 .SignUpSecondItemsLines {
@@ -109,6 +107,7 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  cursor: pointer;
   color: #ebe7e6;
 }
 
@@ -119,6 +118,20 @@
   font-weight: 600px;
 }
 
+.SecondFormItems .rmsc .dropdown-container {
+  border: none;
+}
+
+.SecondFormItems .rmsc .gray {
+  color: #161b1e;
+}
+.SecondFormItems .rmsc .dropdown-heading {
+  padding-right: 0;
+}
+
+.SecondFormItems .dropdown-content label::after {
+  display: none;
+}
 @media only screen and (max-width: 800px) {
   .SignUpSecondRight {
     display: none;
@@ -130,7 +143,7 @@
     width: 80vw;
   }
   .SecondFormItems > select {
-    min-width: 60vw;
+    min-width: 80vw;
     margin: 0;
   }
   .SignUpSecondMoreHeading {

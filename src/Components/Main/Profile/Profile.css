@@ -320,3 +320,52 @@
   min-height: 15vh;
   filter: blur(1px);
 }
+
+@media only screen and (max-width: 800px) {
+  .Profile {
+    width: 100%;
+  }
+  .ProfileHeading {
+    font-size: 14px;
+  }
+  .ProfileQuotes {
+    width: 90%;
+  }
+  .ProfileQuotes > div {
+    width: 90%;
+  }
+  .ProfileQuotesText > p {
+    width: 90%;
+    margin-left: 25px;
+  }
+  .ProfileQuoteHashtag {
+    margin-left: 20px;
+  }
+  .ProfileMain {
+    width: 90%;
+  }
+  .ProfileMainImage {
+    width: 100%;
+    height: 40vh;
+  }
+  .ProfileMainImage > img {
+    width: 90%;
+    height: 40vh;
+    object-fit: unset;
+  }
+  .ProfileMainUserProfileHashtag {
+    grid-column-gap: 5px;
+  }
+  .ProfileMainUserProfileHashtag > p {
+    padding: 0;
+    height: 30px;
+  }
+  .ProfileMainUserLifestyle,
+  .ProfileMainUserGoal {
+    min-width: 100%;
+  }
+  .ProfileMainUserAudioNotes,
+  .ProfileMainUserCompatibility {
+    min-width: 100%;
+  }
+}

@@ -1,0 +1,140 @@
+.VerticalCarousel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 90vh;
+  width: 99vw;
+  z-index: -999;
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+  text-align: center;
+  color: #0f071b;
+}
+
+.VerticalCarouselHeading {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.VerticalCarousel .swiper-container-pointer-events.swiper-container-vertical {
+  touch-action: pan-x;
+  height: 80vh;
+  width: 100%;
+}
+
+.VerticalCarousel .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #f5a834;
+}
+
+.VerticalImageContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.VerticalTopNumber {
+  font-size: 48px;
+  line-height: 59px;
+  text-align: center;
+  color: #ffc452;
+  margin-left: 20px;
+}
+
+.VerticalImageLeftTop,
+.VerticalImageMiddle,
+.VerticalImageBottom {
+  width: 80%;
+}
+
+.VerticalImageLeftTop {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 24px;
+
+  color: #0f071b;
+}
+
+.VerticalImageMiddle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0f071b;
+}
+
+.VerticalImageBottom {
+  font-family: Poiret One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 300;
+  color: #0f071b;
+}
+
+.VerticalImageLeft {
+  width: 30%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.VerticalTopContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.VerticalImageRight {
+  width: 70%;
+}
+
+.VerticalImageRight {
+  object-fit: contain;
+  height: 80vh;
+}
+
+.VerticalImageRight > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.VerticalFullImage {
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .VerticalCarousel .swiper-container {
+    width: 100% !important;
+    min-height: 20vh;
+  }
+  .VerticalFullImageContainer {
+  
+  }
+  .VerticalCarousel {
+    min-height: 20vh;
+  }
+  .VerticalImageContainer {
+    flex-direction: column-reverse;
+  }
+  .VerticalImageRight {
+    height: 30vh;
+    width: 100%;
+  }
+  .VerticalImageLeft {
+    width: 90%;
+  }
+  .VerticalTopNumber {
+    margin-left: 0;
+  }
+  .VerticalTopContent {
+    align-items: center;
+    margin-left: 0;
+  }
+}

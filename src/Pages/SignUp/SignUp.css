@@ -58,4 +58,7 @@
   .SignUpBox {
     min-height: 60vh;
   }
+  .SignUpHeading {
+    margin-bottom: 16px;
+  }
 }

@@ -70,3 +70,12 @@
   font-weight: 500;
   font-size: 16px;
 }
+
+@media only screen and (max-width: 800px) {
+  .VerificationModalWrapper {
+    width: 100vw;
+  }
+  .VerificationModal {
+    width: 90%;
+  }
+}
