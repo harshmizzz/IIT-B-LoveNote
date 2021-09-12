@@ -33,6 +33,4 @@
 Work Pending/To be Done:-
 
 1.Adding the dynamic suggested matches card
-2.Adding Crud Operations in userprofile data
-3.Protected Routes
-4.Mobile Responsive UI
+2.Protected Routes

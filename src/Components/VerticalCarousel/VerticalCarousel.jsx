@@ -1,6 +1,8 @@
 import React from "react";
 import "./VerticalCarousel.css";
-import img1 from "../../Images/HomeImg/step 1.2.png";
+import img12 from "../../Images/HomeImg/step 1.2.png";
+import img11 from "../../Images/HomeImg/step 1.1.png";
+
 import img2 from "../../Images/HomeImg/step 2.png";
 import img3 from "../../Images/HomeImg/step 3.png";
 import img41 from "../../Images/HomeImg/step 4.1.png";
@@ -16,10 +18,18 @@ import img92 from "../../Images/HomeImg/step 9.2.png";
 import img93 from "../../Images/HomeImg/step 9.3.png";
 import img94 from "../../Images/HomeImg/step 9 .4.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css/effect-fade";
 import "swiper/swiper.scss";
-import SwiperCore, { Autoplay, Mousewheel, Pagination, A11y } from "swiper";
+import SwiperCore, {
+  EffectFade,
+  Autoplay,
+  Mousewheel,
+  Pagination,
+  A11y,
+} from "swiper";
 import "swiper/components/pagination/pagination.scss";
-SwiperCore.use([Mousewheel, Autoplay, Pagination, A11y]);
+import "swiper/components/effect-fade/effect-fade.scss";
+SwiperCore.use([EffectFade, Mousewheel, Autoplay, Pagination, A11y]);
 
 function VerticalCarousel() {
   return (
@@ -29,12 +39,13 @@ function VerticalCarousel() {
         <Swiper
           modules={[Autoplay, Pagination, A11y]}
           slidesPerView={1}
+          // effect={"fade"}
           mousewheel={true}
-          autoplay={{
-            stopOnLastSlide: true,
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   stopOnLastSlide: true,
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          // }}
           loop={true}
           pagination={{ clickable: true }}
           breakpoints={{
@@ -44,31 +55,74 @@ function VerticalCarousel() {
           }}
         >
           <SwiperSlide>
-            <div className="VerticalImageContainer">
-              <div className="VerticalImageLeft">
-                <div className="VerticalTopNumber">1</div>
-                <div className="VerticalTopContent">
-                  <div className="VerticalImageLeftTop">
-                    <p>A PERSON IS MORE THAN JUST A FACE</p>
+            <Swiper
+              slidesPerView={1}
+              effect={"fade"}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                800: {
+                  direction: "vertical",
+                },
+              }}
+            >
+              <SwiperSlide>
+                <div className="VerticalImageContainer">
+                  <div className="VerticalImageLeft">
+                    <div className="VerticalTopNumber">1</div>
+                    <div className="VerticalTopContent">
+                      <div className="VerticalImageLeftTop">
+                        <p>A PERSON IS MORE THAN JUST A FACE</p>
+                      </div>
+                      <div className="VerticalImageMiddle">
+                        <p>
+                          So much detail! You can now see them through images,
+                          hear them through audio stories and understand if you
+                          are similar (or not!) through our common questions
+                          It’s as if you are actually interacting with the
+                          person in real life, before matching
+                        </p>
+                      </div>
+                      <div className="VerticalImageBottom">
+                        <p>So that you can choose your ONE & ONLY wisely !</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="VerticalImageMiddle">
-                    <p>
-                      So much detail! You can now see them through images, hear
-                      them through audio stories and understand if you are
-                      similar (or not!) through our common questions It’s as if
-                      you are actually interacting with the person in real life,
-                      before matching
-                    </p>
-                  </div>
-                  <div className="VerticalImageBottom">
-                    <p>So that you can choose your ONE & ONLY wisely !</p>
+                  <div className="VerticalImageRight">
+                    <img src={img11} alt="Home1" />
                   </div>
                 </div>
-              </div>
-              <div className="VerticalImageRight">
-                <img src={img1} alt="Home1" />
-              </div>
-            </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="VerticalImageContainer">
+                  <div className="VerticalImageLeft">
+                    <div className="VerticalTopNumber">1</div>
+                    <div className="VerticalTopContent">
+                      <div className="VerticalImageLeftTop">
+                        <p>A PERSON IS MORE THAN JUST A FACE</p>
+                      </div>
+                      <div className="VerticalImageMiddle">
+                        <p>
+                          So much detail! You can now see them through images,
+                          hear them through audio stories and understand if you
+                          are similar (or not!) through our common questions
+                          It’s as if you are actually interacting with the
+                          person in real life, before matching
+                        </p>
+                      </div>
+                      <div className="VerticalImageBottom">
+                        <p>So that you can choose your ONE & ONLY wisely !</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="VerticalImageRight">
+                    <img src={img12} alt="Home1" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </SwiperSlide>
           <SwiperSlide>
             <div className="VerticalImageContainer">
@@ -124,8 +178,9 @@ function VerticalCarousel() {
           <SwiperSlide>
             <Swiper
               slidesPerView={1}
+              effect={"fade"}
               autoplay={{
-                delay: 1500,
+                delay: 2000,
                 disableOnInteraction: false,
               }}
               breakpoints={{
@@ -244,15 +299,18 @@ function VerticalCarousel() {
           <SwiperSlide>
             <Swiper
               slidesPerView={1}
+              effect={"fade"}
               autoplay={{
-                delay: 1000,
+                delay: 2000,
                 disableOnInteraction: false,
               }}
-              breakpoints={{
-                800: {
-                  direction: "vertical",
-                },
-              }}
+              breakpoints={
+                {
+                  // 800: {
+                  //   direction: "vertical",
+                  // },
+                }
+              }
             >
               <SwiperSlide>
                 <div className="VerticalImageContainer">
@@ -353,20 +411,16 @@ function VerticalCarousel() {
             <Swiper
               slidesPerView={1}
               autoplay={{
-                delay: 1000,
+                delay: 2000,
                 disableOnInteraction: false,
               }}
+              effect={"fade"}
               breakpoints={{
                 800: {
                   direction: "vertical",
                 },
               }}
             >
-              {/* <SwiperSlide>
-                <div className="VerticalImageContainer">
-                  <img className="VerticalFullImage" src={img91} alt="home9" />
-                </div>
-              </SwiperSlide> */}
               <SwiperSlide>
                 <div className="VerticalFullImageContainer">
                   <img className="VerticalFullImage" src={img93} alt="home9" />
@@ -375,6 +429,11 @@ function VerticalCarousel() {
               <SwiperSlide>
                 <div className="VerticalFullImageContainer">
                   <img className="VerticalFullImage" src={img94} alt="home9" />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="VerticalImageContainer">
+                  <img className="VerticalFullImage" src={img91} alt="home9" />
                 </div>
               </SwiperSlide>
               <SwiperSlide>

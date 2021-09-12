@@ -141,6 +141,9 @@
 .UserDataTitle {
   color: #9e7569;
 }
+.UserDataTitleP {
+  color: #956927;
+}
 .UserDataValue {
   color: #0f071b;
 }
@@ -198,6 +201,9 @@
 @media only screen and (max-width: 800px) {
   .UserDataContainer {
     margin-top: 5vh;
+  }
+  .UserDataTitleP {
+    color: #956927;
   }
   .UserDataHeading {
     display: flex;

@@ -4,11 +4,13 @@
 }
 
 .upperImg {
+  display: none;
   position: absolute;
   top: 195vh;
   left: 5vh;
 }
 .lowerImg {
+  display: none;
   position: absolute;
   right: 0;
   top: 275vh;
@@ -38,7 +40,7 @@
   }
   .videoscreen {
     margin: 0;
-    height: 70vh;
+    /* height: 70vh; */
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 1024px) {

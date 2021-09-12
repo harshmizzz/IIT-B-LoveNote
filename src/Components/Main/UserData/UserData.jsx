@@ -247,27 +247,25 @@ function UserData() {
                         </div>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Age Range</p>
+                        <p className="UserDataTitleP">Age Range</p>
                         <p className="UserDataValue">
-                          {data.Preferences.PAge[0]}
-                          -
-                          {data.Preferences.PAge[1]}
+                          {data.Preferences.PAge[0]}-{data.Preferences.PAge[1]}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Preferred gender</p>
+                        <p className="UserDataTitleP">Preferred gender</p>
                         <p className="UserDataValue">
                           {data.Preferences.PGender}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Location</p>
+                        <p className="UserDataTitleP">Location</p>
                         <p className="UserDataValue">
                           {data.Preferences.PState}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Religion</p>
+                        <p className="UserDataTitleP">Religion</p>
                         <p className="UserDataValue">
                           {data.Preferences.PReligion}
                         </p>
@@ -275,31 +273,31 @@ function UserData() {
                       <div className="UserDataLine"></div>
 
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Diet</p>
+                        <p className="UserDataTitleP">Diet</p>
                         <p className="UserDataValue">
                           {data.Preferences.PDiet}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Exercise</p>
+                        <p className="UserDataTitleP">Exercise</p>
                         <p className="UserDataValue">
                           {data.Preferences.PExercise}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Smoke</p>
+                        <p className="UserDataTitleP">Smoke</p>
                         <p className="UserDataValue">
                           {data.Preferences.PIsSmoke}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Drink</p>
+                        <p className="UserDataTitleP">Drink</p>
                         <p className="UserDataValue">
                           {data.Preferences.PIsDrink}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Want Children?</p>
+                        <p className="UserDataTitleP">Want Children?</p>
                         <p className="UserDataValue">
                           {data.Preferences.PWantChildren}
                         </p>
@@ -427,26 +425,26 @@ function UserData() {
                         </div>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Age Range</p>
+                        <p className="UserDataTitleP">Age Range</p>
                         <p className="UserDataValue">
                           {data.Preferences.PAge[0]} {"-"}
                           {data.Preferences.PAge[1]}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Preferred gender</p>
+                        <p className="UserDataTitleP">Preferred gender</p>
                         <p className="UserDataValue">
                           {data.Preferences.PGender}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Location</p>
+                        <p className="UserDataTitleP">Location</p>
                         <p className="UserDataValue">
                           {data.Preferences.PState}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Religion</p>
+                        <p className="UserDataTitleP">Religion</p>
                         <p className="UserDataValue">
                           {data.Preferences.PReligion}
                         </p>
@@ -454,31 +452,31 @@ function UserData() {
                       <div className="UserDataLine"></div>
 
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Diet</p>
+                        <p className="UserDataTitleP">Diet</p>
                         <p className="UserDataValue">
                           {data.Preferences.PDiet}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Exercise</p>
+                        <p className="UserDataTitleP">Exercise</p>
                         <p className="UserDataValue">
                           {data.Preferences.PExercise}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Smoke</p>
+                        <p className="UserDataTitleP">Smoke</p>
                         <p className="UserDataValue">
                           {data.Preferences.PIsSmoke}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Drink</p>
+                        <p className="UserDataTitleP">Drink</p>
                         <p className="UserDataValue">
                           {data.Preferences.PIsDrink}
                         </p>
                       </div>
                       <div className="UserDataInfo">
-                        <p className="UserDataTitle">Want Children?</p>
+                        <p className="UserDataTitleP">Want Children?</p>
                         <p className="UserDataValue">
                           {data.Preferences.PWantChildren}
                         </p>
