@@ -17,12 +17,14 @@ const Excited = () => {
 
           <p className="excitedText">Cant't wait to have you</p>
           <button
-            onClick={() => {
-              history.push("/SignUp");
-            }}
+            // onClick={() => {
+            //   history.push("/SignUp");
+            // }}
             className="excitedButton"
           >
-            <Link>Begin my forever story</Link>
+            <Link to="/SignUp" target="_blank">
+              Begin my forever story
+            </Link>
           </button>
         </div>
       </div>

@@ -16,7 +16,7 @@ const Homebg = ({ hideBG }) => {
         </div>
         <div className="bottomSec">
           <button className="beginButton">
-            <Link to="/SignUp">
+            <Link to="/SignUp" target="_blank">
               <strong>Begin my journey</strong>
             </Link>
           </button>
