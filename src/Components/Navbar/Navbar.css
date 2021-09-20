@@ -11,14 +11,26 @@
   left: 0;
   width: 100vw;
   height: 55px;
-  padding: 10px 90px;
   box-sizing: border-box;
   background: rgba(15, 7, 27, 0.4);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-right: 5%;
+  padding-left: 5%;
 }
+
+.logo > img {
+  height: 80px;
+  position: relative;
+  width: 80px;
+}
+
 .body nav .logo {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   height: 80px;
   float: left;
   font-size: 16px;

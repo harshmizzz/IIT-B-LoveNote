@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import Homebg from "../Homebg/Homebg";
 import { Link } from "react-scroll";
+import Logo from "../../Images/Logo.png";
 import "./Navbar.css";
 const Navbar = ({ hideBG }) => {
   const container = useRef(null);
@@ -19,7 +20,9 @@ const Navbar = ({ hideBG }) => {
       <div className="body">
         <div className="">
           <nav>
-            <div className="logo">Logo</div>
+            <div className="logo">
+              <img src={Logo} alt="logo" />
+            </div>
             <ul>
               <li>
                 <Link
@@ -46,7 +49,7 @@ const Navbar = ({ hideBG }) => {
                 <Link
                   to="/SignUp"
                   onClick={() => {
-                    window.open("/SignUp",'_blank')
+                    window.open("/SignUp", "_blank");
                   }}
                 >
                   Join Now
