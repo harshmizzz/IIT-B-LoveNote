@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Homebg.css";
 const Homebg = ({ hideBG }) => {
   return (
-    <div>
+    <div id="Home">
       <section className="homeBg">
         <div class="centered">
           <p>

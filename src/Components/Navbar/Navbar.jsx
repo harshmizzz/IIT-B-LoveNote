@@ -30,7 +30,7 @@ const Navbar = ({ hideBG }) => {
                   spy={true}
                   smooth={true}
                   className="active navItems"
-                  to="/"
+                  to="Home"
                 >
                   Home
                 </Link>
