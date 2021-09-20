@@ -7,7 +7,7 @@ import { ErrorMessage } from "@hookform/error-message";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../StoreFeatures/userSlice";
 import { Slider } from "@material-ui/core";
-function PreferencesEdit({ open, onclose }) {
+function PreferencesEdit({ open, onclose, age0, age1 }) {
   const [data, setdata] = useState([]);
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
@@ -36,7 +36,7 @@ function PreferencesEdit({ open, onclose }) {
     formState: { errors },
     control,
   } = useForm();
-  const [val, setval] = useState([25, 35]);
+  const [val, setval] = useState([age0, age1]);
 
   const user = useSelector(selectUser);
   const updateRange = (e, data) => {
@@ -125,6 +125,7 @@ function PreferencesEdit({ open, onclose }) {
                 <option value="" disabled selected>
                   State
                 </option>
+              <option value="Open to Anywhere">Open to Anywhere</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">
                   Andaman and Nicobar Islands

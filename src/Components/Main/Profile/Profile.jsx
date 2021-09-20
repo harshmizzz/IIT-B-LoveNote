@@ -3,6 +3,7 @@ import "./Profile.css";
 import ClearIcon from "@material-ui/icons/Clear";
 import ReplayIcon from "@material-ui/icons/Replay";
 import ShareIcon from "@material-ui/icons/Share";
+import Mic from "@material-ui/icons/Mic";
 import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
 import FiberManualRecordOutlinedIcon from "@material-ui/icons/FiberManualRecordOutlined";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
@@ -10,6 +11,7 @@ import BusinessCenterOutlinedIcon from "@material-ui/icons/BusinessCenterOutline
 import TranslateOutlinedIcon from "@material-ui/icons/TranslateOutlined";
 import LockIcon from "@material-ui/icons/Lock";
 import HeightOutlinedIcon from "@material-ui/icons/HeightOutlined";
+import Mood from "@material-ui/icons/Mood";
 import { db } from "../../StoreFeatures/firebase";
 import { useState } from "react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -19,49 +21,40 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import "swiper/components/a11y/a11y.scss";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import girl1 from "../../../Images/DummyProfile/10.2.png";
+import girl2 from "../../../Images/DummyProfile/12.2.png";
+import girl3 from "../../../Images/DummyProfile/15.png";
+
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 function Profile() {
-  const [Quotes, setQuotes] = useState([]);
-  const FetchData = async () => {
-    const citiesRef = db.collection("Quotes");
-    const snapshot = await citiesRef
-      .get()
-      .then((snapshot) =>
-        snapshot.forEach((doc) =>
-          setQuotes((Quotes) => [...Quotes, doc.data()])
-        )
-      );
-  };
-  useEffect(() => {
-    FetchData();
-  }, []);
-
+  const notify = () =>
+    toast.info("Verify Yourself to get access to Your Future Partner", {
+      position: "top-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   return (
     <div className="Profile">
       <div className="ProfileTop">
-        <div className="ProfileBack">
+        <div className="ProfileBack" onClick={notify}>
           <ReplayIcon />
         </div>
         <div className="ProfileHeading">
           <p>SUGGESTED MATCHES</p>
         </div>
-        <div className="ProfileDelete">
+        <div className="ProfileDelete" onClick={notify}>
           <ClearIcon />
+          <ToastContainer />
         </div>
       </div>
       <div className="ProfileQuotes">
-        {/* <div className="ProfileQuotesText">
-          <p>
-            I like taking the scenic route, while looking at the world through
-            colored glasses.Join me on this journey?
-          </p>
-        </div>
-        {console.log(Quotes)}
-        <div className="ProfileQuoteHashtag">
-          <p>Happy Thoughts</p> <p>Realism</p>
-        </div> */}
         <Swiper
-          // install Swiper modules
           modules={[Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={1}
@@ -69,78 +62,223 @@ function Profile() {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          {console.log(Quotes)}
-          {Quotes.map((data) => (
-            <SwiperSlide>
-              <div className="ProfileQuotesText">
-                <p>{data.quote}</p>
+          <SwiperSlide>
+            <div className="ProfileQuotesText">
+              <p>
+                Currently saying yes to new adventures, want an adventurous
+                life. One day, I hope to be a happy old person telling wild
+                stories from their wild youth.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="ProfileQuotesBox" onClick={notify}>
+              <div>
+                <p>What's your dream bae-cation?</p>
               </div>
-              <div className="ProfileQuoteHashtag">
-                {data.hashtag.map((hashtagdata) => (
-                  <p>{hashtagdata}</p>
-                ))}
+              <div className="ProfileQuotesMessage">
+                <div className="ProfileQuotesLeft">
+                  <Mood />
+                  <p>Verify Before Matching</p>
+                </div>
+                <div className="QuotesMicBox">
+                  <Mic />
+                </div>
               </div>
-            </SwiperSlide>
-          ))}
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="ProfileQuotesBox" onClick={notify}>
+              <div>
+                <p>What's the best present you ever gave someone?</p>
+              </div>
+              <div className="ProfileQuotesMessage">
+                <div className="ProfileQuotesLeft">
+                  <Mood />
+                  <p>Verify Before Matching</p>
+                </div>
+                <div className="QuotesMicBox">
+                  <Mic />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
-      <div className="ProfileMain">
-        <div className="ProfileMainTop">
-          <div className="ProfileMainTopLeft">
-            <img
-              src="https://images.unsplash.com/photo-1599110906885-b024c90c2773?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwdXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-              alt="userimage"
-            />
-            <p>Harsh Mishra</p>
-          </div>
-          <div className="ProfileMainTopRight">
-            <ShareIcon />
-          </div>
-        </div>
-        <div className="ProfileMainImage">
-          <img
-            src="https://images.unsplash.com/photo-1599110906885-b024c90c2773?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwdXNlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-            alt="userimage"
-          />
-        </div>
-        <div className="ProfileMainUserInfo">
-          <div className="ProfileMainUserProfile">
-            <div className="ProfileMainUserProfileHeading">PROFILE</div>
-            <div className="ProfileMainUserProfileItems">
-              <div className="ProfileMainUserProfileItemsLeft">
-                <div>
-                  <AccountCircleOutlinedIcon /> <p>age,gender</p>
-                </div>
-                <div>
-                  <BusinessCenterOutlinedIcon /> <p>profession</p>
-                </div>
-                <div>
-                  <LocationOnOutlinedIcon /> <p> location</p>
-                </div>
+      <Swiper
+        className="MainProfileSwiper"
+        modules={[Pagination, A11y]}
+        spaceBetween={50}
+        slidesPerView={1}
+        pagination={false}
+        navigation={{
+          nextEl: "swiper-button-next",
+          prevEl: "swiper-button-prev",
+        }}
+      >
+        <SwiperSlide>
+          <div className="ProfileMain">
+            <div className="ProfileMainTop">
+              <div className="ProfileMainTopLeft">
+                <img src={girl1} alt="userimage" />
+                <p>Aakriti Patil</p>
               </div>
-              <div className="ProfileMainUserProfileItemsRight">
-                <div>
-                  <FiberManualRecordOutlinedIcon />
-                  <p>Religion</p>
+              <div className="ProfileMainTopRight">
+                <ShareIcon />
+              </div>
+            </div>
+            <div className="ProfileMainImage">
+              <img src={girl1} alt="userimage" />
+            </div>
+            <div className="ProfileMainUserInfo">
+              <div className="ProfileMainUserProfile">
+                <div className="ProfileMainUserProfileHeading">PROFILE</div>
+                <div className="ProfileMainUserProfileItems">
+                  <div className="ProfileMainUserProfileItemsLeft">
+                    <div>
+                      <AccountCircleOutlinedIcon /> <p>19,Female</p>
+                    </div>
+                    <div>
+                      <BusinessCenterOutlinedIcon /> <p>Blogger</p>
+                    </div>
+                    <div>
+                      <LocationOnOutlinedIcon /> <p> Delhi</p>
+                    </div>
+                  </div>
+                  <div className="ProfileMainUserProfileItemsRight">
+                    <div>
+                      <FiberManualRecordOutlinedIcon />
+                      <p>Hindu</p>
+                    </div>
+                    <div>
+                      <HeightOutlinedIcon /> <p>5'1''</p>
+                    </div>
+                    <div>
+                      <TranslateOutlinedIcon />
+                      <p>English</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <HeightOutlinedIcon /> <p>height</p>
-                </div>
-                <div>
-                  <TranslateOutlinedIcon />
-                  <p>Language</p>
+                <div className="ProfileMainUserProfileHashtag">
+                  <p>Karaoke</p>
+                  <p>Reading</p>
+                  <p>Photography</p>
+                  <p>Swimming</p>
                 </div>
               </div>
             </div>
-            <div className="ProfileMainUserProfileHashtag">
-              <p>Karaoke</p>
-              <p>Reading</p>
-              <p>Photography</p>
-              <p>Swimming</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <div className="ProfileMain">
+            <div className="ProfileMainTop">
+              <div className="ProfileMainTopLeft">
+                <img src={girl2} alt="userimage" />
+                <p>Muskaan Khan</p>
+              </div>
+              <div className="ProfileMainTopRight">
+                <ShareIcon />
+              </div>
+            </div>
+            <div className="ProfileMainImage">
+              <img src={girl2} alt="userimage" />
+            </div>
+            <div className="ProfileMainUserInfo">
+              <div className="ProfileMainUserProfile">
+                <div className="ProfileMainUserProfileHeading">PROFILE</div>
+                <div className="ProfileMainUserProfileItems">
+                  <div className="ProfileMainUserProfileItemsLeft">
+                    <div>
+                      <AccountCircleOutlinedIcon /> <p>20,Female</p>
+                    </div>
+                    <div>
+                      <BusinessCenterOutlinedIcon /> <p>Student</p>
+                    </div>
+                    <div>
+                      <LocationOnOutlinedIcon /> <p> Maharastra</p>
+                    </div>
+                  </div>
+                  <div className="ProfileMainUserProfileItemsRight">
+                    <div>
+                      <FiberManualRecordOutlinedIcon />
+                      <p>Muslim</p>
+                    </div>
+                    <div>
+                      <HeightOutlinedIcon /> <p>5'3''</p>
+                    </div>
+                    <div>
+                      <TranslateOutlinedIcon />
+                      <p>Marathi</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ProfileMainUserProfileHashtag">
+                  <p>Karaoke</p>
+                  <p>Reading</p>
+                  <p>Photography</p>
+                  <p>Swimming</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <div className="ProfileMain">
+            <div className="ProfileMainTop">
+              <div className="ProfileMainTopLeft">
+                <img src={girl3} alt="userimage" />
+                <p>Aditi Reddy</p>
+              </div>
+              <div className="ProfileMainTopRight">
+                <ShareIcon />
+              </div>
+            </div>
+            <div className="ProfileMainImage">
+              <img src={girl3} alt="userimage" />
+            </div>
+            <div className="ProfileMainUserInfo">
+              <div className="ProfileMainUserProfile">
+                <div className="ProfileMainUserProfileHeading">PROFILE</div>
+                <div className="ProfileMainUserProfileItems">
+                  <div className="ProfileMainUserProfileItemsLeft">
+                    <div>
+                      <AccountCircleOutlinedIcon /> <p>18,Female</p>
+                    </div>
+                    <div>
+                      <BusinessCenterOutlinedIcon /> <p>Engineer</p>
+                    </div>
+                    <div>
+                      <LocationOnOutlinedIcon /> <p> Tamil Nadu</p>
+                    </div>
+                  </div>
+                  <div className="ProfileMainUserProfileItemsRight">
+                    <div>
+                      <FiberManualRecordOutlinedIcon />
+                      <p>Hindu</p>
+                    </div>
+                    <div>
+                      <HeightOutlinedIcon /> <p>5'5''</p>
+                    </div>
+                    <div>
+                      <TranslateOutlinedIcon />
+                      <p>Tamil</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="ProfileMainUserProfileHashtag">
+                  <p>Karaoke</p>
+                  <p>Reading</p>
+                  <p>Photography</p>
+                  <p>Swimming</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
       <div className="ProfileMainUserLifestyle">
         <div className="LifeStyleHeading">LIFESTYLE</div>
         <div className="LifestyleMain">

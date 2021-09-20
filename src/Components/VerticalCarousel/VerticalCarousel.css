@@ -11,6 +11,9 @@
   text-align: center;
   color: #0f071b;
 }
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
 
 .VerticalCarouselHeading {
   font-weight: 600;
@@ -109,14 +112,12 @@
   height: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .VerticalCarousel .swiper-container {
     width: 100% !important;
     min-height: 20vh;
   }
-  .VerticalFullImageContainer {
-  
-  }
+
   .VerticalCarousel {
     min-height: 20vh;
   }
@@ -136,5 +137,10 @@
   .VerticalTopContent {
     align-items: center;
     margin-left: 0;
+  }
+
+  .VerticalFullImage {
+    height: 100%;
+    width: 100%;
   }
 }

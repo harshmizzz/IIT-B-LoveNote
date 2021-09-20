@@ -26,17 +26,20 @@
 
 .VerifiedText {
   width: 25vw;
-  color: #0f071b;
-  font-size: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
   line-height: 24px;
+  color: #0f071b;
   margin-top: -10px;
 }
 .VerifiedImage {
   margin-left: 20vw;
 }
 .VerifiedImage > img {
-  width: 192px;
-  height: 188px;
+  width: 152px;
+  height: 158px;
 }
 
 @media only screen and (max-width: 800px) {

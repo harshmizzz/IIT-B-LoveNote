@@ -2,7 +2,6 @@ import React from "react";
 import "./VerticalCarousel.css";
 import img12 from "../../Images/HomeImg/step 1.2.png";
 import img11 from "../../Images/HomeImg/step 1.1.png";
-
 import img2 from "../../Images/HomeImg/step 2.png";
 import img3 from "../../Images/HomeImg/step 3.png";
 import img41 from "../../Images/HomeImg/step 4.1.png";
@@ -18,7 +17,6 @@ import img92 from "../../Images/HomeImg/step 9.2.png";
 import img93 from "../../Images/HomeImg/step 9.3.png";
 import img94 from "../../Images/HomeImg/step 9 .4.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css/effect-fade";
 import "swiper/swiper.scss";
 import SwiperCore, {
   EffectFade,
@@ -37,15 +35,10 @@ function VerticalCarousel() {
       <div className="VerticalCarousel">
         <p className="VerticalCarouselHeading">How does it work?</p>
         <Swiper
-          modules={[Autoplay, Pagination, A11y]}
+          modules={[Autoplay, Pagination, A11y, EffectFade]}
           slidesPerView={1}
-          // effect={"fade"}
+          effect={"fade"}
           mousewheel={true}
-          // autoplay={{
-          //   stopOnLastSlide: true,
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
           loop={true}
           pagination={{ clickable: true }}
           breakpoints={{
@@ -304,13 +297,6 @@ function VerticalCarousel() {
                 delay: 2000,
                 disableOnInteraction: false,
               }}
-              breakpoints={
-                {
-                  // 800: {
-                  //   direction: "vertical",
-                  // },
-                }
-              }
             >
               <SwiperSlide>
                 <div className="VerticalImageContainer">
@@ -410,6 +396,7 @@ function VerticalCarousel() {
           <SwiperSlide>
             <Swiper
               slidesPerView={1}
+              modules={[EffectFade]}
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,

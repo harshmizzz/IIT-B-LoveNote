@@ -12,6 +12,8 @@
 }
 .footerTitle {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .excitedHeading {
   font-size: 22px;

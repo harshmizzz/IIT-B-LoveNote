@@ -23,6 +23,11 @@
   border-top-right-radius: 10px;
 }
 
+.Toastify {
+  position: absolute;
+  z-index: 999999;
+}
+
 .ProfileHeading {
   font-weight: 600;
   font-size: 18px;
@@ -58,12 +63,8 @@
 }
 
 .ProfileQuotes > div {
+  height: 25vh;
   width: 25vw;
-  display: flex;
-  gap: 20px;
-}
-
-.ProfileQuoteHashtag {
   display: flex;
   gap: 20px;
 }
@@ -105,6 +106,43 @@
   font-size: 14px;
   font-weight: 500;
   padding: 5px;
+}
+
+.ProfileQuotesMessage .MuiSvgIcon-root {
+  color: black;
+}
+
+.ProfileQuotesBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ProfileQuotesMessage {
+  background: #ebe7e6;
+  height: 50px;
+  border-radius: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ProfileQuotesMessage > .ProfileQuotesLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ProfileQuotesMessage > .QuotesMicBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  background: #b4b2b2f1;
 }
 
 /* Main */
@@ -235,6 +273,17 @@
   color: grey;
 }
 
+.MainProfileSwiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: inherit !important;
+  /* margin-right: 0 !important;` */
+}
+
+.MainProfileSwiper {
+  width: 100%;
+}
 /* userhashtag */
 
 .ProfileMainUserProfileHashtag > p {

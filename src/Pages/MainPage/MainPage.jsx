@@ -13,10 +13,12 @@ import { login, selectUser } from "../../Components/StoreFeatures/userSlice";
 import { useState } from "react";
 import HamburgerBox2 from "../../Components/SignUp/SignUpNav/HamburgerBox2";
 import Media from "react-media";
+import AppModal from "../../Components/Main/Profile/AppModal";
+import { CircularProgress } from "@material-ui/core";
 function MainPage() {
   const user = useSelector(selectUser);
   const [data, setdata] = useState("");
-
+  const [loading, setloading] = useState(true);
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -32,12 +34,22 @@ function MainPage() {
           })
           .catch((error) => {
             console.log("Error getting document:", error);
-          });
+          })
+          .finally(setloading(false));
       } else {
         console.log("not signed in");
       }
     });
   }, []);
+
+  if (loading)
+    return (
+      <div className="LoadingScreen">
+        <CircularProgress color="disabled" />
+        <p>Loading...</p>
+      </div>
+    );
+
   return (
     <div className="MainPage">
       <Media query={{ maxWidth: 800 }}>
@@ -47,7 +59,7 @@ function MainPage() {
         <div className="MainPageHeading">
           <div className="MainPageHeadingLeft">
             {console.log(data)}
-            <h3>Hi Aparna! Welcome Back</h3>
+            <h3>Hi {auth.currentUser.displayName}! Welcome Back</h3>
             <p>Let’s explore and find someone awesome for you</p>
           </div>
           <div className="MainPageHeadingRight">
@@ -58,11 +70,10 @@ function MainPage() {
         </div>
         <div className="MainPageItems">
           <div className="MainPageVerificationBox">
-            {console.log(data.isVerified)}
-            {data.isVerified === false ? <MainVerification /> : <Verified />}
+            {data.isVerified === true ? <Verified /> : <MainVerification />}
           </div>
           <div className="MainPageProfileBox">
-            <Profile />
+            {data.isVerified === true ? <AppModal /> : <Profile />}
           </div>
         </div>
       </div>

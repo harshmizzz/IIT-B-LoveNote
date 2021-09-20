@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 import Homebg from "../Homebg/Homebg";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./Navbar.css";
 const Navbar = ({ hideBG }) => {
   const container = useRef(null);
@@ -22,18 +22,35 @@ const Navbar = ({ hideBG }) => {
             <div className="logo">Logo</div>
             <ul>
               <li>
-                <Link className="active navItems" to="/">
+                <Link
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  className="active navItems"
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="navItems">About</Link>
+                <Link to="About" spy={true} smooth={true} className="navItems">
+                  About
+                </Link>
               </li>
               <li>
-                <Link className="navItems">Meet Us</Link>
+                <Link to="MeetUs" spy={true} smooth={true} className="navItems">
+                  Meet Us
+                </Link>
               </li>
               <li className="joinNow">
-                <Link to="/SignUp">Join Now</Link>
+                <Link
+                  to="/SignUp"
+                  onClick={() => {
+                    window.open("/SignUp",'_blank')
+                  }}
+                >
+                  Join Now
+                </Link>
               </li>
             </ul>
           </nav>

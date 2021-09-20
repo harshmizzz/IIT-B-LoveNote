@@ -243,6 +243,8 @@ function UserData() {
                           <PreferencesEdit
                             open={preferences}
                             onclose={() => setpreferences(false)}
+                            age0={data.Preferences.PAge[0]}
+                            age1={data.Preferences.PAge[1]}
                           />
                         </div>
                       </div>
@@ -421,6 +423,8 @@ function UserData() {
                           <PreferencesEdit
                             open={preferences}
                             onclose={() => setpreferences(false)}
+                            age0={data.Preferences.PAge[0]}
+                            age1={data.Preferences.PAge[1]}
                           />
                         </div>
                       </div>

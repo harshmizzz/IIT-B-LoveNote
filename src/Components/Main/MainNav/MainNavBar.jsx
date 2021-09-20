@@ -20,7 +20,7 @@ function MainNavBar() {
       <div>
         <AccountCircleOutlinedIcon />
         <div>
-          <p>{auth.currentUser ? user.name : ""}</p>
+          <p>{auth.currentUser ? auth.currentUser.displayName : ""}</p>
           <div className="MainNavLine"></div>
         </div>
       </div>

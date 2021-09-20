@@ -16,10 +16,10 @@ const Home = () => {
         {(matches) => (matches ? <HamburgerBox /> : <Navbar hideBG={false} />)}
       </Media>
 
-      <div className="homeBody">
+      <div className="homeBody" >
         <WhatSpecial />
       </div>
-      <div className="videoBody">
+      <div className="videoBody" id="About">
         <VideoScreen />
       </div>
       <VerticalCarousel />
