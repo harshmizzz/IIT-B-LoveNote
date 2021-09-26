@@ -21,7 +21,7 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import "swiper/components/a11y/a11y.scss";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import girl1 from "../../../Images/DummyProfile/10.2.png";
 import girl2 from "../../../Images/DummyProfile/12.2.png";
@@ -30,7 +30,7 @@ import girl3 from "../../../Images/DummyProfile/15.png";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 function Profile() {
   const notify = () =>
-    toast.info("Verify Yourself to get access to Your Future Partner", {
+    toast("Verify Yourself to get access to Your Future Partner", {
       position: "top-right",
       autoClose: 2500,
       hideProgressBar: false,
@@ -50,7 +50,7 @@ function Profile() {
         </div>
         <div className="ProfileDelete" onClick={notify}>
           <ClearIcon />
-          <ToastContainer />
+          <ToastContainer transition={Slide} />
         </div>
       </div>
       <div className="ProfileQuotes">
@@ -105,7 +105,7 @@ function Profile() {
           </SwiperSlide>
         </Swiper>
       </div>
-      <Swiper
+      {/* <Swiper
         className="MainProfileSwiper"
         modules={[Pagination, A11y]}
         spaceBetween={50}
@@ -169,116 +169,58 @@ function Profile() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="ProfileMain">
-            <div className="ProfileMainTop">
-              <div className="ProfileMainTopLeft">
-                <img src={girl2} alt="userimage" />
-                <p>Muskaan Khan</p>
-              </div>
-              <div className="ProfileMainTopRight">
-                <ShareIcon />
-              </div>
-            </div>
-            <div className="ProfileMainImage">
-              <img src={girl2} alt="userimage" />
-            </div>
-            <div className="ProfileMainUserInfo">
-              <div className="ProfileMainUserProfile">
-                <div className="ProfileMainUserProfileHeading">PROFILE</div>
-                <div className="ProfileMainUserProfileItems">
-                  <div className="ProfileMainUserProfileItemsLeft">
-                    <div>
-                      <AccountCircleOutlinedIcon /> <p>20,Female</p>
-                    </div>
-                    <div>
-                      <BusinessCenterOutlinedIcon /> <p>Student</p>
-                    </div>
-                    <div>
-                      <LocationOnOutlinedIcon /> <p> Maharastra</p>
-                    </div>
-                  </div>
-                  <div className="ProfileMainUserProfileItemsRight">
-                    <div>
-                      <FiberManualRecordOutlinedIcon />
-                      <p>Muslim</p>
-                    </div>
-                    <div>
-                      <HeightOutlinedIcon /> <p>5'3''</p>
-                    </div>
-                    <div>
-                      <TranslateOutlinedIcon />
-                      <p>Marathi</p>
-                    </div>
-                  </div>
+      </Swiper> */}
+      <div className="ProfileMain">
+        <div className="ProfileMainTop">
+          <div className="ProfileMainTopLeft">
+            <img src={girl1} alt="userimage" />
+            <p>Aakriti Patil</p>
+          </div>
+          <div className="ProfileMainTopRight">
+            <ShareIcon />
+          </div>
+        </div>
+        <div className="ProfileMainImage">
+          <img src={girl1} alt="userimage" />
+        </div>
+        <div className="ProfileMainUserInfo">
+          <div className="ProfileMainUserProfile">
+            <div className="ProfileMainUserProfileHeading">PROFILE</div>
+            <div className="ProfileMainUserProfileItems">
+              <div className="ProfileMainUserProfileItemsLeft">
+                <div>
+                  <AccountCircleOutlinedIcon /> <p>19,Female</p>
                 </div>
-                <div className="ProfileMainUserProfileHashtag">
-                  <p>Karaoke</p>
-                  <p>Reading</p>
-                  <p>Photography</p>
-                  <p>Swimming</p>
+                <div>
+                  <BusinessCenterOutlinedIcon /> <p>Blogger</p>
+                </div>
+                <div>
+                  <LocationOnOutlinedIcon /> <p> Delhi</p>
                 </div>
               </div>
+              <div className="ProfileMainUserProfileItemsRight">
+                <div>
+                  <FiberManualRecordOutlinedIcon />
+                  <p>Hindu</p>
+                </div>
+                <div>
+                  <HeightOutlinedIcon /> <p>5'1''</p>
+                </div>
+                <div>
+                  <TranslateOutlinedIcon />
+                  <p>English</p>
+                </div>
+              </div>
+            </div>
+            <div className="ProfileMainUserProfileHashtag">
+              <p>Karaoke</p>
+              <p>Reading</p>
+              <p>Photography</p>
+              <p>Swimming</p>
             </div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="ProfileMain">
-            <div className="ProfileMainTop">
-              <div className="ProfileMainTopLeft">
-                <img src={girl3} alt="userimage" />
-                <p>Aditi Reddy</p>
-              </div>
-              <div className="ProfileMainTopRight">
-                <ShareIcon />
-              </div>
-            </div>
-            <div className="ProfileMainImage">
-              <img src={girl3} alt="userimage" />
-            </div>
-            <div className="ProfileMainUserInfo">
-              <div className="ProfileMainUserProfile">
-                <div className="ProfileMainUserProfileHeading">PROFILE</div>
-                <div className="ProfileMainUserProfileItems">
-                  <div className="ProfileMainUserProfileItemsLeft">
-                    <div>
-                      <AccountCircleOutlinedIcon /> <p>18,Female</p>
-                    </div>
-                    <div>
-                      <BusinessCenterOutlinedIcon /> <p>Engineer</p>
-                    </div>
-                    <div>
-                      <LocationOnOutlinedIcon /> <p> Tamil Nadu</p>
-                    </div>
-                  </div>
-                  <div className="ProfileMainUserProfileItemsRight">
-                    <div>
-                      <FiberManualRecordOutlinedIcon />
-                      <p>Hindu</p>
-                    </div>
-                    <div>
-                      <HeightOutlinedIcon /> <p>5'5''</p>
-                    </div>
-                    <div>
-                      <TranslateOutlinedIcon />
-                      <p>Tamil</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="ProfileMainUserProfileHashtag">
-                  <p>Karaoke</p>
-                  <p>Reading</p>
-                  <p>Photography</p>
-                  <p>Swimming</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-
+        </div>
+      </div>
       <div className="ProfileMainUserLifestyle">
         <div className="LifeStyleHeading">LIFESTYLE</div>
         <div className="LifestyleMain">
