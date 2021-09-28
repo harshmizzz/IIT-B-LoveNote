@@ -19,13 +19,13 @@ const VideoScreen = () => {
             {(matches) =>
               matches ? (
                 <>
-                  <video controls width="330" height="400" autoPlay muted>
+                  <video controls width="330" height="400" muted>
                     <source src={InstructionVideo} type="video/mp4" />
                   </video>
                 </>
               ) : (
                 <>
-                  <video controls width="900" height="504" autoPlay muted>
+                  <video controls width="900" height="504" muted>
                     <source src={InstructionVideo} type="video/mp4" />
                   </video>
                 </>

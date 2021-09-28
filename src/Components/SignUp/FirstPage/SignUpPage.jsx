@@ -7,7 +7,7 @@ import google from "../../../Images/SignUp/google.png";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import { useState } from "react";
-import { useHistory } from "react-router";
+import { Redirect, useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { auth, db } from "../../StoreFeatures/firebase";
 import firebase from "firebase";

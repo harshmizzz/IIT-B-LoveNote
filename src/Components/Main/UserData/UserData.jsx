@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import { CircularProgress } from "@material-ui/core";
 import MainNavBar from "../MainNav/MainNavBar";
@@ -61,11 +61,10 @@ function UserData() {
   //signout
   const signout = () => {
     auth.signOut().then(() => {
-      dispatch(logout());
-      auth.signOut();
-      history.push("/login");
-      localStorage.removeItem("email");
+      auth.signOut().then(() => dispatch(logout()));
     });
+    localStorage.removeItem("token");
+    window.close();
   };
 
   if (loading)

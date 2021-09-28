@@ -8,6 +8,7 @@ import {
   Switch,
   Route,
   withRouter,
+  Redirect,
 } from "react-router-dom";
 import "./SignUp.css";
 import Media from "react-media";
@@ -16,6 +17,8 @@ import SignUpFourth from "../../Components/SignUp/FourthPage/SignUpFourth";
 import LoginPage from "../../Components/SignUp/Loginpage/LoginPage";
 import HamburgerBox2 from "../../Components/SignUp/SignUpNav/HamburgerBox2";
 import MobileProgressBar from "../../Components/SignUp/Progress/MobileProgressBar";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../Components/StoreFeatures/userSlice";
 const SignUp = () => {
   return (
     <Router>
@@ -24,7 +27,6 @@ const SignUp = () => {
           {(matches) => (matches ? <HamburgerBox2 /> : <SignUPNav />)}
         </Media>
 
-        {/* <SignUPNav /> */}
         <div className="SignUpBody">
           <div className="SignUpHeading">
             <div className="signUpBig">Sign Up</div>
@@ -42,7 +44,9 @@ const SignUp = () => {
 
             <Switch>
               <div className="SignUpContainer">
-                <Route component={SignUpPage} path="/SignUp" exact />
+                <Route path="/SignUp" exact>
+                  <SignUpPage />
+                </Route>
                 <Route component={SignUPSecond} path="/profile" exact />
                 <Route component={SignUpThird} path="/preferences" exact />
                 <Route component={SignUpFourth} path="/feedback" exact />

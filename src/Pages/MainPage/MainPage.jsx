@@ -9,7 +9,11 @@ import { Link } from "react-router-dom";
 import firebase from "firebase";
 import { auth, db } from "../../Components/StoreFeatures/firebase";
 import { useDispatch, useSelector } from "react-redux";
-import { login, selectUser } from "../../Components/StoreFeatures/userSlice";
+import {
+  login,
+  logout,
+  selectUser,
+} from "../../Components/StoreFeatures/userSlice";
 import { useState } from "react";
 import HamburgerBox2 from "../../Components/SignUp/SignUpNav/HamburgerBox2";
 import Media from "react-media";
@@ -19,6 +23,7 @@ function MainPage() {
   const user = useSelector(selectUser);
   const [data, setdata] = useState("");
   const [loading, setloading] = useState(true);
+  const dispatch = useDispatch();
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -29,6 +34,7 @@ function MainPage() {
             if (doc.exists) {
               setdata(doc.data());
             } else {
+              dispatch(logout());
               console.log("No such document!");
             }
           })

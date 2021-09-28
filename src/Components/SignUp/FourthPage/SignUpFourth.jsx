@@ -121,6 +121,7 @@ function SignUpFourth() {
         isVerified: false,
       })
       .then(() => {
+        localStorage.setItem("token", user.uid);
         window.location = "/main";
       });
   };

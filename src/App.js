@@ -1,18 +1,28 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import UserData from "./Components/Main/UserData/UserData";
 import VerificationPage from "./Components/VerificationPage/VerificationPage";
 import Home from "./Pages/Home/Home";
 import { createBrowserHistory } from "history";
 import MainPage from "./Pages/MainPage/MainPage";
 import SignUp from "./Pages/SignUp/SignUp";
-import { Provider, useDispatch } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 import { store } from "./Components/StoreFeatures/Store";
 import { useEffect } from "react";
 import { auth } from "./Components/StoreFeatures/firebase";
-import { login, logout } from "./Components/StoreFeatures/userSlice";
+import {
+  login,
+  logout,
+  selectUser,
+} from "./Components/StoreFeatures/userSlice";
 
 const App = () => {
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
   const appHistory = createBrowserHistory({ forceRefresh: true });
   useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {
@@ -29,13 +39,17 @@ const App = () => {
       }
     });
   }, []);
-
+  const token = localStorage.getItem("token");
   return (
     <Provider store={store}>
       <Router history={appHistory}>
         <div className="App">
           <Switch>
-            <Route path="/SignUp" component={SignUp} exact />
+            <Route path="/SignUp" exact>
+              {/* {user ? <Redirect to="/main" /> : <SignUp />} */}
+              {!token ? <SignUp /> : <Redirect to="/main" />}
+              {/* <SignUp /> */}
+            </Route>
             <Route path="/home" exact>
               <Home />
             </Route>

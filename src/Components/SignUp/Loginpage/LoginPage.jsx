@@ -79,7 +79,7 @@ function LoginPage() {
                 name: user.displayName,
               })
             );
-            localStorage.setItem("email", user.email);
+            localStorage.setItem("token", user.uid);
             window.location = "/main";
           }
         });
@@ -118,7 +118,7 @@ function LoginPage() {
             name: user.displayName,
           })
         );
-        localStorage.setItem("email", user.email);
+        localStorage.setItem("token", user.uid);
 
         window.location = "/main";
       }
