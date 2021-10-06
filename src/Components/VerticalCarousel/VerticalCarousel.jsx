@@ -52,7 +52,7 @@ function VerticalCarousel() {
               slidesPerView={1}
               effect={"fade"}
               autoplay={{
-                delay: 2000,
+                delay: 2500,
                 disableOnInteraction: false,
               }}
               breakpoints={{
@@ -294,7 +294,7 @@ function VerticalCarousel() {
               slidesPerView={1}
               effect={"fade"}
               autoplay={{
-                delay: 2000,
+                delay: 3000,
                 disableOnInteraction: false,
               }}
             >
@@ -398,7 +398,7 @@ function VerticalCarousel() {
               slidesPerView={1}
               modules={[EffectFade]}
               autoplay={{
-                delay: 2000,
+                delay: 1000,
                 disableOnInteraction: false,
               }}
               effect={"fade"}

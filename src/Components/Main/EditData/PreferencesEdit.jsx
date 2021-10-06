@@ -96,7 +96,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
                 <option value="other">Other</option>
               </select>
             </div>
-            <div className="PreferencesEditItems">
+            <div className="PreferencesEditItems PreferencesEditItemsAge">
               <label>What age group would you prefer to see</label>
 
               <Controller
@@ -125,7 +125,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
                 <option value="" disabled selected>
                   State
                 </option>
-              <option value="Open to Anywhere">Open to Anywhere</option>
+                <option value="Open to Anywhere">Open to Anywhere</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">
                   Andaman and Nicobar Islands

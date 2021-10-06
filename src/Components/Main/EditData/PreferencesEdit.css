@@ -8,6 +8,14 @@
   background: rgba(15, 7, 27, 0.9);
 }
 
+.PreferencesEditItems > .sliderComponent {
+  width: 50%;
+}
+
+.PreferencesEditItemsAge {
+  margin-top: 30px !important;
+}
+
 .PreferencesEditModal {
   position: fixed;
   top: 50%;

@@ -18,6 +18,9 @@
   color: #ffff;
   line-height: 22px;
 }
+.MainNavBar > a {
+  text-decoration: none;
+}
 .MainNavBar > a > p:hover {
   border-bottom: 1px solid black;
   transition: 0.5s;

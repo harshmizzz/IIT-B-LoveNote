@@ -24,8 +24,6 @@ import "swiper/components/a11y/a11y.scss";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import girl1 from "../../../Images/DummyProfile/10.2.png";
-import girl2 from "../../../Images/DummyProfile/12.2.png";
-import girl3 from "../../../Images/DummyProfile/15.png";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 function Profile() {

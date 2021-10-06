@@ -39,7 +39,7 @@
   justify-content: flex-start;
 }
 
-.VerificationModalContent > h5 {
+.VerificationModalContent > .VerificationModalHeading {
   font-weight: 500;
   font-size: 30px;
   line-height: 37px;
