@@ -6,7 +6,7 @@ import birthImage2 from "../../Images/BirthLoveNote/Image2.png";
 const BirthLoveNote = () => {
   return (
     <>
-      <div className="body" id="MeetUs">
+      <div className="body2" id="MeetUs">
         <div className="coverBody">
           <h3> THE "BIRTH OF LOVENOTE" </h3>
           <div className="firstSection">
