@@ -28,7 +28,10 @@
 }
 .SignUpFourthImg > img {
   width: 240px;
-  height: 200px;
+  position: fixed;
+  bottom: 0;
+  right: 2vw;
+  height: 180px;
 }
 
 .SignUpFourthBox1 {

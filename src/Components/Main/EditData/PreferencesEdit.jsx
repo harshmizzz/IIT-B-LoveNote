@@ -264,7 +264,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
                 <option value="Doesn't matter">Doesn't matter</option>
               </select>
             </div>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Save" />
           </form>
         </div>
       </div>

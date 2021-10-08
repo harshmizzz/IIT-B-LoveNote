@@ -48,6 +48,7 @@ function SignUPSecond() {
         IsDrink: data.drink,
         WantChildren: data.children,
         Religion: data.religion,
+        isProfileData: true,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then(() => {
@@ -89,6 +90,10 @@ function SignUPSecond() {
                 pattern: {
                   value: /^[0-9]+$/,
                   message: "Please enter a valid age",
+                },
+                min: {
+                  value: 18,
+                  message: "Minimum Age Should be 18",
                 },
               })}
               autoComplete="off"

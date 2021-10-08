@@ -59,7 +59,10 @@
   margin-bottom: 5px;
   /* width: 10%; */
 }
-
+.SignUpSecondForm {
+  display: flex;
+  flex-direction: column;
+}
 .PreferencesEditModal input[type="submit"] {
   background: #0f071b;
   border-radius: 50px;
@@ -71,6 +74,7 @@
   line-height: 16px;
   text-align: center;
   color: #ebe7e6;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 800px) {

@@ -64,7 +64,8 @@ function UserData() {
       auth.signOut().then(() => dispatch(logout()));
     });
     localStorage.removeItem("token");
-    window.close();
+    window.location = "/";
+    // window.close();
   };
 
   if (loading)

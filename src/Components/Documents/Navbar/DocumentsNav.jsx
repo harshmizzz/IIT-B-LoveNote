@@ -1,8 +1,8 @@
 import React from "react";
-import "./SignUPNav.css";
-function SignUPNav() {
+import "./DocumentsNav.css";
+function DocumentsNav() {
   return (
-    <div className="SignUPNav">
+    <div className="DocumentsNav">
       <a href="/">
         <p>Home</p>
       </a>
@@ -19,4 +19,4 @@ function SignUPNav() {
   );
 }
 
-export default SignUPNav;
+export default DocumentsNav;

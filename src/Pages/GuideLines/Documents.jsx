@@ -10,16 +10,17 @@ import CommunityGuideline from "../../Components/Documents/Community GuideLines/
 import Faqs from "../../Components/Documents/FAQs/Faqs";
 import Terms from "../../Components/Documents/T&Cs/Terms";
 import Privacy from "../../Components/Documents/Privacy Policy/Privacy";
-import HamburgerBox2 from "../../Components/SignUp/SignUpNav/HamburgerBox2";
-import SignUPNav from "../../Components/SignUp/SignUpNav/SignUPNav";
+
 import Footer from "../../Components/Footer/Footer";
 import Footer2 from "../../Components/Footer2/Footer2";
+import HamburgerBox3 from "../../Components/Documents/Navbar/HamburgerBox3";
+import DocumentsNav from "../../Components/Documents/Navbar/DocumentsNav";
 function Documents() {
   return (
     <Router>
       <div className="documents">
         <Media query={{ maxWidth: 800 }}>
-          {(matches) => (matches ? <HamburgerBox2 /> : <SignUPNav />)}
+          {(matches) => (matches ? <HamburgerBox3 /> : <DocumentsNav />)}
         </Media>
         <Switch>
           <Route

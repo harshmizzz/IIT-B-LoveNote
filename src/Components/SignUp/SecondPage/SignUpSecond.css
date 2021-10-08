@@ -25,14 +25,15 @@
   position: absolute;
   width: 213px;
   height: 212px;
-  top: 50vh;
+  /* top: 50vh; */
+  bottom: 2vh;
   right: 20vw;
 }
 .SecondFormMen {
   position: absolute;
   width: 238px;
   height: 146px;
-  top: 35vh;
+  top: 47vh;
   right: 5vw;
 }
 

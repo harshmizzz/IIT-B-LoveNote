@@ -15,6 +15,7 @@ function SignUpThird() {
     db.collection("users")
       .doc(user.uid)
       .update({
+        isPreferencesData: true,
         Preferences: {
           PGender: data.gender,
           PAge: val,

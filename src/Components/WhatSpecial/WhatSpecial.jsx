@@ -20,6 +20,27 @@ const WhatSpecial = () => {
           matches ? (
             <>
               <div className="WhatSpecialBody">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26.5586 16.4609L16.5586 26.4609L6.55859 16.4609"
+                    stroke="#EBE7E6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M26.5586 6.46094L16.5586 16.4609L6.55859 6.46094"
+                    stroke="#EBE7E6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
                 <h3>WHAT'S SPECIAL ?</h3>
               </div>
               <Swiper
@@ -79,6 +100,27 @@ const WhatSpecial = () => {
           ) : (
             <>
               <div className="WhatSpecialBody">
+                <svg
+                  width="33"
+                  height="33"
+                  viewBox="0 0 33 33"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26.5586 16.4609L16.5586 26.4609L6.55859 16.4609"
+                    stroke="#EBE7E6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M26.5586 6.46094L16.5586 16.4609L6.55859 6.46094"
+                    stroke="#EBE7E6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
                 <h3>WHAT'S SPECIAL ?</h3>
                 <div className="row imageRow">
                   <div className="imgCard column col-lg-4">

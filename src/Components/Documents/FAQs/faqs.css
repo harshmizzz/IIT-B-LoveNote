@@ -73,11 +73,27 @@
 .FaqsBottomMiddle {
   display: flex;
   flex-direction: column;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #161b1e;
   gap: 10px;
 }
 
 .FaqsBottomMiddleItems {
   border-bottom: 1px solid #cfc4c1;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #161b1e;
 }
 
 .FaqsBottomMiddleItems .MuiIconButton-label .MuiSvgIcon-root {

@@ -233,7 +233,7 @@ function ProfileEdit({ open, onclose }) {
                 <option value="Maybe in future">Maybe in future</option>
               </select>
             </div>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Save" />
           </form>
         </div>
       </div>

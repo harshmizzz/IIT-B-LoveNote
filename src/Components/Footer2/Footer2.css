@@ -1,5 +1,6 @@
 .Footer2 {
-  background: #0f071b;
+  background: #ffffff;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,15 +18,19 @@
   font-size: 16px;
   line-height: 20px;
   /* identical to box height */
-
-  color: #ebe7e6;
+  /* color: #ebe7e6; */
+  color: black;
 }
 
+.Footer2Bottom .MuiSvgIcon-root {
+  color: black;
+}
 .Footer2Bottom {
   display: flex;
-  width: 20%;
+  width: 10%;
   align-items: center;
   justify-content: space-around;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 800px) {
@@ -41,5 +46,6 @@
   }
   .Footer2Bottom {
     width: 40%;
+    margin-left: 0;
   }
 }
