@@ -14,19 +14,18 @@ function SignUpThird() {
   const onSubmit = (data) => {
     db.collection("users")
       .doc(user.uid)
-      .update({
-        isPreferencesData: true,
-        Preferences: {
-          PGender: data.gender,
-          PAge: val,
-          PState: data.state,
-          PReligion: data.religion,
-          PExercise: data.exercise,
-          PIsDrink: data.drink,
-          PWantChildren: data.children,
-          PDiet: data.diet,
-          PIsSmoke: data.smoke,
-        },
+      .collection("UserFormInputs")
+      .doc("userPreferences")
+      .set({
+        Gender: data.gender,
+        Age: val,
+        State: data.state,
+        Religion: data.religion,
+        Exercise: data.exercise,
+        IsDrink: data.drink,
+        WantChildren: data.children,
+        Diet: data.diet,
+        IsSmoke: data.smoke,
       })
       .then(() => {
         window.location = "/feedback";

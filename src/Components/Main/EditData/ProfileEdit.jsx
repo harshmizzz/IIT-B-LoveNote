@@ -12,7 +12,11 @@ function ProfileEdit({ open, onclose }) {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        const response = db.collection("users").doc(user.uid);
+        const response = db
+          .collection("users")
+          .doc(user.uid)
+          .collection("UserFormInputs")
+          .doc("userDetails");
         response
           .get()
           .then((doc) => {
@@ -42,6 +46,8 @@ function ProfileEdit({ open, onclose }) {
     console.log(Items);
     db.collection("users")
       .doc(user.uid)
+      .collection("UserFormInputs")
+      .doc("userDetails")
       .update({
         Age: Items.age,
         HeightFt: Items.height,

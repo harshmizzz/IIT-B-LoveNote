@@ -33,6 +33,8 @@ function SignUPSecond() {
     console.log(data);
     db.collection("users")
       .doc(user.uid)
+      .collection("UserFormInputs")
+      .doc("userDetails")
       .set({
         Fullname: data.name,
         Age: data.age,
@@ -48,7 +50,6 @@ function SignUPSecond() {
         IsDrink: data.drink,
         WantChildren: data.children,
         Religion: data.religion,
-        isProfileData: true,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then(() => {

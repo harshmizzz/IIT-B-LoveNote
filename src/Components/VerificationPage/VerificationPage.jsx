@@ -41,7 +41,11 @@ function VerificationPage() {
       e.preventDefault();
       setisOpen(true);
       console.log(file);
-      db.collection("users").doc(user.uid).update({ isVerified: true });
+      db.collection("users")
+        .doc(user.uid)
+        .collection("UserFormInputs")
+        .doc("userDetails")
+        .update({ isVerified: true });
 
       // uploading to firebase storage
       const promises = [];
@@ -49,7 +53,7 @@ function VerificationPage() {
         const uploadTask = firebase
           .storage()
           .ref()
-          .child(`users/${user.uid}/${file.name}`)
+          .child(`${user.uid}/${file.name}`)
           .put(file);
 
         promises.push(uploadTask);
@@ -70,7 +74,7 @@ function VerificationPage() {
       const uploadcamera = firebase
         .storage()
         .ref()
-        .child(`users/${user.uid}/verify.jpg`)
+        .child(`${user.uid}/verify.jpg`)
         .putString(dataUri, "data_url", { contentType: "image/png" });
 
       Promise.all(promises)

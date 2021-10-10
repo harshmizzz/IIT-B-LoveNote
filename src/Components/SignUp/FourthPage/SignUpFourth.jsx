@@ -113,16 +113,22 @@ function SignUpFourth() {
     e.preventDefault();
     db.collection("users")
       .doc(user.uid)
-      .update({
-        Feedback: {
-          Feedbacks: checkedItems,
-          Suggestion: textbox,
-        },
-        isVerified: false,
+      .collection("UserFormInputs")
+      .doc("Feedback")
+      .set({
+        Feedbacks: checkedItems,
+        Suggestion: textbox,
       })
       .then(() => {
         localStorage.setItem("token", user.uid);
         window.location = "/main";
+      });
+    db.collection("users")
+      .doc(user.uid)
+      .collection("UserFormInputs")
+      .doc("userDetails")
+      .update({
+        isVerified: false,
       });
   };
 

@@ -12,7 +12,11 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        const response = db.collection("users").doc(user.uid);
+        const response = db
+          .collection("users")
+          .doc(user.uid)
+          .collection("UserFormInputs")
+          .doc("userPreferences");
         response
           .get()
           .then((doc) => {
@@ -47,18 +51,18 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
     console.log(Items);
     db.collection("users")
       .doc(user.uid)
+      .collection("UserFormInputs")
+      .doc("userPreferences")
       .update({
-        Preferences: {
-          PGender: Items.gender,
-          PAge: val,
-          PState: Items.state,
-          PReligion: Items.religion,
-          PExercise: Items.exercise,
-          PIsDrink: Items.drink,
-          PWantChildren: Items.children,
-          PDiet: Items.diet,
-          PIsSmoke: Items.smoke,
-        },
+        Gender: Items.gender,
+        Age: val,
+        State: Items.state,
+        Religion: Items.religion,
+        Exercise: Items.exercise,
+        IsDrink: Items.drink,
+        WantChildren: Items.children,
+        Diet: Items.diet,
+        IsSmoke: Items.smoke,
       })
       .then(() => {
         window.location = "/userprofile";

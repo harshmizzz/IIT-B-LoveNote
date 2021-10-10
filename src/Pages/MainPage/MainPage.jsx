@@ -27,7 +27,11 @@ function MainPage() {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        const response = db.collection("users").doc(user.uid);
+        const response = db
+          .collection("users")
+          .doc(user.uid)
+          .collection("UserFormInputs")
+          .doc("userDetails");
         response
           .get()
           .then((doc) => {

@@ -1,12 +1,25 @@
 import React from "react";
 import "./VerificationModal.css";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function VerificationModal({ progress, open, onclose }) {
+  const notify = () =>
+    toast("Link Copied to Clipboard", {
+      position: "top-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   if (!open) return null;
   return (
     <>
       <div className="VerificationModalWrapper" />
       <div className="VerificationModal">
         <div className="VerificationModalContent">
+          <ToastContainer />
           <p className="VerificationModalHeading">Thank you!</p>
           <p>
             We will get back to you after verification! You would then explore
@@ -18,6 +31,7 @@ function VerificationModal({ progress, open, onclose }) {
           <button
             onClick={() => {
               navigator.clipboard.writeText("Copy this text to clipboard");
+              notify();
             }}
           >
             Invite your friends
