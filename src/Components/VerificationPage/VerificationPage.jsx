@@ -46,7 +46,7 @@ function VerificationPage() {
         .collection("UserFormInputs")
         .doc("userDetails")
         .update({ isVerified: true });
-      firebase.analytics().logEvent("User Completed Verification Process"); // uploading to firebase storage
+      // uploading to firebase storage
       const promises = [];
       filesupload.forEach((file) => {
         const uploadTask = firebase
@@ -68,6 +68,7 @@ function VerificationPage() {
           },
           (error) => console.log(error.code)
         );
+        firebase.analytics().logEvent("User Completed Verification Process");
       });
 
       const uploadcamera = firebase
@@ -99,7 +100,6 @@ function VerificationPage() {
       <Media query={{ maxWidth: 800 }}>
         {(matches) => (matches ? <HamburgerBox2 /> : <MainNavBar />)}
       </Media>
-      {firebase.analytics().logEvent("User Visited Verification Page")}
       <div className="VerificationPageContainer">
         <div className="VerificationPageHeading">
           <div className="VerificationPageHeadingLeft">
