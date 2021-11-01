@@ -16,9 +16,14 @@ export const faqs = [
   },
   {
     heading: "What are stages? (Do other people know I increased the stage)",
-    details: "",
+    details:
+      "Stages is a fun element in Love Note. This allows you to gauge your level of interest in the individual you're speaking with. If you believe your degree of interest is increasing, you can raise it as well. You may now access new activities that you can undertake with the other person after raising your level. If the other person's level hasn't been raised yet, you won't be able to participate in your level's activities",
   },
-  { heading: "How does Lovenote match works?", details: "" },
+  {
+    heading: "How does Lovenote match works?",
+    details:
+      "Unlike other dating apps, you don’t just swipe left or right on user profiles. If you answer the questions (at least one) that means you are interested to match with the user. If the person replies back to your questions then it's a match!!",
+  },
   {
     heading: "How do I get a match on Lovenote? ",
     details:
@@ -29,6 +34,20 @@ export const faqs = [
     details:
       "You can unmatch anyone at any point in time. To do so, go to the chat (of that person) > Setting > Unmatch. Think twice before unmatching someone, you cannot undo once it’s done. We don’t want you to regret it. ",
   },
-  { heading: "How to disable or enable video and audio calls?", details: "" },
-  { heading: "How do I know the same?", details: "" },
+  {
+    heading: "How to disable or enable video and audio calls?",
+    details:
+      "If you are uneasy accepting calls from the individual with whom you have just begun a conversation. After that, you can turn off your audio and video calling features. Go to chat > Menu (Three dots) > Enable or Disable Video/Audio call",
+  },
+  {
+    heading:
+      "How can I tell if the user has turned on/off the audio and video calling features?",
+    details:
+      "On the audio and video calling, there is a green dot. It will tell you that the user has enabled both the options.",
+  },
+  {
+    heading: "How will I know that the user has increased the sage? ",
+    details:
+      "You won't be able to participate in your level's activities if the other person's level hasn't been raised yet.",
+  },
 ];

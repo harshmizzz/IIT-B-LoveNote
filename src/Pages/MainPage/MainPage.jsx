@@ -25,6 +25,8 @@ function MainPage() {
   const [loading, setloading] = useState(true);
   const dispatch = useDispatch();
   useEffect(() => {
+    firebase.analytics().logEvent("User On MainPage");
+
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         const response = db
@@ -65,6 +67,7 @@ function MainPage() {
       <Media query={{ maxWidth: 800 }}>
         {(matches) => (matches ? <HamburgerBox2 /> : <MainNavBar />)}
       </Media>
+      {firebase.analytics().logEvent("User Visited Main Profiles Page")}
       <div className="MainPageContainer">
         <div className="MainPageHeading">
           <div className="MainPageHeadingLeft">

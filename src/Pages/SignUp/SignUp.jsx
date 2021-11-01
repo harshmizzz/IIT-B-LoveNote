@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import "./SignUp.css";
 import Media from "react-media";
+import firebase from "firebase";
 import SignUpThird from "../../Components/SignUp/ThirdPage/SignUpThird";
 import SignUpFourth from "../../Components/SignUp/FourthPage/SignUpFourth";
 import LoginPage from "../../Components/SignUp/Loginpage/LoginPage";
@@ -26,7 +27,7 @@ const SignUp = () => {
         <Media query={{ maxWidth: 800 }}>
           {(matches) => (matches ? <HamburgerBox2 /> : <SignUPNav />)}
         </Media>
-
+        {firebase.analytics().logEvent("User Visited Sign Up Page")}
         <div className="SignUpBody">
           <div className="SignUpHeading">
             <div className="signUpBig">Sign Up</div>

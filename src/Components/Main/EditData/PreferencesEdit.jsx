@@ -89,7 +89,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
               <label>Gender Preference</label>
               <select
                 {...register("gender", {
-                  value: data.Preferences.PGender,
+                  value: data.Gender,
                 })}
               >
                 <option value="" disabled selected>
@@ -124,7 +124,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
             <div className="PreferencesEditItems">
               <label>What state they should be from?</label>
               <select
-                {...register("state", { value: data.Preferences.PState })}
+                {...register("state", { value: data.State })}
               >
                 <option value="" disabled selected>
                   State
@@ -176,7 +176,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
               <label>What religion should they be from?</label>
               <select
                 {...register("religion", {
-                  value: data.Preferences.PReligion,
+                  value: data.Religion,
                 })}
               >
                 <option value="" disabled selected>
@@ -193,7 +193,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
               <label>Should they exercise?</label>
               <select
                 {...register("exercise", {
-                  value: data.Preferences.PExercise,
+                  value: data.Exercise,
                 })}
               >
                 <option value="" disabled selected>
@@ -209,7 +209,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
               <label>What's their diet be?</label>
               <select
                 {...register("diet", {
-                  value: data.Preferences.PDiet,
+                  value: data.Diet,
                 })}
               >
                 <option value="" disabled selected>
@@ -225,7 +225,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
               <label>Should they smoke?</label>
               <select
                 {...register("smoke", {
-                  value: data.Preferences.PIsSmoke,
+                  value: data.IsSmoke,
                 })}
               >
                 <option value="" disabled selected>
@@ -241,7 +241,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
               <label>Should they drink?</label>
               <select
                 {...register("drink", {
-                  value: data.Preferences.PIsDrink,
+                  value: data.IsDrink,
                 })}
               >
                 <option value="" disabled selected>
@@ -257,7 +257,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
               <label>Should they want children?</label>
               <select
                 {...register("children", {
-                  value: data.Preferences.PWantChildren,
+                  value: data.WantChildren,
                 })}
               >
                 <option value="" disabled selected>

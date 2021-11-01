@@ -34,29 +34,6 @@ function LoginPage() {
       alert(err.message);
     }
   };
-  // const [data, setdata] = useState("");
-
-  // useEffect(() => {
-  //   firebase.auth().onAuthStateChanged((user) => {
-  //     if (user) {
-  //       const response = db.collection("users").doc(user.uid);
-  //       response
-  //         .get()
-  //         .then((doc) => {
-  //           if (doc.exists) {
-  //             setdata(doc.data());
-  //           } else {
-  //             console.log("No such document!");
-  //           }
-  //         })
-  //         .catch((error) => {
-  //           console.log("Error getting document:", error);
-  //         });
-  //     } else {
-  //       console.log("not signed in");
-  //     }
-  //   });
-  // }, []);
 
   const signInWithGoogle = async () => {
     var provider = new firebase.auth.GoogleAuthProvider();
@@ -69,6 +46,7 @@ function LoginPage() {
         var newUser = result.additionalUserInfo.isNewUser;
         console.log(result.additionalUserInfo.isNewUser);
         auth.onAuthStateChanged((user) => {
+          firebase.analytics().logEvent("User Logged in Via Google");
           if (newUser) {
             window.location = "/profile";
           } else if (user) {
@@ -87,19 +65,6 @@ function LoginPage() {
       .catch((error) => {
         console.log(error.message);
       });
-    // auth.onAuthStateChanged((user) => {
-    //   if (user) {
-    //     dispatch(
-    //       login({
-    //         email: user.email,
-    //         uid: user.uid,
-    //         name: user.displayName,
-    //       })
-    //     );
-    //     localStorage.setItem("email", user.email);
-    //     window.location = "/main";
-    //   }
-    // });
   };
   const signInWithEmailAndPassword = async (email, password) => {
     try {
@@ -119,7 +84,7 @@ function LoginPage() {
           })
         );
         localStorage.setItem("token", user.uid);
-
+      firebase.analytics().logEvent("User Logged in Via Email");
         window.location = "/main";
       }
     });

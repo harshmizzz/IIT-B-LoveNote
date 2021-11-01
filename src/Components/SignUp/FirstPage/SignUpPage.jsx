@@ -27,6 +27,7 @@ function SignUpPage() {
     try {
       await auth.createUserWithEmailAndPassword(data.email, data.password);
       auth.onAuthStateChanged((user) => {
+        firebase.analytics().logEvent("User Signed Up Via Email");
         if (user) {
           dispatch(
             login({
@@ -56,6 +57,8 @@ function SignUpPage() {
         console.log(error.message);
       });
     auth.onAuthStateChanged((user) => {
+      firebase.analytics().logEvent("User Signed Up Via Google");
+
       if (user) {
         dispatch(
           login({

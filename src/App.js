@@ -20,13 +20,20 @@ import {
   selectUser,
 } from "./Components/StoreFeatures/userSlice";
 import Documents from "./Pages/GuideLines/Documents.jsx";
+import firebase from "firebase";
+import smartlookClient from "smartlook-client";
+import { hotjar } from "react-hotjar";
+import useScript from "./Hooks/useScript";
 const MainPage = lazy(() => import("./Pages/MainPage/MainPage"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp"));
 const App = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   const appHistory = createBrowserHistory({ forceRefresh: true });
+  useScript("https://rec.smartlook.com/recorder.js");
+  smartlookClient.init("988c671c4c51c646077758666e11ff61594fb44c");
   useEffect(() => {
+    hotjar.initialize(2679635, 6);
     auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         dispatch(

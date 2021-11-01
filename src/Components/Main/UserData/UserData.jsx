@@ -27,6 +27,7 @@ function UserData() {
   const [mobile1, setmobile1] = useState(true);
   const user = auth.currentUser;
   useEffect(() => {
+    firebase.analytics().logEvent("User Visited User Data Page")
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         const response = db

@@ -1,10 +1,11 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import WhatSpecial from "../../Components/WhatSpecial/WhatSpecial";
 import "./Home.css";
 import Media from "react-media";
 import HamburgerBox from "../../Components/Navbar/Hamburger";
 import { CircularProgress } from "@material-ui/core";
+import firebase from "firebase";
 import Footer2 from "../../Components/Footer2/Footer2";
 const VideoScreen = lazy(() =>
   import("../../Components/VideoScreen/VideoScreen")
@@ -18,6 +19,9 @@ const BirthLoveNote = lazy(() =>
 const Excited = lazy(() => import("../../Components/Footer/Footer"));
 // const VideoScreen = lazy(() => import());
 const Home = () => {
+  useEffect(() => {
+    firebase.analytics().logEvent("User on Landing Page");
+  });
   return (
     <>
       <Media query={{ maxWidth: 800 }}>

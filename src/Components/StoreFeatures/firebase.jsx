@@ -1,9 +1,6 @@
 import firebase from "firebase";
 import "firebase/storage";
 import "firebase/analytics";
-import { useDispatch } from "react-redux";
-import { login, logout } from "./userSlice";
-
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
   authDomain: process.env.REACT_APP_authDomain,
@@ -11,12 +8,12 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_storageBucket,
   messagingSenderId: process.env.REACT_APP_messagingSenderId,
   appId: process.env.REACT_APP_appId,
+  measurementId: process.env.REACT_APP_measurement_id,
 };
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-
-firebase.analytics();
-
+firebase.initializeApp(firebaseConfig);
+const analytics = firebase.analytics();
 const auth = firebase.auth();
 const storage = firebase.storage();
-const db = firebaseApp.firestore();
-export { auth, storage, db };
+const db = firebase.firestore();
+
+export { auth, storage, db, analytics };

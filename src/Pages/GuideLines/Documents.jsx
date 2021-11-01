@@ -10,12 +10,16 @@ import CommunityGuideline from "../../Components/Documents/Community GuideLines/
 import Faqs from "../../Components/Documents/FAQs/Faqs";
 import Terms from "../../Components/Documents/T&Cs/Terms";
 import Privacy from "../../Components/Documents/Privacy Policy/Privacy";
-
+import firebase from "firebase";
 import Footer from "../../Components/Footer/Footer";
 import Footer2 from "../../Components/Footer2/Footer2";
 import HamburgerBox3 from "../../Components/Documents/Navbar/HamburgerBox3";
 import DocumentsNav from "../../Components/Documents/Navbar/DocumentsNav";
+import { useEffect } from "react";
 function Documents() {
+  useEffect(() => {
+    firebase.analytics().logEvent("User on Guidelines Page");
+  });
   return (
     <Router>
       <div className="documents">
