@@ -39,7 +39,7 @@ function PasswordChangeModal({ open, onclose }) {
             auth.signOut().then(() => {
               dispatch(logout());
               auth.signOut();
-              window.location = "/login";
+              window.location = "/Login";
             });
           })
           .catch((error) => {

@@ -48,10 +48,10 @@ const SignUp = () => {
                 <Route path="/SignUp" exact>
                   <SignUpPage />
                 </Route>
-                <Route component={SignUPSecond} path="/profile" exact />
-                <Route component={SignUpThird} path="/preferences" exact />
-                <Route component={SignUpFourth} path="/feedback" exact />
-                <Route component={LoginPage} path="/login" exact />
+                <Route component={SignUPSecond} path="/Profile" exact />
+                <Route component={SignUpThird} path="/Preferences" exact />
+                <Route component={SignUpFourth} path="/Feedback" exact />
+                <Route component={LoginPage} path="/Login" exact />
               </div>
             </Switch>
           </div>

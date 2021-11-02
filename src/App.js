@@ -67,27 +67,27 @@ const App = () => {
               }
             >
               <Route path="/SignUp" exact>
-                {!token ? <SignUp /> : <Redirect to="/main" />}
+                {!token ? <SignUp /> : <Redirect to="/Dashboard" />}
               </Route>
-              <Route path="/profile" exact>
+              <Route path="/Profile" exact>
                 <SignUp />
               </Route>
-              <Route path="/preferences" exact>
+              <Route path="/Preferences" exact>
                 <SignUp />
               </Route>
-              <Route path="/feedback" exact>
+              <Route path="/Feedback" exact>
                 <SignUp />
               </Route>
-              <Route path="/login" exact>
+              <Route path="/Login" exact>
                 <SignUp />
               </Route>
-              <Route path="/main" exact>
+              <Route path="/Dashboard" exact>
                 <MainPage />
               </Route>
-              <Route path="/userprofile" exact>
+              <Route path="/MyProfile" exact>
                 <UserData />
               </Route>
-              <Route path="/verify" exact>
+              <Route path="/Verify" exact>
                 <VerificationPage />
               </Route>
               <Route path="/communityguidelines" component={Documents} exact />

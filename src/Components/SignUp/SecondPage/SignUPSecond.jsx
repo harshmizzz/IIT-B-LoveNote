@@ -53,7 +53,7 @@ function SignUPSecond() {
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then(() => {
-        window.location = "/preferences";
+        window.location = "/Preferences";
       });
     auth.currentUser.updateProfile({
       displayName: data.name,

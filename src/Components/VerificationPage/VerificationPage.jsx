@@ -107,7 +107,7 @@ function VerificationPage() {
               <div
                 className="VerificationPageBackArrow"
                 onClick={() => {
-                  history.push("/main");
+                  history.push("/Dashboard");
                 }}
               >
                 <ArrowBackIcon />

@@ -114,7 +114,7 @@ function UserData() {
             <p>Let’s explore and find someone awesome for you</p>
           </div>
           <div className="UserDataHeadingRight">
-            <Link to="/main">
+            <Link to="/Dashboard">
               <p>Explore</p> <DoubleArrowIcon fontSize="small" />
             </Link>
           </div>

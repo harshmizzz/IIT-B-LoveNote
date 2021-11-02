@@ -60,7 +60,7 @@ function ProfileEdit({ open, onclose }) {
         WantChildren: Items.children,
       })
       .then(() => {
-        window.location = "/userprofile";
+        window.location = "/MyProfile";
       });
   };
 

@@ -65,7 +65,7 @@ function PreferencesEdit({ open, onclose, age0, age1 }) {
         IsSmoke: Items.smoke,
       })
       .then(() => {
-        window.location = "/userprofile";
+        window.location = "/MyProfile";
       });
   };
 

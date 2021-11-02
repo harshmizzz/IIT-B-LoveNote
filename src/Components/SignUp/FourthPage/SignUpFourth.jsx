@@ -130,7 +130,7 @@ function SignUpFourth() {
       })
       .then(() => {
         localStorage.setItem("token", user.uid);
-        window.location = "/main";
+        window.location = "/Dashboard";
       });
     db.collection("users")
       .doc(user.uid)

@@ -28,7 +28,7 @@ function SignUpThird() {
         IsSmoke: data.smoke,
       })
       .then(() => {
-        window.location = "/feedback";
+        window.location = "/Feedback";
       });
 
     console.log(data);

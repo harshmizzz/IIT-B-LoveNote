@@ -8,7 +8,7 @@ function MainVerification() {
   const history = useHistory();
   const verify = () => {
     firebase.analytics().logEvent("User Visited Verification Page");
-    history.push("/verify");
+    history.push("/Verify");
   };
   return (
     <div className="MainVerification">

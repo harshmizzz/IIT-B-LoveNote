@@ -76,7 +76,7 @@ function MainPage() {
             <p>Let’s explore and find someone awesome for you</p>
           </div>
           <div className="MainPageHeadingRight">
-            <Link to="/userprofile">
+            <Link to="/MyProfile">
               <p>Go to my profile </p> <DoubleArrowIcon fontSize="small" />
             </Link>
           </div>

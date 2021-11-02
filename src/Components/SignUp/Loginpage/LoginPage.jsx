@@ -48,7 +48,7 @@ function LoginPage() {
         auth.onAuthStateChanged((user) => {
           firebase.analytics().logEvent("User Logged in Via Google");
           if (newUser) {
-            window.location = "/profile";
+            window.location = "/Profile";
           } else if (user) {
             dispatch(
               login({
@@ -58,7 +58,7 @@ function LoginPage() {
               })
             );
             localStorage.setItem("token", user.uid);
-            window.location = "/main";
+            window.location = "/Dashboard";
           }
         });
       })
@@ -85,7 +85,7 @@ function LoginPage() {
         );
         localStorage.setItem("token", user.uid);
       firebase.analytics().logEvent("User Logged in Via Email");
-        window.location = "/main";
+        window.location = "/Dashboard";
       }
     });
   };

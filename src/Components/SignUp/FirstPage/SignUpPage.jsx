@@ -36,7 +36,7 @@ function SignUpPage() {
               name: user.displayName,
             })
           );
-          history.push("/profile");
+          history.push("/Profile");
         }
       });
     } catch (err) {
@@ -68,7 +68,7 @@ function SignUpPage() {
           })
         );
         localStorage.setItem("email", user.email);
-        window.location = "/profile";
+        window.location = "/Profile";
       }
     });
   };

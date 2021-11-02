@@ -57,10 +57,18 @@ function Footer2() {
         </Link>
       </div>
       <div className="Footer2Bottom">
-        <Link>
+        <Link
+          onClick={() => {
+            window.open("https://www.facebook.com/Thelovenoteapp/", "_blank");
+          }}
+        >
           <Facebook />
         </Link>
-        <Link>
+        <Link
+          onClick={() => {
+            window.open("https://www.instagram.com/lovenote_in/", "_blank");
+          }}
+        >
           <Instagram />
         </Link>
       </div>

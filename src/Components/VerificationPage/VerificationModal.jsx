@@ -39,7 +39,7 @@ function VerificationModal({ progress, open, onclose }) {
           <button
             onClick={
               progress === 100
-                ? () => (window.location = "/main")
+                ? () => (window.location = "/Dashboard")
                 : () => alert("Uploading Files Wait for few seconds")
             }
           >
