@@ -44,6 +44,46 @@
   flex-direction: row;
 }
 
+.SignUpFourthPhoneBox > p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.SignUpFourthPhoneBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUpFourthPhoneBox > input[type="number"] {
+  padding: 5px;
+  border: 0px;
+  border-bottom: 1px solid #cabfbc;
+  /* margin: 10px; */
+  width: 130%;
+  margin-left: -5px;
+}
+
+.SignUpFourthPhoneBox > input[type="number"]:focus {
+  outline: none;
+  padding-left: 5px;
+}
+.SignUpFourthPhoneBox > input[type="number"]::placeholder {
+  color: #cfc4c1;
+  font-size: 16px;
+}
+
+.SignUpFourthPhoneBox > label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #cfc4c1;
+}
+
 .SignUpTextbox {
   background: rgba(255, 255, 255, 0.44);
   color: #333;
@@ -93,6 +133,18 @@
   line-height: 20px;
   font-weight: 500;
   font-family: "Monserrat";
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .SignUpFourthPhoneBox > input[type="number"] {
+    width: 110%;
+  }
+}
+
+@media only screen and (min-width: 250px) and (max-width: 600px) {
+  .SignUpFourthPhoneBox > input[type="number"] {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 800px) {

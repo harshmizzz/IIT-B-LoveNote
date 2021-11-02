@@ -1,11 +1,23 @@
 import React from "react";
 import "./Footer2.css";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 import Facebook from "@material-ui/icons/Facebook";
 import { Instagram } from "@material-ui/icons";
 function Footer2() {
+  const notify = () =>
+    toast("Email Copied to Clipboard", {
+      position: "top-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   return (
     <div className="Footer2">
+      <ToastContainer />
       <div className="Footer2Top">
         <Link
           onClick={() => {
@@ -37,7 +49,8 @@ function Footer2() {
         </Link>
         <Link
           onClick={() => {
-            window.location = "/contactus";
+            navigator.clipboard.writeText("social@lovenote.co.in");
+            notify();
           }}
         >
           <div>Contact Us</div>

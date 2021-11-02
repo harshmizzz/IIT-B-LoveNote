@@ -30,7 +30,7 @@ function VerificationModal({ progress, open, onclose }) {
         <div className="VerificationButtonContainer">
           <button
             onClick={() => {
-              navigator.clipboard.writeText("Copy this text to clipboard");
+              navigator.clipboard.writeText("http://lovenote.co.in/");
               notify();
             }}
           >

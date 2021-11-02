@@ -23,8 +23,13 @@ const Checkbox = ({ type = "checkbox", name, checked = false, onChange }) => {
 function SignUpFourth() {
   const [checkedItems, setCheckedItems] = useState({});
   const [textbox, settextbox] = useState("");
+  const [phonevalue, setphonevalue] = useState("");
+  const [phone, setphone] = useState(true);
   const handletextbox = (e) => {
     settextbox(e.target.value);
+  };
+  const handlephone = (e) => {
+    setphonevalue(e.target.value);
   };
   const handleChange = (event) => {
     setCheckedItems({
@@ -118,6 +123,10 @@ function SignUpFourth() {
       .set({
         Feedbacks: checkedItems,
         Suggestion: textbox,
+        Phone: {
+          Mobile: phonevalue,
+          testing: phone,
+        },
       })
       .then(() => {
         localStorage.setItem("token", user.uid);
@@ -138,6 +147,28 @@ function SignUpFourth() {
         Since we are a community driven platform, we keep improving from your
         suggestions. Amazing suggestions would get a chance to be featured!
       </p>
+      <div className="SignUpFourthPhoneBox">
+        <p>Your Phone Number?</p>
+        <input
+          type="number"
+          name="Phone Number"
+          value={phonevalue}
+          onChange={handlephone}
+          placeholder="Help us grow by participating and contributing to amazing ideas"
+        />
+        <label>
+          <input
+            type="checkbox"
+            name="Participating in Testing"
+            checked={phone}
+            onClick={() => {
+              setphone(!phone);
+            }}
+            onChange={handleChange}
+          />{" "}
+          I agree for participating in product testing and ideation
+        </label>
+      </div>
       <p className="SignUpFourthSubHeading1">
         What feature on our platform caught your attention the most?
       </p>
@@ -175,12 +206,10 @@ function SignUpFourth() {
           {item.name}
         </label>
       ))}
-      {console.log(checkedItems)}
       <p className="SignUpFourthSubHeading3">
         Share any awesome innovative idea(s), feature(s) that could help us
         expand and improve...
       </p>
-      {console.log(textbox)}
       <textarea
         className="SignUpTextbox"
         onChange={handletextbox}
