@@ -13,7 +13,7 @@ const useScript = (url) => {
     //   document.body.removeChild(script);
     // };
   }, [url]);
-  smartlookClient.init("988c671c4c51c646077758666e11ff61594fb44c");
+  smartlookClient.init("40c0a7c40bdd5c58bafeac8683e3d3e650978197");
 };
 
 export default useScript;
