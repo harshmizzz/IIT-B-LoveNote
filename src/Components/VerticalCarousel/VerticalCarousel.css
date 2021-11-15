@@ -34,57 +34,34 @@
 
 .VerticalImageContainer {
   display: flex;
-  gap: 20px;
+  gap: 10%;
   justify-content: center;
   align-items: center;
 }
 
-.VerticalTopNumber {
-  font-size: 48px;
-  line-height: 59px;
-  text-align: center;
-  color: #ffc452;
-  margin-left: 20px;
-}
-
-.VerticalImageLeftTop,
-.VerticalImageMiddle,
-.VerticalImageBottom {
-  width: 80%;
-}
-
-.VerticalImageLeftTop {
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 24px;
-
-  color: #0f071b;
-}
-
-.VerticalImageMiddle {
+.VerticalImageLeft {
+  width: 15%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: Montserrat;
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   color: #0f071b;
+  text-align: start;
 }
 
-.VerticalImageBottom {
-  font-family: Poiret One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 300;
-  color: #0f071b;
+.VerticalImageLeft1 {
+  color: #f5a834;
 }
-
-.VerticalImageLeft {
-  width: 30%;
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
+.VerticalImageLeftLight {
+  color: #f8c3b3;
 }
-
+.VerticalImageLeftBold {
+  font-weight: bold;
+}
 .VerticalTopContent {
   display: flex;
   flex-direction: column;

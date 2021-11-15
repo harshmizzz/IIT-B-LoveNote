@@ -57,11 +57,13 @@ const WhatSpecial = () => {
                       <img src={img1} alt="" />
                     </div>
                     <div className="WhatsSpecialText">
-                      <h3>Gauge a person, your own way!</h3>
                       <p>
-                        We have a surprise for you! You can now ask whatever you
-                        always wanted to ask strangers, before adding them to
-                        your bracket!
+                        Show your genuine interests,
+                        <span className="WhatsSpecialText1">
+                          {" "}
+                          ask questions{" "}
+                        </span>
+                        that suit your preferences to match without doubt
                       </p>
                     </div>
                   </div>
@@ -72,7 +74,6 @@ const WhatSpecial = () => {
                       <img src={img2} alt="" />
                     </div>
                     <div className="WhatsSpecialText">
-                      <h3>Forgo the incompatible</h3>
                       <p>
                         Select a few admirables, remove the unsuitable to avoid
                         the wild goose chase
@@ -86,11 +87,11 @@ const WhatSpecial = () => {
                       <img src={img3} alt="" />
                     </div>
                     <div className="WhatsSpecialText">
-                      <h3>On the safer side...</h3>
                       <p>
-                        Verified users, verified users, verified all the way! oh
-                        what a relief it is to enable and disable calls on your
-                        way
+                        Talk on your terms! Enable your video and audio calls,
+                        when you think
+                        <span className="WhatsSpecialText2"> YOU </span> are
+                        Ready
                       </p>
                     </div>
                   </div>
@@ -125,16 +126,14 @@ const WhatSpecial = () => {
                 <div className="row imageRow">
                   <div className="imgCard column col-lg-4">
                     <img className="WhatSpecialImg" src={img1} alt="" />
-                    <h3>Gauge a person, your own way!</h3>
                     <p>
-                      We have a surprise for you! You can now ask whatever you
-                      always wanted to ask strangers, before adding them to your
-                      bracket!
+                      Show your genuine interests,
+                      <span className="WhatsSpecialText1"> ask questions </span>
+                      that suit your preferences to match without doubt
                     </p>
                   </div>
                   <div className="imgCard column col-lg-4">
                     <img className="WhatSpecialImg" src={img2} alt="" />
-                    <h3>Forgo the incompatible</h3>
                     <p>
                       Select a few admirables, remove the unsuitable to avoid
                       the wild goose chase
@@ -142,11 +141,10 @@ const WhatSpecial = () => {
                   </div>
                   <div className="imgCard column col-lg-4">
                     <img className="WhatSpecialImg" src={img3} alt="" />
-                    <h3>On the safer side...</h3>
                     <p>
-                      Verified users, verified users, verified all the way! oh
-                      what a relief it is to enable and disable calls on your
-                      way
+                      Talk on your terms! Enable your video and audio calls,
+                      when you think
+                      <span className="WhatsSpecialText2"> YOU </span> are Ready
                     </p>
                   </div>
                 </div>

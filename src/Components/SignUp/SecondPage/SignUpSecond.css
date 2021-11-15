@@ -3,7 +3,19 @@
   content: "*";
   display: inline;
 }
+.FormError {
+  display: flex;
+  margin: 0;
+  margin-block: 0;
+  color: #bf1650;
+  width: 15vw;
+}
 
+.FormError::before,
+.FormError::after {
+  display: flex;
+  width: inherit;
+}
 .SignUpSecond {
   display: flex;
   font-family: "Montserrat";

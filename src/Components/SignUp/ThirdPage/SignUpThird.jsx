@@ -54,6 +54,8 @@ function SignUpThird() {
               </option>
               <option value="male">Male</option>
               <option value="female">Female</option>
+              <option value="Transgender">Transgender</option>
+              <option value="Bisexual">Bisexual</option>
               <option value="other">Other</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
@@ -147,7 +149,10 @@ function SignUpThird() {
               <option value="Hindu">Hindu</option>
               <option value="Muslim">Muslim</option>
               <option value="Christian">Christian</option>
-              <option value="Any">Any</option>
+              <option value="Sikh">Sikh</option>
+              <option value="Buddhism">Buddhism</option>
+              <option value="Jainism">Jainism</option>
+              <option value="Judaism">Judaism</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
           </div>
@@ -163,7 +168,10 @@ function SignUpThird() {
               </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
-              <option value="Doesn't matter">Doesn't matter</option>
+              <option value="Weekly">Weekly</option>
+              <option value="1-3 times a week">1-3 times a week</option>
+              <option value="4-6 Times a week">4-6 Times a week</option>
+              <option value="Monthly">Monthly</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
           </div>
@@ -180,6 +188,9 @@ function SignUpThird() {
               <option value="Vegetarian">Vegetarian</option>
               <option value="Non-Vegetarian">Non-Vegetarian</option>
               <option value="Vegan">Vegan</option>
+              <option value="Jain">Jain</option>
+              <option value="Vegetarianism">Vegetarianism</option>
+              <option value="Eggiterian">Eggiterian</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
           </div>

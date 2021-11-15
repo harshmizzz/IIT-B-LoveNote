@@ -17,6 +17,14 @@ const options = [
   { label: "Tamil ", value: "Tamil" },
   { label: "Telugu ", value: "Telugu" },
   { label: "Kannada ", value: "Kannada" },
+  { label: "Bengali ", value: "Bengali" },
+  { label: "Urdu ", value: "Urdu" },
+  { label: "Gujarati ", value: "Gujarati" },
+  { label: "Malayalam ", value: "Malayalam" },
+  { label: "Odia ", value: "Odia" },
+  { label: "Punjabi ", value: "Punjabi" },
+  { label: "Assamese ", value: "Assamese" },
+  { label: "Maithili ", value: "Maithili" },
 ];
 function SignUPSecond() {
   const {
@@ -80,7 +88,11 @@ function SignUPSecond() {
               autoComplete="off"
               placeholder="Your name"
             />
+
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.name?.type === "required" && "Name is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Age</label>
@@ -101,6 +113,9 @@ function SignUPSecond() {
               placeholder="Your age"
             />
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.age?.type === "required" && "age is required"}
+            </p>
             <ErrorMessage
               errors={errors}
               name="age"
@@ -120,9 +135,14 @@ function SignUPSecond() {
               </option>
               <option value="male">Male</option>
               <option value="female">Female</option>
+              <option value="Transgender">Transgender</option>
+              <option value="Bisexual">Bisexual</option>
               <option value="other">Other</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.gender?.type === "required" && "Gender is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Height</label>
@@ -133,6 +153,10 @@ function SignUPSecond() {
                 pattern: {
                   value: /^[0-9,'".]+$/,
                   message: "Please enter a valid height",
+                },
+                max: {
+                  value: 8,
+                  message: " Please enter a valid height",
                 },
               })}
               autoComplete="off"
@@ -198,6 +222,9 @@ function SignUPSecond() {
               <option value="West Bengal">West Bengal</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.location?.type === "required" && "Location is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>What language(s) can you speak?</label>
@@ -209,7 +236,6 @@ function SignUPSecond() {
               onChange={setSelected}
               labelledBy="Choose"
             />
-            {console.log(selected.map((n) => n.label))}
             <div className="SignUpSecondItemsLines"></div>
           </div>
           <div className="SecondFormItems">
@@ -223,6 +249,10 @@ function SignUPSecond() {
               placeholder="Type here"
             />
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.occupation?.type === "required" &&
+                "Occupation is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Your current status is...</label>
@@ -240,6 +270,9 @@ function SignUPSecond() {
               <option value="Complicated">Complicated</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.status?.type === "required" && "Status is required"}
+            </p>
           </div>
           <h3 className="SignUpSecondMoreHeading">
             Tell us something more about you...
@@ -257,8 +290,14 @@ function SignUPSecond() {
               <option value="Vegetarian">Vegetarian</option>
               <option value="Non-Vegetarian">Non-Vegetarian</option>
               <option value="Vegan">Vegan</option>
+              <option value="Jain">Jain</option>
+              <option value="Vegetarianism">Vegetarianism</option>
+              <option value="Eggiterian">Eggiterian</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.diet?.type === "required" && "diet is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Your Religion?</label>
@@ -273,9 +312,15 @@ function SignUPSecond() {
               <option value="Hindu">Hindu</option>
               <option value="Muslim">Muslim</option>
               <option value="Christian">Christian</option>
-              <option value="Any">Any</option>
+              <option value="Sikh">Sikh</option>
+              <option value="Buddhism">Buddhism</option>
+              <option value="Jainism">Jainism</option>
+              <option value="Judaism">Judaism</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.religion?.type === "required" && "Religion is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Do you exercise?</label>
@@ -289,9 +334,15 @@ function SignUPSecond() {
               </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
-              <option value="Sometimes">Sometimes</option>
+              <option value="Weekly">Weekly</option>
+              <option value="1-3 times a week">1-3 times a week</option>
+              <option value="4-6 Times a week">4-6 Times a week</option>
+              <option value="Monthly">Monthly</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.exercise?.type === "required" && "exercise is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Do you smoke?</label>
@@ -308,6 +359,9 @@ function SignUPSecond() {
               <option value="Occasionally">Occasionally</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.smoke?.type === "required" && "smoke is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Do you drink?</label>
@@ -324,6 +378,9 @@ function SignUPSecond() {
               <option value="Occasionally">Occasionally</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.drink?.type === "required" && "Drink is required"}
+            </p>
           </div>
           <div className="SecondFormItems">
             <label>Do you want children?</label>
@@ -340,6 +397,9 @@ function SignUPSecond() {
               <option value="Maybe in future">Maybe in future</option>
             </select>
             <div className="SignUpSecondItemsLines"></div>
+            <p className="FormError">
+              {errors.children?.type === "required" && "children is required"}
+            </p>
           </div>
           <div className="SignUpSecondFormBottom">
             <h4>Awesome! Let's go ahead</h4>

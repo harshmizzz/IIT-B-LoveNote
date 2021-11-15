@@ -20,7 +20,13 @@
   text-align: center;
   color: #ebe7e6;
 }
-
+.WhatsSpecialText1 {
+  color: #f5a834;
+}
+.WhatsSpecialText2 {
+  color: #f5a834;
+  text-transform: capitalize;
+}
 .imageRow {
   display: flex;
   justify-content: center;
