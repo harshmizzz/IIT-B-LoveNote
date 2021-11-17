@@ -39,79 +39,137 @@ function SignUpFourth() {
   };
   const checkboxes1 = [
     {
-      name: "Asking questions before matching",
-      key: "Asking questions before matching",
-      label: "Asking questions before matching",
+      name: "Tinder",
+      key: "Tinder",
+      label: "Tinder",
     },
     {
-      name: "Compatibility questions and percentage",
-      key: "Compatibility questions and percentage",
-      label: "Compatibility questions and percentage",
+      name: "Bumble",
+      key: "Bumble",
+      label: "Bumble",
     },
     {
-      name: "Receiving daily facts about a match",
-      key: "Receiving daily facts about a match",
-      label: "Receiving daily facts about a match",
+      name: "Hinge",
+      key: "Hinge",
+      label: "Hinge",
     },
     {
-      name: "Seeing a detailed profiles (seeing their photos, audios)",
-      key: "Seeing a detailed profiles (seeing their photos, audios)",
-      label: "Seeing a detailed profiles (seeing their photos, audios)",
+      name: "Coffee meets bagel",
+      key: "Coffee meets bagel",
+      label: "Coffee meets bagel",
     },
     {
-      name: "Enabling and disabling of calls",
-      key: "Enabling and disabling of calls",
-      label: "Enabling and disabling of calls",
+      name: "Ok Cupid",
+      key: "Ok Cupid",
+      label: "Ok Cupid",
     },
     {
-      name: "Reporting inappropriate messages on our platform",
-      key: "Reporting inappropriate messages on our platform",
-      label: "Reporting inappropriate messages on our platform",
+      name: "eHarmony",
+      key: "eHarmony",
+      label: "eHarmony",
     },
     {
-      name: "Stages & activities in chat",
-      key: "Stages & activities in chat",
-      label: "Stages & activities in chat",
-    },
-    {
-      name: "None of the above",
-      key: "None of the above",
-      label: "None of the above",
+      name: "Happn",
+      key: "Happn",
+      label: "Happn",
     },
   ];
   const checkboxes2 = [
     {
-      name: "Images and videos of a person",
-      key: "Images and videos of a person",
-      label: "Images and videos of a person",
+      name: "Superficial profiles",
+      key: "Superficial profiles",
+      label: "Superficial profiles",
     },
     {
-      name: "Their basic information",
-      key: "Their basic information",
-      label: "Their basic information",
+      name: "Faced ghosting issues",
+      key: "Faced ghosting issues",
+      label: "Faced ghosting issues",
     },
     {
-      name: "Detailed stories",
-      key: "Detailed stories",
-      label: "Detailed stories",
+      name: "Inappropriate behaviour of others",
+      key: "Inappropriate behaviour of others",
+      label: "Inappropriate behaviour of others",
     },
     {
-      name: "Yours and their’s compatibility match percentage",
-      key: "Yours and their’s compatibility match percentage",
-      label: "Yours and their’s compatibility match percentage",
+      name: "Found fake profiles",
+      key: "Found fake profiles",
+      label: "Found fake profiles",
     },
     {
-      name: "Being able to share profiles with others",
-      key: "Being able to share profiles with others",
-      label: "Being able to share profiles with others",
+      name: "Security measure (information getting hacked)",
+      key: "Security measure (information getting hacked)",
+      label: "Security measure (information getting hacked)",
     },
-
     {
-      name: "None",
-      key: "None",
-      label: "None",
+      name: "Faced ill suited language on the platform",
+      key: "Faced ill suited language on the platform",
+      label: "Faced ill suited language on the platform",
+    },
+    {
+      name: "Platform couldn’t help find someone satisfactory",
+      key: "Platform couldn’t help find someone satisfactory",
+      label: "Platform couldn’t help find someone satisfactory",
     },
   ];
+  const checkboxes3 = [
+    {
+      name: "Preferred meeting the person in real life to know more about them",
+      key: "Preferred meeting the person in real life to know more about them",
+      value:
+        "Preferred meeting the person in real life to know more about them",
+    },
+    {
+      name: "Preferred shifting to other modes of communication (eg: social media, whatsapp)",
+      key: "Preferred shifting to other modes of communication (eg: social media, whatsapp)",
+      value:
+        "Preferred shifting to other modes of communication (eg: social media, whatsapp)",
+    },
+    {
+      name: "Deleted the platform",
+      key: "Deleted the platform",
+      value: "Deleted the platform",
+    },
+    {
+      name: "Reported the problems",
+      key: "Reported the problems",
+      value: "Reported the problems",
+    },
+  ];
+  const checkboxes4 = [
+    { name: "There are no reasons", key: "There are no reasons", value: "There are no reasons" },
+    { name: "No time to go out and meet people/date", key: "No time to go out and meet people/date", value: "No time to go out and meet people/date" },
+    { name: "It's more convenient and efficient", key: "It's more convenient and efficient", value: "It's more convenient and efficient" },
+    { name: "Access to a larger pool of people", key: "Access to a larger pool of people", value: "Access to a larger pool of people" },
+    { name: "To find someone we are more compatible with", key: "To find someone we are more compatible with", value: "To find someone we are more compatible with" },
+    { name: "It is easier to meet people online initially", key: "It is easier to meet people online initially", value: "It is easier to meet people online initially" },
+  ];
+  const checkboxes5 = [ 
+    {
+      name: "Providing detail profiles for you to choose better",
+      key:"Providing detail profiles for you to choose better",
+      value: "Providing detail profiles for you to choose better"
+    },
+    {
+      name: "Less ghosting (conversation reminders shield you from ghosting)",
+      key:"Less ghosting (conversation reminders shield you from ghosting)",
+      value: "Less ghosting (conversation reminders shield you from ghosting)"
+    },
+    {
+      name: "Can enable or disable both audio and video call",
+      key:"Can enable or disable both audio and video call",
+      value: "Can enable or disable both audio and video call"
+    },
+    {
+      name: "Compulsory verification of users",
+      key:"Compulsory verification of users",
+      value: "Compulsory verification of users"
+    },
+    {
+      name: "Activities that help you get closer to your match",
+      key:"Activities that help you get closer to your match",
+      value: "Activities that help you get closer to your match"
+    },
+  ]
   const user = useSelector(selectUser);
 
   const onSubmit = (e) => {
@@ -170,7 +228,7 @@ function SignUpFourth() {
         </label>
       </div>
       <p className="SignUpFourthSubHeading1">
-        What feature on our platform caught your attention the most?
+        Which of the following apps have you used before?
       </p>
       <div className="SignUpFourthBox1">
         <div>
@@ -193,8 +251,7 @@ function SignUpFourth() {
       </div>
 
       <p className="SignUpFourthSubHeading2">
-        When you choose from profiles, which section grabs your attention and
-        you are interested in the most?
+        What hurdles did you face while using them?
       </p>
       {checkboxes2.map((item) => (
         <label key={item.key}>
@@ -206,6 +263,46 @@ function SignUpFourth() {
           {item.name}
         </label>
       ))}
+      <p className="SignUpFourthSubHeading2">
+      How did you tackle these problems?
+      </p>
+      {checkboxes3.map((item) => (
+        <label key={item.key}>
+          <Checkbox
+            name={item.name}
+            checked={checkedItems[item.name]}
+            onChange={handleChange}
+          />
+          {item.name}
+        </label>
+      ))}
+      <p className="SignUpFourthSubHeading2">
+      What are the reasons for you to use a dating app?
+      </p>
+      {checkboxes4.map((item) => (
+        <label key={item.key}>
+          <Checkbox
+            name={item.name}
+            checked={checkedItems[item.name]}
+            onChange={handleChange}
+          />
+          {item.name}
+        </label>
+      ))}
+      <p className="SignUpFourthSubHeading2">
+      Reasons to favour us?
+      </p>
+      {checkboxes5.map((item) => (
+        <label key={item.key}>
+          <Checkbox
+            name={item.name}
+            checked={checkedItems[item.name]}
+            onChange={handleChange}
+          />
+          {item.name}
+        </label>
+      ))}
+
       <p className="SignUpFourthSubHeading3">
         Share any awesome innovative idea(s), feature(s) that could help us
         expand and improve...

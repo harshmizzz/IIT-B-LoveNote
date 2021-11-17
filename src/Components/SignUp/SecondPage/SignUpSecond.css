@@ -91,6 +91,30 @@
   padding-left: 5px;
 }
 
+.SecondFormHeightBox input:focus {
+outline: none;}
+
+.SecondFormHeightBox {
+  display: flex;
+  gap: 40px;
+}
+
+.SecondFormHeightBox input[type="text"] {
+  width: 2vw;
+  height: 8vh;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Montserrat";
+  font-weight: 600px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding-left: 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
+
 .SignUpSecondMoreHeading {
   margin-top: 30px;
   margin-left: 50px;
@@ -168,4 +192,13 @@
   .SecondFormItems option {
     width: 40vw;
   }
+.SecondFormHeightBox input[type="text"] {
+ width: 10vw;
+}
+}
+
+@media only screen and (min-height:1000px) and (max-height: 1800px) {
+  .SecondFormHeightBox input[type="text"] {
+    height: 50px;
+   }
 }

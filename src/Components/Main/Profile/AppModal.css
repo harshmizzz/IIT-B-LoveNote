@@ -36,6 +36,7 @@
   color: #0f071b;
 }
 .AppModalButton {
+  cursor: pointer;
   width: 207px;
   height: 49px;
   font-family: Manrope;

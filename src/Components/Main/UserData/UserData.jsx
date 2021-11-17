@@ -185,7 +185,7 @@ function UserData() {
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Height</p>
                         <p className="UserDataValue">
-                          {userDetails.HeightFt} ft
+                          {userDetails.HeightFt} ft {userDetails.HeightIn} In
                         </p>
                       </div>
                       <div className="UserDataInfo">
@@ -277,15 +277,15 @@ function UserData() {
                           <PreferencesEdit
                             open={preferences}
                             onclose={() => setpreferences(false)}
-                            age0={userPreferences.PAge[0]}
-                            age1={userPreferences.PAge[1]}
+                            age0={userPreferences.Age[0]}
+                            age1={userPreferences.Age[1]}
                           />
                         </div>
                       </div>
                       <div className="UserDataInfo">
                         <p className="UserDataTitleP">Age Range</p>
                         <p className="UserDataValue">
-                          {userPreferences.PAge[0]}-{userPreferences.Age[1]}
+                          {userPreferences.Age[0]}-{userPreferences.Age[1]}
                         </p>
                       </div>
                       <div className="UserDataInfo">
@@ -369,7 +369,7 @@ function UserData() {
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Height</p>
                         <p className="UserDataValue">
-                          {userDetails.HeightFt} ft
+                          {userDetails.HeightFt} ft {userDetails.HeightIn} In
                         </p>
                       </div>
                       <div className="UserDataInfo">

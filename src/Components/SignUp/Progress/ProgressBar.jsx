@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 function ProgressBar({ location: { pathname } }) {
   const isFirstStep = pathname === "/SignUp";
   const isSecondStep = pathname === "/profile";
-  const isThirdStep = pathname === "/preferences";
+  const isThirdStep = pathname === "/Preferences";
   const isFourthStep = pathname === "/feedback";
   return (
     <div className="SignUpProgress">

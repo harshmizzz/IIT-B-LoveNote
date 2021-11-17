@@ -9,7 +9,8 @@ function AppModal() {
         <p className="AppModalText">
           ...And your forever story awaits you only on LoveNote
         </p>
-        <div className="AppModalButton">Download LoveNote</div>
+        {/* <div className="AppModalButton">Download LoveNote</div> */}
+        <div className="AppModalButton">Want to participate</div>
         <img className="AppModalImg" src={phone} alt="phone" />
       </div>
     </div>

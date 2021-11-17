@@ -146,6 +146,7 @@ function SignUpThird() {
               <option value="" disabled selected>
                 Religion
               </option>
+              <option value="Doesn't Matter">Doesn't Matter</option>
               <option value="Hindu">Hindu</option>
               <option value="Muslim">Muslim</option>
               <option value="Christian">Christian</option>
@@ -166,6 +167,7 @@ function SignUpThird() {
               <option value="" disabled selected>
                 Choose
               </option>
+              <option value="Doesn't Matter">Doesn't Matter</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               <option value="Weekly">Weekly</option>
@@ -185,6 +187,7 @@ function SignUpThird() {
               <option value="" disabled selected>
                 Choose
               </option>
+              <option value="Doesn't Matter">Doesn't Matter</option>
               <option value="Vegetarian">Vegetarian</option>
               <option value="Non-Vegetarian">Non-Vegetarian</option>
               <option value="Vegan">Vegan</option>
@@ -207,6 +210,10 @@ function SignUpThird() {
               </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
+              <option value="Weekly">Weekly</option>
+              <option value="1-3 times a week">1-3 times a week</option>
+              <option value="4-6 Times a week">4-6 Times a week</option>
+              <option value="Monthly">Monthly</option>
               <option value="Doesn't matter">Doesn't matter</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
@@ -223,6 +230,10 @@ function SignUpThird() {
               </option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
+              <option value="Weekly">Weekly</option>
+              <option value="1-3 times a week">1-3 times a week</option>
+              <option value="4-6 Times a week">4-6 Times a week</option>
+              <option value="Monthly">Monthly</option>
               <option value="Doesn't matter">Doesn't matter</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
