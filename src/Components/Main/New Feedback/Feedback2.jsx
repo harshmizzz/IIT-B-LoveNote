@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import "./SignUpFourth.css";
+import React,{useState} from "react";
+import Media from "react-media";
+import { Router } from "react-router";
+import SignUpFourth from "../../SignUp/FourthPage/SignUpFourth";
+import HamburgerBox2 from "../../SignUp/SignUpNav/HamburgerBox2";
+import SignUPNav from "../../SignUp/SignUpNav/SignUPNav";
 import allura from "../../../Images/SignUp/Allura Feedback Session.png";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../StoreFeatures/userSlice";
 import { db } from "../../StoreFeatures/firebase";
-
+import "./Feedback2.css"
 const Checkbox = ({ type = "checkbox", name, checked = false, onChange }) => {
   return (
     <>
@@ -20,7 +24,7 @@ const Checkbox = ({ type = "checkbox", name, checked = false, onChange }) => {
   );
 };
 
-function SignUpFourth() {
+function Feedback2() {
   const [checkedItems, setCheckedItems] = useState({});
   const [textbox, settextbox] = useState("");
   const [phonevalue, setphonevalue] = useState("");
@@ -190,10 +194,27 @@ function SignUpFourth() {
         localStorage.setItem("token", user.uid);
         window.location = "/Dashboard";
       });
+      db.collection("users")
+      .doc(user.uid)
+      .collection("UserFormInputs")
+      .doc("userDetails")
+      .update({
+        isFeedback:true,
+      })
   };
-
   return (
-    <div className="SignUpFourth">
+    <div className="feedback2">
+      <Media query={{ maxWidth: 800 }}>
+        {(matches) => (matches ? <HamburgerBox2 /> : <SignUPNav />)}
+      </Media>
+      <div className="feedback2box">
+          <div className="feedback2top">
+              <h3>Let’s grow together</h3>
+              <p>We would love for you to join our community! Contribute your ideas and help us grow together</p>
+          </div>
+          <div className="feedback2content">
+            {/* <SignUpFourth /> */}
+            <div className="SignUpFourth">
       <p className="SignUpFourthHeading">
         Since we are a community driven platform, we keep improving from your
         suggestions. Amazing suggestions would get a chance to be featured!
@@ -312,7 +333,10 @@ function SignUpFourth() {
         <input onClick={onSubmit} type="submit" value="Done & Dusted" />
       </div>
     </div>
+          </div>
+      </div>
+    </div>
   );
 }
 
-export default SignUpFourth;
+export default Feedback2;

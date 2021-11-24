@@ -47,8 +47,7 @@ function SignUPSecond() {
         Fullname: data.name,
         Age: data.age,
         Gender: data.gender,
-        HeightFt: data.HeightFt,
-        HeightIn: data.HeightIn,
+        HeightCM: data.HeightCM,
         State: data.location,
         Languages: selected.map((n) => n.label),
         Profession: data.occupation,
@@ -59,6 +58,8 @@ function SignUPSecond() {
         IsDrink: data.drink,
         WantChildren: data.children,
         Religion: data.religion,
+        isVerified: false,
+        isFeedback: false,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then(() => {
@@ -150,56 +151,38 @@ function SignUPSecond() {
             <div className="SecondFormHeightBox">
             <input
               type="text"
-              {...register("HeightFt", {
+              {...register("HeightCM", {
                 required: true,
                 maxLength: {
-                  value: 1,
+                  value: 3,
                   message: "Too Many Characters"
+                },
+                min: {
+                  value: 110,
+                  message: "Enter the correct height"
                 },
                 pattern: {
                   value: /^[0-9]+$/,
-                  message: "Please enter a valid Height in ft",
+                  message: "Please enter a valid Height in cm",
                 },
               })}
-              placeholder = "Ft"
+              placeholder = "in cm"
               autoComplete = "off"
             />
-             <input
-              type="text"
-              {...register("HeightIn", {
-                required: true,
-                maxLength: {
-                  value: 1,
-                  message: "Too Many Characters"
-                },
-                pattern: {
-                  value: /^[0-9]+$/,
-                  message: "Please enter a valid Height in Inches",
-                },
-              })}
-              placeholder = "In"
-              autoComplete = "off"
-            />
+            
             </div>
             <div className="SignUpSecondItemsLines"></div>
             <p className="FormError">
-              {errors.HeightFt?.type === "required" && "Height is required"}
+              {errors.HeightCM?.type === "required" && "Height is required"}
             </p>
-            <p className="FormError">
-              {errors.HeightIn?.type === "required" && "Height is required"}
-            </p>
+            
             <ErrorMessage
               errors={errors}
-              name="HeightFt"
+              name="HeightCM"
               as="p"
               className="SignUpEmailError"
             />
-            <ErrorMessage
-              errors={errors}
-              name="HeightIn"
-              as="p"
-              className="SignUpEmailError"
-            />
+           
           </div>
           <div className="SecondFormItems">
             <label>Location</label>
@@ -361,12 +344,12 @@ function SignUPSecond() {
               <option value="" disabled selected>
                 Choose
               </option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
               <option value="Weekly">Weekly</option>
               <option value="1-3 times a week">1-3 times a week</option>
               <option value="4-6 Times a week">4-6 Times a week</option>
               <option value="Monthly">Monthly</option>
+              <option value="No">No</option>
+
             </select>
             <div className="SignUpSecondItemsLines"></div>
             <p className="FormError">
@@ -383,12 +366,12 @@ function SignUPSecond() {
               <option value="" disabled selected>
                 Choose
               </option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
               <option value="Weekly">Weekly</option>
               <option value="1-3 times a week">1-3 times a week</option>
               <option value="4-6 Times a week">4-6 Times a week</option>
               <option value="Monthly">Monthly</option>
+              <option value="No">No</option>
+
             </select>
             <div className="SignUpSecondItemsLines"></div>
             <p className="FormError">
@@ -405,12 +388,12 @@ function SignUPSecond() {
               <option value="" disabled selected>
                 Choose
               </option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
               <option value="Weekly">Weekly</option>
               <option value="1-3 times a week">1-3 times a week</option>
               <option value="4-6 Times a week">4-6 Times a week</option>
               <option value="Monthly">Monthly</option>
+              <option value="No">No</option>
+
             </select>
             <div className="SignUpSecondItemsLines"></div>
             <p className="FormError">

@@ -19,6 +19,8 @@ import HamburgerBox2 from "../../Components/SignUp/SignUpNav/HamburgerBox2";
 import Media from "react-media";
 import AppModal from "../../Components/Main/Profile/AppModal";
 import { CircularProgress } from "@material-ui/core";
+import FeedbackModal from "../../Components/Main/New Feedback/FeedbackModal";
+import FeedbackPage from "../FeedbackPage";
 function MainPage() {
   const user = useSelector(selectUser);
   const [data, setdata] = useState("");
@@ -86,7 +88,7 @@ function MainPage() {
             {data.isVerified === true ? <Verified /> : <MainVerification />}
           </div>
           <div className="MainPageProfileBox">
-            {data.isVerified === true ? <AppModal /> : <Profile />}
+            {data.isVerified === true ?  <FeedbackPage /> : <Profile />}
           </div>
         </div>
       </div>

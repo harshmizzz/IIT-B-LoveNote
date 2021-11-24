@@ -1,0 +1,91 @@
+.FeedbackModal {
+    display: flex;
+    font-family: "Montserrat";
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    background: #ebe7e6;
+    border-radius: 4.46963px;
+    min-height: 70vh;
+  }
+  .FeedbackModalHeading {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #0f071b;
+    /* width: 100%; */
+  }
+  
+  .FeedbackModalItems {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 30vw;
+  }
+  
+  .FeedbackModalText {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #0f071b;
+  }
+  .FeedbackModalButton {
+    cursor: pointer;
+    width: 207px;
+    height: 49px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ebe7e6;
+    background: #0f071b;
+    border-radius: 50px;
+  }
+  
+  .FeedbackModalImg {
+    width: 102px;
+    height: 158px;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .FeedbackModal {
+      width: 100%;
+      flex-direction: row;
+      height: 50%;
+      min-height: 40vh;
+    }
+    .FeedbackModalItems {
+      width: 100%;
+      margin-left: 5%;
+      margin-top: 0;
+      justify-content: flex-start;
+    }
+  
+    .FeedbackModalHeading {
+      font-size: 13px;
+      /* width: 90%; */
+    }
+    .FeedbackModalImage {
+      margin-left: 0;
+    }
+    .FeedbackModalImg {
+      width: 75px;
+      height: 110px;
+    }
+    .FeedbackModalText {
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+  

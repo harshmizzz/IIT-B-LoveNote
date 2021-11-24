@@ -1,0 +1,54 @@
+.feedback2 {
+  margin-top: 60px;
+  margin-left: 98px;
+  margin-right: 139px;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  width: clamp(80vw, 90vw, 100vw);
+}
+
+.feedback2content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid #f5a834;
+  box-sizing: border-box;
+  border-radius: 4.46963px;
+  margin-bottom: 20px;
+  overflow-x: hidden;
+}
+
+.feedback2top > h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+
+  color: #0f071b;
+}
+
+.feedback2content .SignUpFourth {
+  max-height: 70vh;
+}
+
+.feedback2content .SignUpTextbox {
+  min-height: 15vh;
+}
+
+@media only screen and (max-width: 800px){
+.feedback2 {
+    margin-left: 3vh;
+    min-height: 50vh;
+}
+.feedback2content{
+    min-height: 60vh;
+    max-height: none;
+}
+.feedback2content .SignUpFourth {
+ min-height: 60vh;
+ max-height: none;
+}
+}

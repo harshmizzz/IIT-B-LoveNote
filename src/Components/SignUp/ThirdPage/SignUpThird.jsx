@@ -168,12 +168,12 @@ function SignUpThird() {
                 Choose
               </option>
               <option value="Doesn't Matter">Doesn't Matter</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
               <option value="Weekly">Weekly</option>
               <option value="1-3 times a week">1-3 times a week</option>
               <option value="4-6 Times a week">4-6 Times a week</option>
               <option value="Monthly">Monthly</option>
+              <option value="No">No</option>
+
             </select>
             <div className="SignUpThirdItemsLines"></div>
           </div>
@@ -208,13 +208,12 @@ function SignUpThird() {
               <option value="" disabled selected>
                 Choose
               </option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+              <option value="Doesn't Matter">Doesn't Matter</option>
               <option value="Weekly">Weekly</option>
               <option value="1-3 times a week">1-3 times a week</option>
               <option value="4-6 Times a week">4-6 Times a week</option>
               <option value="Monthly">Monthly</option>
-              <option value="Doesn't matter">Doesn't matter</option>
+              <option value="No">No</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
           </div>
@@ -228,13 +227,12 @@ function SignUpThird() {
               <option value="" disabled selected>
                 Choose
               </option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+              <option value="Doesn't Matter">Doesn't Matter</option>
               <option value="Weekly">Weekly</option>
               <option value="1-3 times a week">1-3 times a week</option>
               <option value="4-6 Times a week">4-6 Times a week</option>
               <option value="Monthly">Monthly</option>
-              <option value="Doesn't matter">Doesn't matter</option>
+              <option value="No">No</option>
             </select>
             <div className="SignUpThirdItemsLines"></div>
           </div>

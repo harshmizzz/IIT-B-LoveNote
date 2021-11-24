@@ -16,7 +16,7 @@
   font-size: 25px;
   line-height: 30px;
   color: #0f071b;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .AppModalItems {
@@ -51,6 +51,7 @@
   color: #ebe7e6;
   background: #0f071b;
   border-radius: 50px;
+  border: none;
 }
 
 .AppModalImg {
@@ -74,7 +75,7 @@
 
   .AppModalHeading {
     font-size: 13px;
-    width: 90%;
+    /* width: 90%; */
   }
   .AppModalImage {
     margin-left: 0;

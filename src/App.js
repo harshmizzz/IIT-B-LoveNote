@@ -13,7 +13,7 @@ import { createBrowserHistory } from "history";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { store } from "./Components/StoreFeatures/Store";
 import { useEffect } from "react";
-import { auth } from "./Components/StoreFeatures/firebase";
+import { auth, db } from "./Components/StoreFeatures/firebase";
 import {
   login,
   logout,
@@ -22,18 +22,21 @@ import {
 import Documents from "./Pages/GuideLines/Documents.jsx";
 import firebase from "firebase";
 import smartlookClient from "smartlook-client";
-import { hotjar } from "react-hotjar";
 import useScript from "./Hooks/useScript";
+import FeedbackPage from "./Pages/FeedbackPage";
+
+import { useState } from "react";
+import Feedback2 from "./Components/Main/New Feedback/Feedback2";
+import { Helmet } from "react-helmet";
 const MainPage = lazy(() => import("./Pages/MainPage/MainPage"));
 const SignUp = lazy(() => import("./Pages/SignUp/SignUp"));
 const App = () => {
   const dispatch = useDispatch();
-  const user = useSelector(selectUser);
+
   const appHistory = createBrowserHistory({ forceRefresh: true });
   useScript("https://rec.smartlook.com/recorder.js");
   smartlookClient.init("40c0a7c40bdd5c58bafeac8683e3d3e650978197");
   useEffect(() => {
-    hotjar.initialize(2679635, 6);
     auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
         dispatch(
@@ -53,6 +56,9 @@ const App = () => {
     <Provider store={store}>
       <Router history={appHistory}>
         <div className="App">
+          <Helmet>
+          <meta name="facebook-domain-verification" content="locfhkrofr0my3n52ruu13xmtrrp0z" />
+          </Helmet>
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/home" exact>
@@ -90,9 +96,10 @@ const App = () => {
               <Route path="/Verify" exact>
                 <VerificationPage />
               </Route>
+              <Route path="/UserFeedback" component={Feedback2} exact />
               <Route path="/communityguidelines" component={Documents} exact />
-              <Route path="/faqs" component={Documents} exact />
               <Route path="/t&c" component={Documents} exact />
+              <Route path="/faqs" component={Documents} exact />
               <Route path="/privacy&policy" component={Documents} exact />
             </Suspense>
           </Switch>

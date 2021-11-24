@@ -21,6 +21,7 @@ function UserData() {
   const [isOpen, setisOpen] = useState(false);
   const [profile, setprofile] = useState(false);
   const [preferences, setpreferences] = useState(false);
+  const [phone,setphone]=useState("")
   const [userPreferences, setuserPreferences] = useState([]);
   const [userDetails, setuserDetails] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -35,12 +36,30 @@ function UserData() {
           .doc(user.uid)
           .collection("UserFormInputs")
           .doc("userDetails");
-
+        const response3 = db
+          .collection("users")
+          .doc(user.uid)
+          .collection("UserFormInputs")
+          .doc("Feedback");
+   
         const response2 = db
           .collection("users")
           .doc(user.uid)
           .collection("UserFormInputs")
           .doc("userPreferences");
+          response3
+          .get()
+          .then((doc) => {
+            if (doc.exists) {
+              setphone(doc.data().Phone.Mobile);
+            } else {
+              console.log("No such document!");
+            }
+          })
+          .catch((error) => {
+            console.log("Error getting document:", error);
+          });
+
         response2
           .get()
           .then((doc) => {
@@ -185,12 +204,16 @@ function UserData() {
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Height</p>
                         <p className="UserDataValue">
-                          {userDetails.HeightFt} ft {userDetails.HeightIn} In
+                          {userDetails.HeightCM} cm
                         </p>
                       </div>
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Location</p>
                         <p className="UserDataValue">{userDetails.State}</p>
+                      </div>
+                      <div className="UserDataInfo">
+                        <p className="UserDataTitle">Phone Number</p>
+                        <p className="UserDataValue">{phone}</p>
                       </div>
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Religion</p>
@@ -369,7 +392,7 @@ function UserData() {
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Height</p>
                         <p className="UserDataValue">
-                          {userDetails.HeightFt} ft {userDetails.HeightIn} In
+                          {userDetails.HeightCM} cm
                         </p>
                       </div>
                       <div className="UserDataInfo">
@@ -379,6 +402,10 @@ function UserData() {
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Religion</p>
                         <p className="UserDataValue">{userDetails.Religion}</p>
+                      </div>
+                      <div className="UserDataInfo">
+                        <p className="UserDataTitle">Phone Number</p>
+                        <p className="UserDataValue">{ phone? phone : "Not Given"}</p>
                       </div>
                       <div className="UserDataInfo">
                         <p className="UserDataTitle">Languages you speak</p>

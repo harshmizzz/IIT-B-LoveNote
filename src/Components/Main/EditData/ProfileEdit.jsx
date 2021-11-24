@@ -50,8 +50,7 @@ function ProfileEdit({ open, onclose }) {
       .doc("userDetails")
       .update({
         Age: Items.age,
-        HeightFt: Items.HeightFt,
-        HeightIn: Items.HeightIn,
+        HeightCM: Items.HeightCM,
         State: Items.location,
         Profession: Items.occupation,
         Diet: Items.diet,
@@ -106,40 +105,22 @@ function ProfileEdit({ open, onclose }) {
               <label>Height</label>
               <div className="ProfileEditItemsHeightBox">
                 <input
-              type="text"
-              {...register("HeightFt", {
-                required: true,
-                value: data.HeightFt,
-                maxLength: {
-                  value: 1,
-                  message: "Too Many Characters"
-                },
-                pattern: {
-                  value: /^[0-9]+$/,
-                  message: "Please enter a valid Height in ft",
-                },
-              })}
-              placeholder = "Ft"
-              autoComplete = "off"
-            />
-             <input
-              type="text"
-              {...register("HeightIn", {
-                required: true,
-                value: data.HeightIn,
-                maxLength: {
-                  value: 1,
-                  message: "Too Many Characters"
-                },
-                pattern: {
-                  value: /^[0-9]+$/,
-                  message: "Please enter a valid Height in Inches",
-                },
-              })}
-              placeholder = "In"
-              autoComplete = "off"
-            />
-            </div>
+                  type="text"
+                  {...register("HeightCM", {
+                    value: data.HeightCM,
+                    maxLength: {
+                      value: 3,
+                      message: "Too Many Characters",
+                    },
+                    pattern: {
+                      value: /^[0-9]+$/,
+                      message: "Please enter a valid Height in CM",
+                    },
+                  })}
+                  placeholder="in CM"
+                  autoComplete="off"
+                />
+              </div>
             </div>
             <div className="ProfileEditItems">
               <label>Location</label>
@@ -209,11 +190,11 @@ function ProfileEdit({ open, onclose }) {
                   Choose
                 </option>
                 <option value="Vegetarian">Vegetarian</option>
-              <option value="Non-Vegetarian">Non-Vegetarian</option>
-              <option value="Vegan">Vegan</option>
-              <option value="Jain">Jain</option>
-              <option value="Vegetarianism">Vegetarianism</option>
-              <option value="Eggiterian">Eggiterian</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Jain">Jain</option>
+                <option value="Vegetarianism">Vegetarianism</option>
+                <option value="Eggiterian">Eggiterian</option>
               </select>
             </div>
             <div className="ProfileEditItems">
@@ -223,11 +204,11 @@ function ProfileEdit({ open, onclose }) {
                   Choose
                 </option>
                 <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              <option value="Weekly">Weekly</option>
-              <option value="1-3 times a week">1-3 times a week</option>
-              <option value="4-6 Times a week">4-6 Times a week</option>
-              <option value="Monthly">Monthly</option>
+                <option value="No">No</option>
+                <option value="Weekly">Weekly</option>
+                <option value="1-3 times a week">1-3 times a week</option>
+                <option value="4-6 Times a week">4-6 Times a week</option>
+                <option value="Monthly">Monthly</option>
               </select>
             </div>
             <div className="ProfileEditItems">
@@ -238,11 +219,11 @@ function ProfileEdit({ open, onclose }) {
                   Choose
                 </option>
                 <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              <option value="Weekly">Weekly</option>
-              <option value="1-3 times a week">1-3 times a week</option>
-              <option value="4-6 Times a week">4-6 Times a week</option>
-              <option value="Monthly">Monthly</option>
+                <option value="No">No</option>
+                <option value="Weekly">Weekly</option>
+                <option value="1-3 times a week">1-3 times a week</option>
+                <option value="4-6 Times a week">4-6 Times a week</option>
+                <option value="Monthly">Monthly</option>
               </select>
             </div>
             <div className="ProfileEditItems">
@@ -252,11 +233,11 @@ function ProfileEdit({ open, onclose }) {
                   Choose
                 </option>
                 <option value="Yes">Yes</option>
-              <option value="No">No</option>
-              <option value="Weekly">Weekly</option>
-              <option value="1-3 times a week">1-3 times a week</option>
-              <option value="4-6 Times a week">4-6 Times a week</option>
-              <option value="Monthly">Monthly</option>
+                <option value="No">No</option>
+                <option value="Weekly">Weekly</option>
+                <option value="1-3 times a week">1-3 times a week</option>
+                <option value="4-6 Times a week">4-6 Times a week</option>
+                <option value="Monthly">Monthly</option>
               </select>
             </div>
             <div className="ProfileEditItems">
