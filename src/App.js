@@ -24,7 +24,7 @@ import firebase from "firebase";
 import smartlookClient from "smartlook-client";
 import useScript from "./Hooks/useScript";
 import FeedbackPage from "./Pages/FeedbackPage";
-
+import ReactPixel from "react-facebook-pixel";
 import { useState } from "react";
 import Feedback2 from "./Components/Main/New Feedback/Feedback2";
 import { Helmet } from "react-helmet";
@@ -35,6 +35,9 @@ const App = () => {
 
   const appHistory = createBrowserHistory({ forceRefresh: true });
   useScript("https://rec.smartlook.com/recorder.js");
+
+  ReactPixel.init("1106251906816500");
+  ReactPixel.pageView();
   smartlookClient.init("40c0a7c40bdd5c58bafeac8683e3d3e650978197");
   useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {
@@ -57,7 +60,10 @@ const App = () => {
       <Router history={appHistory}>
         <div className="App">
           <Helmet>
-          <meta name="facebook-domain-verification" content="locfhkrofr0my3n52ruu13xmtrrp0z" />
+            <meta
+              name="facebook-domain-verification"
+              content="locfhkrofr0my3n52ruu13xmtrrp0z"
+            />
           </Helmet>
           <Switch>
             <Route path="/" component={Home} exact />
